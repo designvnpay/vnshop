@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <title>VNSHOP</title>
+  </head>
+
+  <body class="custom-home" id="body">
+    <ons-page>
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">Action Sheet</div>
+        </ons-toolbar>
+
+        <p style="text-align: center">
+          <ons-button onclick="app.showFromTemplate()"
+            >Create from template</ons-button
+          >
+          <br /><br />
+          <ons-button onclick="app.showFromObject()"
+            >Create from object</ons-button
+          >
+        </p>
+      </ons-page>
+
+      <template id="action-sheet.html">
+        <ons-action-sheet id="sheet" cancelable title="From template">
+          <ons-action-sheet-button
+            icon="md-square-o"
+            onclick="app.hideFromTemplate()"
+            >Label</ons-action-sheet-button
+          >
+          <ons-action-sheet-button
+            icon="md-square-o"
+            onclick="app.hideFromTemplate()"
+            >Label</ons-action-sheet-button
+          >
+          <ons-action-sheet-button
+            icon="md-square-o"
+            onclick="app.hideFromTemplate()"
+            modifier="destructive"
+            >Label</ons-action-sheet-button
+          >
+          <ons-action-sheet-button
+            icon="md-close"
+            onclick="app.hideFromTemplate()"
+            >Cancel</ons-action-sheet-button
+          >
+        </ons-action-sheet>
+      </template>
+      <ons-tabbar swipeable animation="none" position="auto">
+        <ons-tab
+          page="tab1.html"
+          label="Trang chủ"
+          icon="md-home"
+          badge="7"
+          active
+        >
+        </ons-tab>
+        <ons-tab
+          page="tab2.html"
+          label="Danh mục"
+          icon="md-view-list"
+          active-icon="md-view-list"
+        >
+        </ons-tab>
+        <ons-tab
+          page="tab3.html"
+          label="Giỏ hàng"
+          icon="md-shopping-cart"
+          active-icon="md-shopping-cart"
+        >
+        </ons-tab>
+        <ons-tab
+          page="tab4.html"
+          label="Thông báo"
+          icon="md-notifications-none"
+          active-icon="md-notifications-none"
+        >
+        </ons-tab>
+        <ons-tab
+          page="tab5.html"
+          label="Cá nhân"
+          icon="md-account-circle"
+          active-icon="md-account-circle"
+        >
+        </ons-tab>
+      </ons-tabbar>
+    </ons-page>
+
+    <template id="tab1.html">
+      <ons-page id="Tab1" controller="ChatController">
+        <ons-toolbar>
+          <div class="center">Tab1</div>
+        </ons-toolbar>
+        <div class="header-menu" id="btn-qr1">header-menu</div>
+
+        <ul class="list">
+          <li class="list-header">Header</li>
+          <li class="list-item">
+            <div class="list-item__center" window.open="pages/tab1.html">
+              Item1
+            </div>
+          </li>
+        </ul>
+        <ons-list>
+          <ons-list-header>Default</ons-list-header>
+          <ons-list-item>Item A</ons-list-item>
+          <ons-list-item>Item B</ons-list-item>
+
+          <ons-list-header>Expandable</ons-list-header>
+          <ons-list-item expandable>
+            Tap to expand
+            <div class="expandable-content">Expandable content</div>
+          </ons-list-item>
+
+          <ons-list-header>Tappable / Ripple</ons-list-header>
+          <ons-list-item tappable>Tap me</ons-list-item>
+
+          <ons-list-header>Chevron</ons-list-header>
+          <ons-list-item modifier="chevron" tappable>Chevron</ons-list-item>
+
+          <ons-list-header>Thumbnails and titles</ons-list-header>
+          <ons-list-item>
+            <div class="left">
+              <img
+                class="list-item__thumbnail"
+                src="https://placekitten.com/g/40/40"
+              />
+            </div>
+            <div class="center">
+              <span class="list-item__title">Cutest kitty</span
+              ><span class="list-item__subtitle">On the Internet</span>
+            </div>
+          </ons-list-item>
+
+          <ons-list-header>Icons</ons-list-header>
+          <ons-list-item>
+            <div class="left">
+              <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
+            </div>
+            <div class="center">Icon</div>
+          </ons-list-item>
+
+          <ons-list-header>Switch</ons-list-header>
+          <ons-list-item>
+            <div class="center">Turn it on</div>
+            <div class="right">
+              <ons-switch></ons-switch>
+            </div>
+          </ons-list-item>
+
+          <ons-list-header>Switch and icon</ons-list-header>
+          <ons-list-item>
+            <div class="left">
+              <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
+            </div>
+            <div class="center">Icon and switch</div>
+            <div class="right">
+              <ons-switch></ons-switch>
+            </div>
+          </ons-list-item>
+
+          <ons-list-header>No divider</ons-list-header>
+          <ons-list-item modifier="nodivider">Item A</ons-list-item>
+          <ons-list-item modifier="nodivider">Item B</ons-list-item>
+
+          <ons-list-header>Long divider</ons-list-header>
+          <ons-list-item modifier="longdivider">Item A</ons-list-item>
+          <ons-list-item modifier="longdivider">Item B</ons-list-item>
+        </ons-list>
+
+        <br />
+
+        <ons-list modifier="inset">
+          <ons-list-header>Inset list</ons-list-header>
+          <ons-list-item modifier="longdivider">Item A</ons-list-item>
+          <ons-list-item modifier="longdivider">Item B</ons-list-item>
+        </ons-list>
+      </ons-page>
+    </template>
+    <template id="tab2.html">
+      <ons-page id="Tab2">
+        <ons-toolbar>
+          <div class="center">Tab2</div>
+        </ons-toolbar>
+
+        <input
+          type="search"
+          value=""
+          placeholder="Search"
+          class="search-input search-input--material"
+          style="width: 280px"
+        />
+        <p style="text-align: center; margin-top: 10px">
+          <ons-search-input
+            id="txtSearch"
+            placeholder="Tìm kiếm"
+          ></ons-search-input>
+          <ons-icon
+            icon="ion-close"
+            size="20px"
+            fixed-width="true"
+            style="margin-left: -25px"
+            onclick="document.getElementById('txtSearch').value='';"
+            >close</ons-icon
+          >
+        </p>
+        <ons-button onclick="showTemplateDialog()">Show Dialog</ons-button>
+
+        <template id="dialog.html">
+          <ons-dialog id="my-dialog">
+            <div style="text-align: center; padding: 10px">
+              <p>This is a simple dialog!</p>
+
+              <p>
+                <ons-button onclick="hideDialog('my-dialog')">Close</ons-button>
+              </p>
+            </div>
+          </ons-dialog>
+        </template>
+      </ons-page>
+    </template>
+    <template id="tab3.html">
+      <ons-page id="Tab3">
+        <ons-toolbar>
+          <div class="center">Tab3</div>
+        </ons-toolbar>
+        3</ons-page
+      >
+    </template>
+    <template id="tab4.html">
+      <ons-page id="Tab4">
+        <ons-toolbar>
+          <div class="center">Tab4</div>
+        </ons-toolbar>
+        4</ons-page
+      >
+    </template>
+    <template id="tab5.html">
+      <ons-page id="Tab5">
+        <ons-toolbar>
+          <div class="center">Tab5</div>
+        </ons-toolbar>
+        5</ons-page
+      >
+    </template>
+
+    <script src="js/custom.js"></script>
+
+    <!--dialog-->
+    <script>
+      var showTemplateDialog = function () {
+        var dialog = document.getElementById("my-dialog");
+
+        if (dialog) {
+          dialog.show();
+        } else {
+          ons
+            .createElement("dialog.html", { append: true })
+            .then(function (dialog) {
+              dialog.show();
+            });
+        }
+      };
+
+      var hideDialog = function (id) {
+        document.getElementById(id).hide();
+      };
+    </script>
+    <!--dialog end-->
+  </body>
+</html>

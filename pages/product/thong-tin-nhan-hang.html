@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>    
+    <div class="page page-account">
+        <div class="toolbar align-center flex">
+            <div class="toolbar__left">
+              <a href="pages/product/confirm.html" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+              </a>
+            </div>
+            <div class="toolbar__center align-center">
+                <div class="font-size-14 font-weight-700">Thông tin nhận hàng</div>
+            </div>
+            <div class="toolbar__right">
+                <a href="pages/product/thong-tin-nhan-hang-add.html" class="button button--quiet">
+                    <i class="icon icon_24 icon_add color-main"></i>
+                </a>
+            </div>
+          </div>
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="box-list">
+            <ul class="list list-bor list-line-bottom">
+                <li class="list-item list-item--tappable">
+                    <label for="check1-1" class="list-item__center">
+                        <div class="row row-20 align-center">
+                            <div class="col list-mb-4">
+                              <div class="row row-8 align-items-center">
+                                <div class="col-auto"><div class="font-weight-700 font-size-14 color-main">Nguyễn Văn A</div></div>
+                                <div class="col-auto">
+                                  <div class="chip chip-sm chip-outline color-primary">
+                                    <div class="chip-label">Mặc định</div>
+                                  </div>
+                                </div>
+                              </div>                                
+                                <div class="font-weight-700 font-size-14 color-main">0123456789</div>
+                                <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                              </div>
+                          <div class="col-auto pr0">
+                            <div class="box-24">
+                                <a href="javascript:;" onclick="showsheet()">
+                                    <i class="icon icon_16 icon_filter_line color-main"></i>
+                                </a>                              
+                            </div>
+                          </div>
+                          
+                        </div>
+                    </label>
+                    <div class="list-item__left">
+                    <label class="radio-button">
+                        <input type="radio" id="check1-1" class="radio-button__input" name="check1" checked="checked">
+                        <div class="radio-button__checkmark"></div>
+                    </label>
+                    </div>
+                </li>
+                <li class="list-item list-item--tappable">
+                    <label for="check1-2" class="list-item__center">
+                        <div class="row row-20 align-center">
+                            <div class="col list-mb-4">
+                              <div class="row row-8 align-items-center">
+                                <div class="col-auto"><div class="font-weight-700 font-size-14 color-main">Nguyễn Văn B</div></div>
+                              </div>                                
+                                <div class="font-weight-700 font-size-14 color-main">0123456789</div>
+                                <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                              </div>
+                          <div class="col-auto pr0">
+                            <div class="box-24">
+                                <a href="javascript:;" onclick="showsheet()">
+                                    <i class="icon icon_16 icon_filter_line color-main"></i>
+                                </a>                              
+                            </div>
+                          </div>
+                          
+                        </div>
+                    </label>
+                    <div class="list-item__left">
+                    <label class="radio-button">
+                        <input type="radio" id="check1-2" class="radio-button__input" name="check1">
+                        <div class="radio-button__checkmark"></div>
+                    </label>
+                    </div>
+                </li>
+                <li class="list-item list-item--tappable">
+                    <label for="check1-3" class="list-item__center">
+                        <div class="row row-20 align-center">
+                            <div class="col list-mb-4">
+                              <div class="row row-8 align-items-center">
+                                <div class="col-auto"><div class="font-weight-700 font-size-14 color-main">Nguyễn Văn C</div></div>
+                              </div>                                
+                                <div class="font-weight-700 font-size-14 color-main">0123456789</div>
+                                <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                              </div>
+                          <div class="col-auto pr0">
+                            <div class="box-24">
+                                <a href="javascript:;" onclick="showsheet()">
+                                    <i class="icon icon_16 icon_filter_line color-main"></i>
+                                </a>                              
+                            </div>
+                          </div>
+                          
+                        </div>
+                    </label>
+                    <div class="list-item__left">
+                    <label class="radio-button">
+                        <input type="radio" id="check1-3" class="radio-button__input" name="check1">
+                        <div class="radio-button__checkmark"></div>
+                    </label>
+                    </div>
+                </li>
+                </ul>
+            
+            
+
+          </div>
+        
+      </div>
+    </div>
+    <ons-action-sheet someAttribute="true" anotherAttribute>
+        <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet()">
+        </div>
+        <div class="action-sheet action-sheet-bottom action-sheet--material">   
+            <div class="sheet-title action-sheet-title action-sheet-title--material" onclick="hidesheet()">
+                <div class="main">
+                    <div class="row row-8 align-center height-sheet-title">
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close">&nbsp;</a>
+                        </div>
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700 text-center">Cài đặt</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>   
+          <div class="sheet-cont">
+            <div class="box box-list-icon">
+                <div class="main">
+                  <div class="box-list-bor no-icon">
+                    <div class="block">
+                        <a href="pages/product/thong-tin-nhan-hang-edit.html" class="font-size-14 font-weight-700 title-link arrow-right-24">
+                          <div class="row row-8 align-center">
+                            <div class="col-auto">
+                              <div class="box-24">
+                                <i class="icon icon_24 icon_edit color-main"></i>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <span class="font-weight-700 font-size-14 color-main">Chỉnh sửa</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>  
+                      <div class="block">
+                        <a onclick="showModal_Delete()" href="javascript:;" class="font-size-14 font-weight-700 title-link arrow-right-24">
+                          <div class="row row-8 align-center">
+                            <div class="col-auto">
+                              <div class="box-24">
+                                <i class="icon icon_24 icon_delete color-main"></i>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <span class="font-weight-700 font-size-14 color-main">Xoá</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>                    
+    
+                  </div>              
+                </div>
+              </div>  
+          </div>  
+        </div>  
+    </ons-action-sheet>
+            <ons-modal direction="up">
+                <div class="modal-js">
+                    <div class="modal-header">
+                        <div class="main">
+                            <div class="row row-8 align-center">
+                                <div class="col">
+                                    <div class="color-main font-size-14 font-weight-700">Xoá thông tin nhận hàng</div>                                            
+                                </div>
+                                <div class="col-auto">
+                                    <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="modal-body">
+                        <div class="font-size-13 font-weight-400 text-secondary">Bạn có chắc chắn muốn xoá thông tin nhận hàng này</div>
+    
+                    </div>
+                    <div class="modal-footer">
+                        <div class="button-form">
+                            <div class="button-form-cont">
+                              <div class="row row-12">
+                                <div class="col-6">
+                                  <button onclick="hideModal()" class="button width-100 button-md button--outline">
+                                    Huỷ
+                                  </button>
+                                </div>
+                                <div class="col-6">
+                                  <button onclick="myToast.toggle(), hideModal(), hidesheet()" class="button width-100 button-md">
+                                    Xóa
+                                   </button>              
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+    
+                    </div>                    
+                </div>              
+              </ons-modal>
+              <ons-toast id="myToast" animation="ascend" class="toast-success toast-bottom">
+                <div class="row row-8 align-center">
+                  <div class="col-auto flex">
+                    <i class="icon icon_24 icon_success color-success"></i>
+                  </div>
+                  <div class="col flex">
+                    <span class="color-main font-size-13">Xoá thông tin nhận hàng thành công</span>
+                  </div>
+                </div>
+                 
+                <button onclick="myToast.hide()"><i class="icon icon_24 icon_x text-secondary"></i></button>
+              </ons-toast>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+    <script src="js/custom.js"></script>
+    <!--myToast-->
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $("#myToast").hide()
+        }, 5000);
+      });
+    </script>
+    <!--myToast end-->
+    <script>
+        function showsheet() {
+          var sheet = document.querySelector("ons-action-sheet");
+          sheet.show();
+        }
+        function hidesheet() {
+          var sheet = document.querySelector("ons-action-sheet");
+          sheet.hide();
+        }
+      </script>
+      
+      <script>
+        function showModal_Delete() {
+  var modal = document.querySelector('ons-modal');
+  modal.show();
+}
+function hideModal() {
+          var modal = document.querySelector("ons-modal");
+          modal.hide();
+        }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>    
+    <div class="page page-order">
+        <div class="toolbar align-center flex">
+            <div class="toolbar__left">
+              <a href="index.html" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+              </a>
+            </div>
+            <div class="toolbar__center align-center">
+                <div class="font-size-14 font-weight-700">Quản lý đơn hàng</div>
+            </div>
+            <div class="toolbar__right">
+                &nbsp;
+            </div>
+          </div>
+          <div class="toolbar toolbar-sub1 align-center flex">
+            <div class="toolbar__center">
+              <div class="form-group width-100">
+                <div
+                  class="input-group-wrap input-default input-size-md input-group-vertical"
+                >
+                  <label class="input-inner-wrap">
+                    <input
+                      type=""
+                      class="input search-input input-label-change input-has-clear"
+                      placeholder="Tìm kiếm đơn hàng"
+                      required
+                      autocorrect="off"
+                    />
+                    <div class="input-extend input-extend-right">
+                      <div class="input-box input-ic-clear"></div>
+                    </div>
+                    <div class="input-frame"></div>
+                  </label>
+                </div>
+                <div class="errorBlock"></div>
+              </div>
+            </div>
+          </div>
+          <div class="toolbar toolbar-no-padding toolbar-sub toolbar-sub2 align-center flex">
+            <div class="toolbar__center">
+              <div class="box-glider glider-contain">
+                <div class="glider-order glider">
+                  <div class="glider-slide label-radio">
+                    <label>
+                      <input type="radio" name="label-radio" checked />
+                      <span class="font-size-13 font-weight-700 color-disabled"
+                        >Tất cả đơn</span
+                      >
+                    </label>
+                  </div>
+                  <div class="glider-slide label-radio">
+                    <label>
+                      <input type="radio" name="label-radio" />
+                      <span class="font-size-13 font-weight-700 color-disabled"
+                        >Chờ thanh toán</span
+                      >
+                    </label>
+                  </div>
+                  <div class="glider-slide label-radio">
+                    <label>
+                      <input type="radio" name="label-radio" />
+                      <span class="font-size-13 font-weight-700 color-disabled"
+                        >Đang xử lý</span
+                      >
+                    </label>
+                  </div>
+                  <div class="glider-slide label-radio">
+                    <label>
+                      <input type="radio" name="label-radio" />
+                      <span class="font-size-13 font-weight-700 color-disabled"
+                        >Đã giao</span
+                      >
+                    </label>
+                  </div>
+                  <div class="glider-slide label-radio">
+                    <label>
+                      <input type="radio" name="label-radio" />
+                      <span class="font-size-13 font-weight-700 color-disabled"
+                        >Đã hủy</span
+                      >
+                    </label>
+                  </div>
+                </div>
+              </div>             
+            </div>
+          </div>
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="box-show list-box-bor">
+          <div class="box-order">
+            <div class="main">
+              <div class="list-mb-16">
+                <div class="row row-8">
+                  <div class="col list-mb-8">
+                    <div class="font-size-13 font-weight-700">Đơn hàng: 123456789</div>
+                    <div class="font-size-12 font-weight-400 text-secondary">09:00, Thứ 6 17/10/2023</div>                    
+                  </div>
+                  <div class="col-auto">
+                    <div class="chip chip-24 chip-outline outline-warning">
+                      <div class="chip-label font-size-12 font-weight-600">Chờ thanh toán</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-12">
+                  <div class="col-auto">
+                    <div class="box-77">
+                      <img src="demo/product_124.png">
+                    </div>
+      
+                  </div>
+                  <div class="col list-mb-8 overflow-hidden">
+                      <div class="title-normal font-size-13 font-weight-700">
+                          Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                      </div>
+                      <div class="type mb16">
+                          <div class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám , L</div>
+                      </div>
+                    <div class="price-main mb0">
+                      <div class="row row-8 align-center">
+                        <div class="col">
+                          <div class="font-size-13 font-weight-600 text-secondary">+2 sản phẩm khác</div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="font-size-16 font-weight-800">400.000đ</div>
+                        </div>
+                      </div>                        
+                    </div>
+                  </div>
+                  
+      
+                </div>
+                <div class="row row-8 align-center border-top pt8">
+                  <div class="col flex">
+                    <a href="pages/order/order-cho-thanh-toan.html" class="flex list-mr-8 align-center">
+                      <span class="font-size-13 font-weight-600 text-secondary">Chi tiết đơn hàng</span> <i class="icon icon_16 icon_arrow_right color-secondary"></i>
+                    </a>                    
+                  </div>
+                  <div class="col-auto">
+                    <a href="pages/product/confirm.html" class="button width-100 button-sm">
+                      Thanh toán ngay
+                    </a>
+                  </div>
+                </div>
+                <div class="alert alert-danger">
+                  <div class="row row-8">
+                      <div class="col-auto flex">
+                        <i class="icon icon_16 icon_aleft_danger color-danger"></i>
+                      </div>
+                      <div class="col flex">
+                        <span class="font-size-13">Thời gian thanh toán còn:</span>
+                        <span class="font-size-13 font-weight-700">30:00</span>
+                      </div>
+                    </div>         
+              </div>
+              </div>                
+            </div>
+        </div>
+        <div class="box-order">
+          <div class="main">
+            <div class="list-mb-16">
+              <div class="row row-8">
+                <div class="col list-mb-8">
+                  <div class="font-size-13 font-weight-700">Đơn hàng: 123456789</div>
+                  <div class="font-size-12 font-weight-400 text-secondary">09:00, Thứ 6 17/10/2023</div>                    
+                </div>
+                <div class="col-auto">
+                  <div class="chip chip-24 chip-outline outline-info">
+                    <div class="chip-label font-size-12 font-weight-600">Đang xử lý</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-12">
+                <div class="col-auto">
+                  <div class="box-77">
+                    <img src="demo/product_124.png">
+                  </div>
+    
+                </div>
+                <div class="col list-mb-8 overflow-hidden">
+                    <div class="title-normal font-size-13 font-weight-700">
+                        Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                    </div>
+                    <div class="type mb16">
+                        <div class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám , L</div>
+                    </div>
+                  <div class="price-main mb0">
+                    <div class="row row-8 align-center">
+                      <div class="col">
+                        <div class="font-size-13 font-weight-600 text-secondary">+2 sản phẩm khác</div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="font-size-16 font-weight-800">400.000đ</div>
+                      </div>
+                    </div>                        
+                  </div>
+                </div>
+                
+    
+              </div>
+              <div class="row row-8 align-center border-top pt8">
+                <div class="col flex">
+                  <a href="pages/order/order-dang-xy-ly-01.html" class="flex list-mr-8 align-center">
+                    <span class="font-size-13 font-weight-600 text-secondary">Chi tiết đơn hàng</span> <i class="icon icon_16 icon_arrow_right color-secondary"></i>
+                  </a>                    
+                </div>
+                <div class="col-auto">
+                  <a href="pages/product/confirm.html" class="button width-100 button-sm">
+                    Mua lại
+                  </a>
+                </div>
+              </div>
+            </div>                
+          </div>
+      </div>
+      <div class="box-order">
+        <div class="main">
+          <div class="list-mb-16">
+            <div class="row row-8">
+              <div class="col list-mb-8">
+                <div class="font-size-13 font-weight-700">Đơn hàng: 123456789</div>
+                <div class="font-size-12 font-weight-400 text-secondary">09:00, Thứ 6 17/10/2023</div>                    
+              </div>
+              <div class="col-auto">
+                <div class="chip chip-24 chip-outline outline-success">
+                  <div class="chip-label font-size-12 font-weight-600">Đã giao</div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-12">
+              <div class="col-auto">
+                <div class="box-77">
+                  <img src="demo/product_124.png">
+                </div>
+  
+              </div>
+              <div class="col list-mb-8 overflow-hidden">
+                  <div class="title-normal font-size-13 font-weight-700">
+                      Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                  </div>
+                  <div class="type mb16">
+                      <div class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám , L</div>
+                  </div>
+                <div class="price-main mb0">
+                  <div class="row row-8 align-center">
+                    <div class="col">
+                      <div class="font-size-13 font-weight-600 text-secondary">+2 sản phẩm khác</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="font-size-16 font-weight-800">400.000đ</div>
+                    </div>
+                  </div>                        
+                </div>
+              </div>
+              
+  
+            </div>
+            <div class="row row-8 align-center border-top pt8">
+              <div class="col flex">
+                <a href="pages/order/order-da-giao.html" class="flex list-mr-8 align-center">
+                  <span class="font-size-13 font-weight-600 text-secondary">Chi tiết đơn hàng</span> <i class="icon icon_16 icon_arrow_right color-secondary"></i>
+                </a>                    
+              </div>
+              <div class="col-auto">
+                <a href="pages/product/confirm.html" class="button width-100 button-sm">
+                  Mua lại
+                </a>
+              </div>
+            </div>
+          </div>                
+        </div>
+    </div>
+    <div class="box-order">
+      <div class="main">
+        <div class="list-mb-16">
+          <div class="row row-8">
+            <div class="col list-mb-8">
+              <div class="font-size-13 font-weight-700">Đơn hàng: 123456789</div>
+              <div class="font-size-12 font-weight-400 text-secondary">09:00, Thứ 6 17/10/2023</div>                    
+            </div>
+            <div class="col-auto">
+              <div class="chip chip-24 chip-outline outline-danger">
+                <div class="chip-label font-size-12 font-weight-600">Đã huỷ</div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-12">
+            <div class="col-auto">
+              <div class="box-77">
+                <img src="demo/product_124.png">
+              </div>
+
+            </div>
+            <div class="col list-mb-8 overflow-hidden">
+                <div class="title-normal font-size-13 font-weight-700">
+                    Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                </div>
+                <div class="type mb16">
+                    <div class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám , L</div>
+                </div>
+              <div class="price-main mb0">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <div class="font-size-13 font-weight-600 text-secondary">+2 sản phẩm khác</div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="font-size-16 font-weight-800">400.000đ</div>
+                  </div>
+                </div>                        
+              </div>
+            </div>
+            
+
+          </div>
+          <div class="row row-8 align-center border-top pt8">
+            <div class="col flex">
+              <a href="pages/order/order-da-huy.html" class="flex list-mr-8 align-center">
+                <span class="font-size-13 font-weight-600 text-secondary">Chi tiết đơn hàng</span> <i class="icon icon_16 icon_arrow_right color-secondary"></i>
+              </a>                    
+            </div>
+            <div class="col-auto">
+              <a href="pages/product/confirm.html" class="button width-100 button-sm">
+                Mua lại
+              </a>
+            </div>
+          </div>
+        </div>                
+      </div>
+  </div>
+        </div>
+        <div class="box-hide">
+          <div class="box-order">
+            <div class="main">
+              <div class="list-mb-16">
+                <div class="row row-8">
+                  <div class="col list-mb-8">
+                    <div class="font-size-13 font-weight-700">Đơn hàng: 123456789</div>
+                    <div class="font-size-12 font-weight-400 text-secondary">09:00, Thứ 6 17/10/2023</div>                    
+                  </div>
+                  <div class="col-auto">
+                    <div class="chip chip-24 chip-outline outline-info">
+                      <div class="chip-label font-size-12 font-weight-600">Đang xử lý</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-12">
+                  <div class="col-auto">
+                    <div class="box-77">
+                      <img src="demo/product_124.png">
+                    </div>
+      
+                  </div>
+                  <div class="col list-mb-8 overflow-hidden">
+                      <div class="title-normal font-size-13 font-weight-700">
+                          Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                      </div>
+                      <div class="type mb16">
+                          <div class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám , L</div>
+                      </div>
+                    <div class="price-main mb0">
+                      <div class="row row-8 align-center">
+                        <div class="col">
+                          <div class="font-size-13 font-weight-600 text-secondary">+2 sản phẩm khác</div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="font-size-16 font-weight-800">400.000đ</div>
+                        </div>
+                      </div>                        
+                    </div>
+                  </div>
+                  
+      
+                </div>
+                <div class="row row-8 align-center border-top pt8">
+                  <div class="col flex">
+                    <a href="pages/order/order-dang-xy-ly-01.html" class="flex list-mr-8 align-center">
+                      <span class="font-size-13 font-weight-600 text-secondary">Chi tiết đơn hàng</span> <i class="icon icon_16 icon_arrow_right color-secondary"></i>
+                    </a>                    
+                  </div>
+                  <div class="col-auto">
+                    <a href="pages/product/confirm.html" class="button width-100 button-sm">
+                      Mua lại
+                    </a>
+                  </div>
+                </div>
+              </div>                
+            </div>
+        </div>
+        </div>
+        <div class="box-not-found list-border-4">
+          <div class="box not-found list-mb-4">
+            <div class="icon_160 icon-not-found"></div>
+            <div class="font-size-14 font-weight-600">Không tìm thấy kết quả phù hợp</div>
+            <div class="font-size-12 font-weight-400 color-secondary">Hãy thử <span class="font-weight-600 color-primary">từ khoá khác</span> nhé!</div>
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+    <script src="js/custom.js"></script>
+    <script>
+      $(document).ready(function () {
+          //Glider
+new Glider(document.querySelector(".glider-order"), {
+  slidesToShow: 4.5,
+  slidesToScroll: 1,
+  draggable: true,
+  dots: false,
+});
+
+//Glider end
+      });
+  </script>
+    <script>
+      $(document).ready(function () {
+      //search
+      $(".search-input").on("paste keyup change", function () {
+      if ($(this).val() == "kem" || $(this).val() == "Kem" || $(this).val() == "K" || $(this).val() == "Ke" || $(this).val() == "k" || $(this).val() == "ke") {
+        $('.box-hide').addClass('show');
+        $('.box-show').addClass('hiddren');
+        $('.box-not-found').removeClass('show');
+      } 
+      else if ($(this).val() == "") {
+        $('.box-hide').removeClass('show');
+        $('.box-show').removeClass('hiddren');
+        $('.box-not-found').removeClass('show');
+      }
+      else if ($(this).val() != "kem") {
+        $('.box-hide').removeClass('show');
+        $('.box-show').addClass('hiddren');
+        $('.box-not-found').addClass('show');
+      }
+      });
+      //end search
+      });
+    </script>
+  </body>
+</html>

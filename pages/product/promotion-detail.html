@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>
+    <div class="page page-promotion-detail">
+      <div class="toolbar toolbar-tran align-center flex">
+        <div class="toolbar__left">
+          <a href="pages/product/promotion.html" class="button button--quiet">
+            <i class="icon icon_24 icon_back color-main"></i>
+          </a>
+        </div>
+        <div class="toolbar__center align-center">
+            <div class="font-size-14 font-weight-700">Khuyến mại liên quan</div>
+        </div>
+        <div class="toolbar__right">
+            &nbsp;
+        </div>
+      </div>
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="box-pic">
+            <img src="demo/banner-promotion.jpg">
+        </div>
+        <div class="box-ticket">
+            <div class="main">
+                <div class="box-white-shadow">
+                    <div class="box-white-top text-center">
+                        <div class="promotion-ticket">
+                            <div class="chip chip-sm chip-primary-light">
+                                <div class="chip-media">
+                                  <i class="icon_16 icon icon_ticket color-primary"></i>
+                                </div>
+                                <div class="chip-label text-upper font-size-12">VNSHOP9</div>
+                                <button class="button button-16 button--quiet pr0">
+                                    <i class="icon icon_16 icon_copy color-primary"></i>
+                                </button>
+                              </div>
+                        </div>                        
+
+                    </div>
+                    <div class="box-white-cont">
+                        <div class="font-size-18 font-weight-700 text-center">Giảm 9% tối đa 99k cho đơn từ 100.000đ</div>
+                    </div>
+                    <div class="box-white-bottom text-center">
+                        <div class="font-size-12 font-weight-400 text-secondary text-center">HSD: 09/09/2023</div>
+                    </div>
+
+                </div>   
+            </div>
+          
+
+        </div>
+        <div class="box-regular">
+            <div class="main">
+<div class="box-list-bor">
+    <div class="block list-mb-8">
+        <div class="font-size-16 font-weight-700">Thời gian sử dụng</div>
+        <div class="font-size-14 font-weight-400 text-secondary">20/9/2023 00:00 - 30/09/2023 23:59</div>
+    </div>
+    <div class="block list-mb-8">
+        <div class="font-size-16 font-weight-700">Điều kiện áp dụng</div>
+        <ul class="list-dot text-secondary font-size-14">
+            <li><span class="font-weight-700">Giảm 10% tối đa 99.000đ</span> khi mua mọi sản phẩm</li>
+            <li>Tần suất áp dụng: 1 lần/khách hàng</li>
+            <li>Số lượng mã có hạn</li>
+            <li>Mã khuyến mãi được áp dụng cho mọi sản phẩm</li>
+        </ul>
+    </div>
+</div>
+            </div>
+        </div>
+        
+        
+
+      </div>
+      <div class="tabbar tabbar-auto">
+        <div class="button-form">
+            <div class="button-form-cont">
+                <a href="pages/product/cart.html" class="button width-100 button-md">
+                    Đồng ý
+                </a>
+
+            </div>
+
+        </div>
+        
+        
+      </div>
+    </div>
+    <ons-action-sheet someAttribute="true" anotherAttribute>
+      <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet()"></div>
+      <div class="action-sheet action-sheet-cart action-sheet--material">      
+        <div class="sheet-cont">
+          <div class="cart-top">
+            <button onclick="hidesheet()" class="button-close button button--quiet button-24"><i class="icon icon_24 ic_close color-main"></i></button>
+            <div class="main">
+              <div class="cart-top-cont">
+                <div class="row row-12 align-end">
+                  <div class="col-auto">
+                    <div class="box-124">
+                      <img src="demo/product_124.png">
+                      <button class="button-expand button button-gray-light button-24"><i class="icon icon_16 icon_expand color-main"></i></button>
+                    </div>
+      
+                  </div>
+                  <div class="col">
+                    <div class="price-main font-weight-800">
+                      <div class="font-size-16">2.000.000 đ</div>
+                    </div>
+                    <div class="price-sub font-size-12">
+                      <span class="price-sub-text">4.000.000 đ</span>
+                      <span class="price-sub-number">-11%</span>
+                    </div>
+                  </div>
+                  
+      
+                </div>
+              </div>
+              
+
+            </div>
+            
+          </div>
+          <div class="box">
+            <div class="title">
+              <div class="main">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <div class="font-size-14">MÀU SẮC</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main">
+              <div class="box-radio">
+                <div class="tabbar tabbar-sm tabbar--top">
+                  <label class="tabbar__item">
+                    <input type="checkbox" name="tabbar-radio1" checked="checked" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="checkbox" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="checkbox" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+                  <label class="tabbar__item">
+                    <input type="checkbox" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="checkbox" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="title">
+              <div class="main">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <div class="font-size-14">KÍCH THƯỚC</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main">
+              <div class="box-radio">
+                <div class="tabbar tabbar-sm tabbar--top">
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio2" checked />
+                    <button class="tabbar__button tabbar-button-bor">
+                      S
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio2" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      M
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio2" />
+                    <button class="tabbar__button tabbar-button-bor" disabled>
+                      L
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box box-number">
+            <div class="title mb0">
+              <div class="main">
+                <div class="box-number-cont">
+                  <div class="row row-8 align-center">
+                    <div class="col">
+                      <div class="font-size-14">SỐ LƯỢNG</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="item-number">
+                        <button class="item-number-left button button-xs button--light"><i class="icon icon_16 icon_minus color-main"></i></button>
+                        <button class="item-number-center button button-xs button--light font-size-13 font-weight-600">01</button>
+                        <button class="item-number-right button button-xs button--light"><i class="icon icon_16 icon_plus color-main"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="sheet-footer">
+          <div class="row row-0">
+            <div class="col">
+              <a href="pages/product/cart.html" onclick="hidesheet()" class="button button-primary button-md  width-100">Thêm vào giỏ hàng</a>
+            </div>
+          </div>
+        </div>      
+      </div>
+  
+    </ons-action-sheet>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+    <script src="js/custom.js"></script>
+    <script>
+      $(document).ready(function () {
+  //input clear
+  const buttonsearch = document.getElementById("button-search");
+  $(".input-has-clear").on("paste keyup change", function () {
+    var inputClear = $(this)
+      .closest(".input-inner-wrap")
+      .find(".input-ic-clear");
+    if ($(this).val()) {
+      buttonsearch.removeAttribute("disabled");
+    } else {
+      buttonsearch.setAttribute("disabled", "");
+    }
+  });
+  //end input clear  
+});
+    </script>
+  </body>
+</html>

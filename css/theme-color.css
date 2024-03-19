@@ -1,0 +1,167 @@
+:root {
+  --color-primary: #004a9c;
+  --color-primary-light: #dcecfe;
+  --border-primary-light: #c9e2ff;
+  --color-secondary: #e50019;
+  --color-secondary-500: #0077ff;
+  --color-secondary-400: #3392ff;
+  --color-secondary-300: #66adff;
+  --color-secondary-200: #cfe5ff;
+  --color-secondary-100: #eff6ff;
+  --color-secondary-light-300: #6fcaf6;
+  --color-secondary-light-200: #9fdcf9;
+  --color-gray-500: #aae0fa;
+  --color-gray-400: #4f4f4f;
+  --color-gray-300: #9c9c9c;
+  --color-gray-200: #bdbdbd;
+  --color-gray-100: #dadada;
+  --color-gray-50: #f0f0f0;
+  --color-gray-25: #f8f8f8;
+  --color-red-500: #e50019;
+  --color-red-400: #f2485a;
+  --color-red-300: #fd8a96;
+  --color-red-200: #ffe0e3;
+  --color-red-100: #fff5f6;
+  --brand-primary-main:#004A9C;
+/* Landing page */
+  --ldp_color_primary:#A52847;
+  --box_bg: #FEE0E0;
+  --ldp_box_bg: #FEE0E0; 
+  --ldp_background: #FEF0EE;
+  --ldp_text: #A52847;
+  --ldp_button: #A52847;
+  --ldp_bg_flash_sale:#FDDADE;
+  --ldp_disable:#F8C6C9;
+  --ldp_focus:#C95859;
+  --ldp_navigation:#C95859;
+  --ldp_bg_counting:rgba(253, 218, 213, 1);
+  --ldp_border_counting:#FDDAD5;
+  --ldp_color_counting:#C85458;
+  --price-box:rgba(254, 241, 242, 1);
+/* Landing page end*/
+  /* variables for iOS components */
+  --brand-primary-main:#004A9C;
+  --brand-primary-lightSellect:#F0F7FF;
+  --brand-100: #ebf4ff;
+  --brand-200: #d6e9ff;
+  --brand-300: #99c9ff;
+  --brand-500: #0072f5;
+  --brand-600: #004a9c;
+  --brand-700: #00438f;
+  --brand-900: #00397a;
+  --color-green: #52c41a;
+  --color-blue: #1890ff;
+  --color-info: #0084FF;
+  --color-success: rgba(50, 154, 78, 1);
+  --color-warning: #fa541c;
+  --color-info: #0084FF;
+  --color-danger: #E11E1E;
+  --color-processing: #40a9ff;
+  --border-color-success: #3EC161;
+  --border-color-warning: #fa541c;
+  --border-color-info: #0084FF;
+  --border-color-danger: #E11E1E;
+  --border-color-processing: #91d5ff;
+  --bg-guide: #ebf4ff;
+  --bg-default: #ebf4ff;
+  --bg-primary: #d6e9ff;
+  --bg-success: #f6ffed;
+  --bg-info: #ebf4ff;
+  --bg-warning: #ffbb96;
+  --bg-danger: #fde4e5;
+  --bg-danger-light: #fff2e8;
+  --bg-processing: #e6f7ff;
+  --color-dark: #00438f;
+  --bg-disabled: #f5f7fb;
+  --progress-bar-danger: rgba(225, 30, 30, 1);
+  --progress-bar-danger-light: rgba(225, 30, 30, 0.4);
+  --success-light:#F3FBF6;
+  --color-warning:rgba(255, 139, 0, 1);
+  --warning-warning-light:#FFF8F0;
+  --warning-warning-mainHover:#CC6F00;
+  --colors-secondary-turquoise-300:#6FCAF6;
+
+  --error-error-light:#FDF1F1;
+  --error-error-mainHover:#B41818;
+}
+.bg-brand-primary-lightSellect {background-color: var(--brand-primary-lightSellect);}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo-pic {
+  background-image: url(../general/logo.png);
+  width: 193px;
+  height: 48px;
+  content: "";
+  background-size: contain;
+  background-position: center center;
+}
+
+.icon_sales_01 {
+  background-image: url(../general/category/Sieu_sale_8.8.svg);
+}
+.icon_sales_02 {
+  background-image: url(../general/category/Gia_re_nhat.svg);
+}
+.icon_sales_03 {
+  background-image: url(../general/category/Dai_tiec_uu_dai.svg);
+}
+.icon_sales_04 {
+  background-image: url(../general/category/Chinh_hang_gia_re_nhat.svg);
+}
+.icon_sales_05 {
+  background-image: url(../general/category/Mien_phi_van_chuyen.svg);
+}
+.title_flash_sales {
+  background-image: url(../general/title-fash-sale.svg);
+}
+
+.icon_suggest_01 {
+  background-image: url(../general/category/icon_suggest_01.svg);
+}
+.icon_suggest_02 {
+  background-image: url(../general/category/icon_suggest_02.svg);
+}
+.icon_suggest_03 {
+  background-image: url(../general/category/icon_suggest_03.svg);
+}
+.icon_suggest_04 {
+  background-image: url(../general/category/icon_suggest_04.svg);
+}
+.icon_suggest_05 {
+  background-image: url(../general/category/icon_suggest_05.svg);
+}
+.flash_bg_price {
+  background-image: url(../general/bg/flash_bg_price.png);
+}
+.product-detail-flashsale, .toolbar-flashsale {
+  background-image: url(../general/bg/flash_bg.png);
+}
+.flashsale_end {
+  background-image: url(../general/icon/flashsale_end.svg);
+}
+.toolbar-tran.sticky {
+  background: var(--colors-secondary-turquoise-300);
+}
+.page-promotion-detail .toolbar-tran.sticky {
+  background: var(--color-white);
+}
+.page-product-detail .toolbar-tran.sticky, .page-landingpage .toolbar-tran.sticky {
+  background: linear-gradient(180deg, #fff 0%, #fff 100%);
+}
+.page-product-detail .sticky .icon.color-white {
+  color: var(--color-primary);
+}
+.page-landingpage .sticky .icon.color-white {
+  color: var(--color-main);
+}
+.page-product-detail .sticky .button-gray, .page-landingpage .sticky .button-gray {
+  background: var(--color-white);
+}
+.page-product-detail .toolbar__center {
+  opacity: 0;
+}
+.page-product-detail .sticky .toolbar__center {
+  opacity: 1;
+}

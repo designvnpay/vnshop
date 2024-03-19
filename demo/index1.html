@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script></script>
+  </head>
+
+  <body
+    data-gr-c-s-loaded="true"
+    class="ui-mobile-viewport ui-overlay-a"
+    style=""
+    data-feedly-mini="yes"
+  >
+    <!-- Start of first page: #one -->
+    <div
+      data-role="page"
+      id="one"
+      data-url="one"
+      tabindex="0"
+      class="ui-page ui-page-theme-a ui-page-active"
+      style=""
+    >
+      <div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+        <h1 class="ui-title" role="heading" aria-level="1">Multi-page</h1>
+      </div>
+      <!-- /header -->
+
+      <div role="main" class="ui-content">
+        <ons-page>
+          <ons-toolbar>
+            <div class="center">Action Sheet</div>
+          </ons-toolbar>
+
+          <p style="text-align: center">
+            <ons-button onclick="app.showFromTemplate()"
+              >Create from template</ons-button
+            >
+            <br /><br />
+            <ons-button onclick="app.showFromObject()"
+              >Create from object</ons-button
+            >
+          </p>
+        </ons-page>
+
+        <template id="action-sheet.html">
+          <ons-action-sheet cancelable title="From template">
+            <div class="sheet-cont">
+              <div class="cart-top">
+                <button
+                  onclick="hidesheet()"
+                  class="button-close button button--quiet button-24"
+                >
+                  <i class="icon icon_24 ic_close color-main"></i>
+                </button>
+                <div class="main">
+                  <div class="cart-top-cont">
+                    <div class="row row-12 align-end">
+                      <div class="col-auto">
+                        <div class="box-124">
+                          <img src="demo/product_124.png" />
+                          <button
+                            class="button-expand button button-gray-light button-24"
+                          >
+                            <i class="icon icon_16 icon_expand color-main"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="price-main font-weight-800">
+                          <div class="font-size-16">2.000.000 đ</div>
+                        </div>
+                        <div class="price-sub font-size-12">
+                          <span class="price-sub-text">4.000.000 đ</span>
+                          <span class="price-sub-number">-11%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="title">
+                  <div class="main">
+                    <div class="row row-8 align-center">
+                      <div class="col">
+                        <div class="font-size-14">MÀU SẮC</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main">
+                  <div class="box-radio">
+                    <div class="tabbar tabbar-sm tabbar--top">
+                      <label class="tabbar__item">
+                        <input
+                          type="checkbox"
+                          name="tabbar-radio1"
+                          checked="checked"
+                        />
+                        <button class="tabbar__button tabbar-button-bor">
+                          Giày bóng rổ
+                        </button>
+                      </label>
+
+                      <label class="tabbar__item">
+                        <input type="checkbox" name="tabbar-radio1" />
+                        <button class="tabbar__button tabbar-button-bor">
+                          Giày bóng rổ
+                        </button>
+                      </label>
+
+                      <label class="tabbar__item">
+                        <input type="checkbox" name="tabbar-radio1" />
+                        <button class="tabbar__button tabbar-button-bor">
+                          Giày bóng rổ
+                        </button>
+                      </label>
+                      <label class="tabbar__item">
+                        <input type="checkbox" name="tabbar-radio1" />
+                        <button class="tabbar__button tabbar-button-bor">
+                          Giày bóng rổ
+                        </button>
+                      </label>
+
+                      <label class="tabbar__item">
+                        <input type="checkbox" name="tabbar-radio1" />
+                        <button class="tabbar__button tabbar-button-bor">
+                          Giày bóng rổ
+                        </button>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="title">
+                  <div class="main">
+                    <div class="row row-8 align-center">
+                      <div class="col">
+                        <div class="font-size-14">KÍCH THƯỚC</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main">
+                  <div class="box-radio">
+                    <div class="tabbar tabbar-sm tabbar--top">
+                      <label class="tabbar__item mb0">
+                        <input type="radio" name="tabbar-radio2" checked="" />
+                        <button class="tabbar__button tabbar-button-bor">
+                          S
+                        </button>
+                      </label>
+
+                      <label class="tabbar__item mb0">
+                        <input type="radio" name="tabbar-radio2" />
+                        <button class="tabbar__button tabbar-button-bor">
+                          M
+                        </button>
+                      </label>
+
+                      <label class="tabbar__item mb0">
+                        <input type="radio" name="tabbar-radio2" />
+                        <button
+                          class="tabbar__button tabbar-button-bor"
+                          disabled=""
+                        >
+                          L
+                        </button>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box box-number">
+                <div class="title mb0">
+                  <div class="main">
+                    <div class="box-number-cont">
+                      <div class="row row-8 align-center">
+                        <div class="col">
+                          <div class="font-size-14">SỐ LƯỢNG</div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-number">
+                            <button
+                              class="item-number-left button button-xs button--light"
+                            >
+                              <i class="icon icon_16 icon_minus color-main"></i>
+                            </button>
+                            <button
+                              class="item-number-center button button-xs button--light font-size-13 font-weight-600"
+                            >
+                              01
+                            </button>
+                            <button
+                              class="item-number-right button button-xs button--light"
+                            >
+                              <i class="icon icon_16 icon_plus color-main"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ons-action-sheet>
+        </template>
+        <br />
+
+        <ons-list modifier="inset">
+          <ons-list-header>Inset list</ons-list-header>
+          <ons-list-item modifier="longdivider">Item A</ons-list-item>
+          <ons-list-item modifier="longdivider">Item B</ons-list-item>
+        </ons-list>
+        <h2>One</h2>
+        <p>
+          <a href="#two" class="ui-btn ui-shadow ui-corner-all"
+            >Show page "two"</a
+          >
+        </p>
+        <p>
+          <a
+            href="#popup"
+            class="ui-btn ui-shadow ui-corner-all"
+            data-rel="dialog"
+            data-transition="pop"
+            >Show page "popup" (as a dialog)</a
+          >
+        </p>
+      </div>
+      <!-- /content -->
+
+      <div
+        data-role="footer"
+        data-theme="a"
+        role="contentinfo"
+        class="ui-footer ui-bar-a"
+      >
+        <h4 class="ui-title" role="heading" aria-level="1">Page Footer</h4>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page one -->
+
+    <!-- Start of second page: #two -->
+    <div data-role="page" id="two" data-theme="a" data-url="two">
+      <div data-role="header">
+        <h1>Two</h1>
+      </div>
+      <!-- /header -->
+
+      <div role="main" class="ui-content">
+        <h2>Two</h2>
+        <p>
+          I have an id of "two" on my page container. I'm the second page
+          container in this multi-page template.
+        </p>
+        <p>
+          Notice that the theme is different for this page because we've added a
+          few <code>data-theme</code> swatch assigments here to show off how
+          flexible it is. You can add any content or widget to these pages, but
+          we're keeping these simple.
+        </p>
+        <p>
+          <a
+            href="#one"
+            data-direction="reverse"
+            class="ui-btn ui-shadow ui-corner-all ui-btn-b"
+            >Back to page "one"</a
+          >
+        </p>
+      </div>
+      <!-- /content -->
+
+      <div data-role="footer">
+        <h4>Page Footer</h4>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page two -->
+
+    <!-- Start of third page: #popup -->
+    <div data-role="page" id="popup" data-url="popup">
+      <div data-role="header" data-theme="b">
+        <h1>Dialog</h1>
+      </div>
+      <!-- /header -->
+
+      <div role="main" class="ui-content">
+        <h2>Popup</h2>
+        <p>
+          I have an id of "popup" on my page container and only look like a
+          dialog because the link to me had a
+          <code>data-rel="dialog"</code> attribute which gives me this inset
+          look and a <code>data-transition="pop"</code> attribute to change the
+          transition to pop. Without this, I'd be styled as a normal page.
+        </p>
+        <p>
+          <a
+            href="#one"
+            data-rel="back"
+            class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"
+            >Back to page "one"</a
+          >
+        </p>
+      </div>
+      <!-- /content -->
+
+      <div data-role="footer">
+        <h4>Page Footer</h4>
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page popup -->
+
+    <div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+      <span class="ui-icon-loading"></span>
+      <h1>loading</h1>
+    </div>
+    <div id="weava-permanent-marker" date="1538710288557"></div>
+    <div id="feedly-mini" title="feedly Mini tookit"></div>
+    <div id="weava-ui-wrapper">
+      <div class="weava-drop-area-wrapper">
+        <div class="weava-drop-area"></div>
+        <div class="weava-drop-area-text">Drop here!</div>
+      </div>
+    </div>
+    <script>
+      var app = {};
+
+      ons.ready(function () {
+        ons
+          .createElement("action-sheet.html", { append: true })
+          .then(function (sheet) {
+            app.showFromTemplate = sheet.show.bind(sheet);
+            app.hideFromTemplate = sheet.hide.bind(sheet);
+          });
+      });
+    </script>
+  </body>
+</html>

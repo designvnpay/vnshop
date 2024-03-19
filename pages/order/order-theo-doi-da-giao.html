@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>
+    <div class="page page-order-detail">
+        <div class="toolbar toolbar-tran align-center flex">
+            <div class="toolbar__left">
+              <a href="pages/order/" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+              </a>
+            </div>
+            <div class="toolbar__center align-center">
+                <div class="font-size-14 font-weight-700">Chi tiết đơn hàng</div>
+            </div>
+            <div class="toolbar__right">
+                <button class="button button--quiet">
+                    &nbsp;
+                </button>
+            </div>
+          </div>
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="order-icon order-icon-01">
+            <div class="order-icon-cont text-center">
+                <div class="box-order-icon mb8"><i class="icon icon_36 icon_order_01 color-white"></i></div>
+                <div class="font-size-22 font-weight-700 mb4">Đã giao</div>
+                <div class="font-size-12 font-weight-400 text-secondary">Giao hàng thành công</div>
+            </div>            
+        </div>
+        <div class="list-box-bor">
+        <div class="main">
+            <div class="box-gray-default list-mb-8 mb20">
+                <div class="row row-8 align-items-center">
+                    <div class="col">
+                        <div class="row row-8 align-items-center">
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700">0123456789-01</div>                                
+                            </div>
+                            <div class="col-auto">
+                                <button class="button button-16 button--quiet pr0">                                  
+                                    <i class="icon icon_16 icon_copy text-secondary"></i>
+                                  </button> 
+                            </div>
+                        </div>                      
+                    </div>
+                    <div class="col-auto">
+                        <button class="button button--quiet pd0 align-center" onclick="sheet_order_detail()">
+                          <span class="color-primary font-size-13 font-weight-600">2 vận đơn</span>
+                            <i class="icon icon_16 icon_arrow_right color-primary"></i>                                
+                          </button> 
+                    </div>
+                </div>
+                <div class="row row-8 align-center">
+                    <div class="col">
+                        <span class="font-weight-400 font-size-12 text-secondary">Được giao bởi Công ty DHL</span>
+                    </div>
+                    </div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item row row-12 active">
+                <div class="col-auto timeline-left">
+                  <div class="font-size-12 font-weight-400 text-secondary">17 tháng 11<br>10:13</div>
+                </div>
+                <div class="col-auto timeline-center">
+                  <div class="timeline-item-divider">
+                    <div class="box-24">
+                      <i class="icon icon_16 icon_order_01"></i>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="col timeline-right">
+                  <div class="font-size-14 font-weight-700 text-disabled mb4">Đã giao</div>
+                </div>
+              </div>
+              <div class="timeline-item row row-12">
+                <div class="col-auto timeline-left">
+                  <div class="font-size-12 font-weight-400 text-secondary">17 tháng 11<br>10:13</div>
+                </div>
+                <div class="col-auto timeline-center">
+                  <div class="timeline-item-divider">
+                    <div class="box-24">
+                      <i class="icon icon_16 icon_order_02"></i>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="col timeline-right">
+                  <div class="font-size-14 font-weight-700 text-disabled mb4">Đang vận chuyển</div>
+                </div>
+              </div>
+              <div class="timeline-item row row-12">
+                <div class="col-auto timeline-left">
+                  <div class="font-size-12 font-weight-400 text-secondary">17 tháng 11<br>10:13</div>
+                </div>
+                <div class="col-auto timeline-center">
+                  <div class="timeline-item-divider">                
+                  </div>
+                </div>
+                <div class="col timeline-right">
+                  <div class="font-size-14 font-weight-700 text-disabled mb4">Đang xử lý</div>
+                </div>
+              </div>
+              <div class="timeline-item row row-12">
+                <div class="col-auto timeline-left">
+                  <div class="font-size-12 font-weight-400 text-secondary">17 tháng 11<br>10:13</div>
+                </div>
+                <div class="col-auto timeline-center">
+                  <div class="timeline-item-divider">                
+                  </div>
+                </div>
+                <div class="col timeline-right">
+                  <div class="font-size-14 font-weight-700 text-disabled mb4">Đang xử lý</div>
+                </div>
+              </div>
+              <div class="timeline-item row row-12">
+                <div class="col-auto timeline-left">
+                  <div class="font-size-12 font-weight-400 text-secondary">17 tháng 11<br>10:13</div>
+                </div>
+                <div class="col-auto timeline-center">
+                  <div class="timeline-item-divider">
+                    <div class="box-24">
+                      <i class="icon icon_16 icon_order_04"></i>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="col timeline-right">
+                  <div class="font-size-14 font-weight-700 text-disabled mb4">Chờ giao hàng</div>
+                </div>
+              </div>
+            </div>
+        </div>
+            
+        </div>
+      </div>
+      <div class="tabbar tabbar-auto">
+        <div class="button-form">
+          <div class="button-form-cont">
+            <a href="pages/order/order-da-giao.html" class="button width-100 button-md">
+              Xem chi tiết đơn hàng
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ons-action-sheet class="sheet_order_detail" someAttribute="true" anotherAttribute>
+        <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet_order_detail()">
+        </div>
+        <div class="action-sheet action-sheet-bottom action-sheet--material">   
+            <div class="sheet-title action-sheet-title action-sheet-title--material" onclick="hidesheet_order_detail()">
+                <div class="main">
+                    <div class="row row-8 align-center height-sheet-title">
+                      <div class="col-auto">
+                        <i class="icon_24"></i>
+                      </div>
+                        <div class="col">
+                          <div class="color-main font-size-14 font-weight-700 text-center mb2">Danh sách vận đơn</div>
+                          <div class="color-secondary font-size-12 font-weight-400 text-center">Bạn có thể sao chép và tra cứu vận đơn</div>                                          
+                        </div>
+                        <div class="col-auto">
+                          <i class="icon icon_24 icon_x color-main"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>   
+          <div class="sheet-cont pt16">
+            <div class="main">
+                <div class="list-mb-24">
+                    <div class="box-list-bor">
+                      <div class="row row-8">
+                        <div class="col">
+                          <div class="font-size-14 font-weight-700">Vận đơn: 0123456789-01-01</div>                           
+                        </div>
+                        <div class="col-auto">
+                          <button class="button button-24 button--quiet pr0">                                  
+                            <i class="icon icon_16 icon_copy text-secondary"></i>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="row row-8">
+                      <div class="col">
+                        <div class="font-size-14 font-weight-700">Vận đơn: 0123456789-01-02</div>                           
+                      </div>
+                      <div class="col-auto">
+                        <button class="button button-24 button--quiet pr0">                                  
+                          <i class="icon icon_16 icon_copy text-secondary"></i>
+                        </button>
+                      </div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+             
+          </div>  
+        </div>  
+    </ons-action-sheet>     
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+    <script src="js/custom.js"></script>
+    <!--myToast-->
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $("#myToast").hide()
+        }, 5000);
+      });
+    </script>
+    <!--myToast end-->
+    <script>
+      function sheet_order_detail() {
+        var sheet = document.querySelector(".sheet_order_detail");
+        sheet.show();
+      }
+      function hidesheet_order_detail() {
+        var sheet = document.querySelector(".sheet_order_detail");
+        sheet.hide();
+      }
+    </script>
+  </body>
+</html>

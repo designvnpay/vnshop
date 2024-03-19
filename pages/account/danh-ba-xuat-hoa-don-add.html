@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>    
+    <div class="page page-account">
+        <div class="toolbar align-center flex">
+            <div class="toolbar__left">
+              <a href="pages/account/danh-ba-xuat-hoa-don.html" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+              </a>
+            </div>
+            <div class="toolbar__center align-center">
+                <div class="font-size-14 font-weight-700">Xuất hoá đơn GTGT</div>
+            </div>
+            <div class="toolbar__right">
+                <button class="button button--quiet">
+                    &nbsp;
+                </button>
+            </div>
+          </div>
+          <div class="toolbar toolbar-sub height-48 align-center flex">
+            <div class="tab tab-color mb12 width-100">
+                <div class="row row-0 width-100">
+                    <div class="col">
+                        <button class="tablinks tablinks-tab1 font-size-13 font-weight-700 active" onclick="openCity(event, 'tab1')">Đã có Mã số thuế</button> 
+                    </div>
+                    <div class="col">
+                        <button class="tablinks tablinks-tab2 font-size-13 font-weight-700" onclick="openCity(event, 'tab2')">Chưa có Mã số thuế</button>  
+                    </div>
+                </div>
+              </div>
+
+          </div>
+          
+      <div class="page__background"></div>
+      <div class="page__content pt16">
+        <div class="box-tab">                  
+                <div id="tab1" class="tabcontent" style="display: block;">
+                    <div class="box-alert mb24">
+                        <div class="main">
+                          <div class="alert alert-warning">
+                            <div class="row row-8">
+                                <div class="col-auto flex">
+                                  <i class="icon icon_16 icon_aleft color-warning"></i>
+                                </div>
+                                <div class="col flex">
+                                  <span class="font-size-13">Trường hợp các đơn vị, tổ chức và cá nhân chưa có Mã số thuế, vui lòng chọn Yêu cầu xuất hoá đơn Chưa có Mã số thuế</span>
+                                </div>
+                              </div>         
+                        </div>
+                        </div>
+                      </div>       
+              
+                      <div class="box box-form">
+                          <div class="main">
+                              <div class="form">
+                                      <button class="button button--quiet pd0" onclick="showsheet_contract()">
+                                          <div class="row row-8 align-center">
+                                              <div class="col-auto flex">
+                                                  <i class="icon icon_20 icon_contract color-primary"></i>
+                                              </div>
+                                          <div class="col flex">
+                                              <div class="font-size-14 font-weight-600 color-primary">
+                                                  Chọn từ danh bạ
+                                              </div>
+                                          </div>
+                                          </div>
+                                      </button>
+                              <div class="row list-mb-8">
+                                  <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Mã số thuế</span></div>
+                                  <div class="col-12 list-mb-4">
+                                      <div class="row row-8 form-group">
+                                          <div class="col">
+                                              <div class="input-group-wrap input-default input-size-md">
+                                                  <label class="input-inner-wrap">
+                                                  <input value="" type="text" class="input input-label-change input-has-clear" placeholder="Mã số thuế" />
+                                                  <div class="input-extend input-extend-right">
+                                                      <div class="input-box input-ic-clear"></div>
+                                                  </div>
+                                                  <div class="input-frame"></div>
+                                                  </label>
+                                              </div>
+                                              <div class="errorBlock"></div>                                
+                                          </div>
+                                          <div class="col-auto">
+                                              <button id="button-tax" class="button width-100 button-md button--outline button-tax" disabled="">
+                                                  Truy vấn
+                                                </button>
+                                              
+                                          </div>
+                                          
+                                          </div>
+                                          <div class="font-size-12 text-secondary">
+                                              Vui lòng nhập mã số thuế và bấm TRUY VẤN để hiển thị thông tin hóa đơn
+                                          </div>
+                                  </div>
+                                  </div>
+                                  <div class="box-show hiddren list-mb-16">
+                                      <div class="row list-mb-8">
+                                          <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Tên công ty</span></div>
+                                          <div class="col-12">
+                                              <div class="form-group">
+                                                  <div class="input-group-wrap input-default input-size-md">
+                                                      <label class="input-inner-wrap">
+                                                          <textarea class="textarea-autosize input input-xs input-material input-clean input-has-clear input-hadval">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</textarea>
+                                                      <div class="input-extend input-extend-right">
+                                                          <div class="input-box input-ic-clear"></div>
+                                                      </div>
+                                                      <div class="input-frame"></div>
+                                                      </label>
+                                                  </div>
+                                                  <div class="errorBlock"></div>
+                                                  </div>
+                                          </div>
+                                          </div>                        
+                                      <div class="row list-mb-8">
+                                          <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Địa chỉ</span></div>
+                                          <div class="col-12">
+                                              <div class="form-group">
+                                                  <div class="input-group-wrap input-default input-size-md">
+                                                      <label class="input-inner-wrap">
+                                                          <textarea class="textarea-autosize input input-xs input-material input-clean input-has-clear input-hadval">Tầng 8, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Hà Nội</textarea>
+                                                      <div class="input-extend input-extend-right">
+                                                          <div class="input-box input-ic-clear"></div>
+                                                      </div>
+                                                      <div class="input-frame"></div>
+                                                      </label>
+                                                  </div>
+                                                  <div class="errorBlock"></div>
+                                                  </div>
+                                          </div>
+                                          </div>
+                                      <div class="row list-mb-8">
+                                          <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Email</span></div>
+                                          <div class="col-12">
+                                              <div class="form-group">
+                                                  <div class="input-group-wrap input-default input-size-md">
+                                                      <label class="input-inner-wrap">
+                                                      <input value="Nguyenvana@gmail.com" type="text" class="input input-label-change input-has-clear" placeholder="Nhập email" />
+                                                      <div class="input-extend input-extend-right">
+                                                          <div class="input-box input-ic-clear"></div>
+                                                      </div>
+                                                      <div class="input-frame"></div>
+                                                      </label>
+                                                  </div>
+                                                  <div class="errorBlock"></div>
+                                                  </div>
+                                          </div>
+                                          </div>
+                                      <ul class="list list--material list-nobor">
+                                          <li class="list-item list-item--material">
+                                              <div class="list-item__left">
+                                                  <label class="checkbox checkbox--material">
+                                                  <input type="checkbox" id="checkbox1" class="checkbox__input checkbox--material__input">
+                                                  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+                                                  </label>
+                                              </div>
+                                          
+                                              <label for="checkbox1" class="list-item__center list-item--material__center">
+                                                  <div class="list-item__title list-item--material__title font-weight-400 font-size-14">Hiển thị tên người mua trên hoá đơn</div>
+                                              </label>
+                                              </li>
+                                              <li class="list-item list-item--material">
+                                              <div class="list-item__left">
+                                                  <label class="checkbox checkbox--material">
+                                                  <input type="checkbox" id="checkbox2" class="checkbox__input checkbox--material__input">
+                                                  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+                                                  </label>
+                                              </div>
+                                          
+                                              <label for="checkbox2" class="list-item__center list-item--material__center">
+                                                  <div class="list-item__title list-item--material__title font-weight-400 font-size-14">Lưu hoá đơn vào danh bạ</div>
+                                              </label>
+                                              </li>
+                                          
+                                          </ul>
+              
+                                  </div>
+                                  
+              
+              
+                              </div>
+              
+                          </div>
+                      </div>
+                    
+                </div>
+                <div id="tab2" class="tabcontent">
+                    <div class="box-alert mb24">
+                        <div class="main">
+                          <div class="alert alert-warning">
+                            <div class="row row-8">
+                                <div class="col-auto flex">
+                                  <i class="icon icon_16 icon_aleft color-warning"></i>
+                                </div>
+                                <div class="col">
+                                  <span class="font-size-13">Yêu cầu xuất hoá đơn không có Mã số thuế <b>chỉ dành cho các đơn vị, tổ chức và cá nhân không có Mã số thuế.</b> Các trường hợp còn lại vui lòng nhập đầy đủ thông tin Mã số thuế của Công ty.</span>
+                                </div>
+                              </div>         
+                        </div>
+                        </div>
+                      </div>       
+              
+                      <div class="box box-form">
+                          <div class="main">
+                              <div class="form">
+                                      <button class="button button--quiet pd0" onclick="showsheet_contract2()">
+                                          <div class="row row-8 align-center">
+                                              <div class="col-auto flex">
+                                                  <i class="icon icon_20 icon_contract color-primary"></i>
+                                              </div>
+                                          <div class="col flex">
+                                              <div class="font-size-14 font-weight-600 color-primary">
+                                                  Chọn từ danh bạ
+                                              </div>
+                                          </div>
+                                          </div>
+                                      </button>
+                                  <div class="box-show list-mb-16">
+                                      <div class="row list-mb-8">
+                                          <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Tên công ty</span></div>
+                                          <div class="col-12">
+                                              <div class="form-group">
+                                                  <div class="input-group-wrap input-default input-size-md">
+                                                      <label class="input-inner-wrap">
+                                                          <textarea class="textarea-autosize input input-xs input-material input-clean input-has-clear input-hadval">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</textarea>
+                                                      <div class="input-extend input-extend-right">
+                                                          <div class="input-box input-ic-clear"></div>
+                                                      </div>
+                                                      <div class="input-frame"></div>
+                                                      </label>
+                                                  </div>
+                                                  <div class="errorBlock"></div>
+                                                  </div>
+                                          </div>
+                                          </div>                        
+                                      <div class="row list-mb-8">
+                                          <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Địa chỉ</span></div>
+                                          <div class="col-12">
+                                              <div class="form-group">
+                                                  <div class="input-group-wrap input-default input-size-md">
+                                                      <label class="input-inner-wrap">
+                                                          <textarea class="textarea-autosize input input-xs input-material input-clean input-has-clear input-hadval">Tầng 8, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Hà Nội</textarea>
+                                                      <div class="input-extend input-extend-right">
+                                                          <div class="input-box input-ic-clear"></div>
+                                                      </div>
+                                                      <div class="input-frame"></div>
+                                                      </label>
+                                                  </div>
+                                                  <div class="errorBlock"></div>
+                                                  </div>
+                                          </div>
+                                          </div>
+                                      <div class="row list-mb-8">
+                                          <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Email</span></div>
+                                          <div class="col-12">
+                                              <div class="form-group">
+                                                  <div class="input-group-wrap input-default input-size-md">
+                                                      <label class="input-inner-wrap">
+                                                      <input value="Nguyenvana@gmail.com" type="text" class="input input-label-change input-has-clear" placeholder="Nhập email" />
+                                                      <div class="input-extend input-extend-right">
+                                                          <div class="input-box input-ic-clear"></div>
+                                                      </div>
+                                                      <div class="input-frame"></div>
+                                                      </label>
+                                                  </div>
+                                                  <div class="errorBlock"></div>
+                                                  </div>
+                                          </div>
+                                          </div>
+                                      <ul class="list list--material list-nobor">
+                                          <li class="list-item list-item--material">
+                                              <div class="list-item__left">
+                                                  <label class="checkbox checkbox--material">
+                                                  <input type="checkbox" id="checkbox1" class="checkbox__input checkbox--material__input">
+                                                  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+                                                  </label>
+                                              </div>
+                                          
+                                              <label for="checkbox1" class="list-item__center list-item--material__center">
+                                                  <div class="list-item__title list-item--material__title font-weight-400 font-size-14">Hiển thị tên người mua trên hoá đơn</div>
+                                              </label>
+                                              </li>
+                                              <li class="list-item list-item--material">
+                                              <div class="list-item__left">
+                                                  <label class="checkbox checkbox--material">
+                                                  <input type="checkbox" id="checkbox2" class="checkbox__input checkbox--material__input">
+                                                  <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+                                                  </label>
+                                              </div>
+                                          
+                                              <label for="checkbox2" class="list-item__center list-item--material__center">
+                                                  <div class="list-item__title list-item--material__title font-weight-400 font-size-14">Lưu hoá đơn vào danh bạ</div>
+                                              </label>
+                                              </li>
+                                          
+                                          </ul>
+              
+                                  </div>
+                                  
+              
+              
+                              </div>
+              
+                          </div>
+                      </div>
+                    
+                </div>
+                  
+                  <script>
+                  function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                      tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                      tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                  }                     
+
+                  </script>
+                  
+          </div>        
+      </div>
+      <div class="tabbar tabbar-auto border-top">
+        <div class="button-form">
+          <div class="button-form-cont">
+            <div class="row">
+              <div class="col-12">
+                <a disabled id="button-submit" href="pages/product/confirm-tax.html" class="button width-100 button-md">
+                    Xác nhận
+                </a>               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ons-action-sheet class="showsheet_contract" someAttribute="true" anotherAttribute>
+        <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet()">
+        </div>
+        <div class="action-sheet action-sheet-top action-sheet--material">   
+            <div class="sheet-title action-sheet-title action-sheet-title--material" onclick="hidesheet()">
+                <div class="main">
+                    <div class="row row-8 align-center height-sheet-title">
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close">&nbsp;</a>
+                        </div>
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700 text-center">Danh bạ hoá đơn</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close color-primary font-size-14 font-weight-700">Huỷ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+          <div class="sheet-cont">
+            <div class="box-list">
+                <ul class="list list-bor list-line-bottom">
+                    <li class="list-item list-item--tappable">
+                        <label for="check1-1" class="list-item__center">
+                            <div class="row row-20 align-center">
+                                <div class="col list-mb-4">
+                                  <div class="row row-8 align-items-center">
+                                    <div class="col-auto">
+                                        <div class="font-weight-700 font-size-14 color-main">MST:0123456789</div>
+                                        <div class="font-weight-700 font-size-14 color-main">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</div>
+                                    </div>
+                                  </div>                                
+                                  <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                                  <div class="font-weight-400 font-size-13 color-main">Nguyenvana@gmail.com</div>
+                                  </div>
+                            </div>
+                        </label>
+                        <div class="list-item__left">
+                        <label class="radio-button">
+                            <input type="radio" id="check1-1" class="radio-button__input" name="check1" checked="checked">
+                            <div class="radio-button__checkmark"></div>
+                        </label>
+                        </div>
+                    </li>
+                    <li class="list-item list-item--tappable">
+                        <label for="check1-2" class="list-item__center">
+                            <div class="row row-20 align-center">
+                                <div class="col list-mb-4">
+                                  <div class="row row-8 align-items-center">
+                                    <div class="col-auto">                                        
+                                        <div class="font-weight-700 font-size-14 color-main">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</div>
+                                    </div>
+                                  </div>                                
+                                  <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                                  <div class="font-weight-400 font-size-13 color-main">Nguyenvana@gmail.com</div>
+                                  </div>
+                            </div>
+                        </label>
+                        <div class="list-item__left">
+                        <label class="radio-button">
+                            <input type="radio" id="check1-2" class="radio-button__input" name="check1">
+                            <div class="radio-button__checkmark"></div>
+                        </label>
+                        </div>
+                    </li>
+                    <li class="list-item list-item--tappable">
+                        <label for="check1-3" class="list-item__center">
+                            <div class="row row-20 align-center">
+                                <div class="col list-mb-4">
+                                  <div class="row row-8 align-items-center">
+                                    <div class="col-auto"><div class="font-weight-700 font-size-14 color-main">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</div></div>
+                                  </div>                                
+                                  <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                                  <div class="font-weight-400 font-size-13 color-main">Nguyenvana@gmail.com</div>
+                                  </div>
+                            </div>
+                        </label>
+                        <div class="list-item__left">
+                        <label class="radio-button">
+                            <input type="radio" id="check1-3" class="radio-button__input" name="check1">
+                            <div class="radio-button__checkmark"></div>
+                        </label>
+                        </div>
+                    </li>
+                    </ul>
+                
+                
+    
+              </div>
+          </div>  
+        </div>  
+    </ons-action-sheet>
+    <ons-action-sheet class="showsheet_contract2" someAttribute="true" anotherAttribute>
+        <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet()">
+        </div>
+        <div class="action-sheet action-sheet-top action-sheet--material">   
+            <div class="sheet-title action-sheet-title action-sheet-title--material" onclick="hidesheet2()">
+                <div class="main">
+                    <div class="row row-8 align-center height-sheet-title">
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close">&nbsp;</a>
+                        </div>
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700 text-center">Danh bạ hoá đơn</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close color-primary font-size-14 font-weight-700">Huỷ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+          <div class="sheet-cont">
+            <div class="box-list">
+                <ul class="list list-bor list-line-bottom">
+                    <li class="list-item list-item--tappable">
+                        <label for="check1-1" class="list-item__center">
+                            <div class="row row-20 align-center">
+                                <div class="col list-mb-4">
+                                  <div class="row row-8 align-items-center">
+                                    <div class="col-auto">
+                                        <div class="font-weight-700 font-size-14 color-main">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</div>
+                                    </div>
+                                  </div>                                
+                                  <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                                  <div class="font-weight-400 font-size-13 color-main">Nguyenvana@gmail.com</div>
+                                  </div>
+                            </div>
+                        </label>
+                        <div class="list-item__left">
+                        <label class="radio-button">
+                            <input type="radio" id="check1-1" class="radio-button__input" name="check1" checked="checked">
+                            <div class="radio-button__checkmark"></div>
+                        </label>
+                        </div>
+                    </li>
+                    <li class="list-item list-item--tappable">
+                        <label for="check1-2" class="list-item__center">
+                            <div class="row row-20 align-center">
+                                <div class="col list-mb-4">
+                                  <div class="row row-8 align-items-center">
+                                    <div class="col-auto">                                        
+                                        <div class="font-weight-700 font-size-14 color-main">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</div>
+                                    </div>
+                                  </div>                                
+                                  <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                                  <div class="font-weight-400 font-size-13 color-main">Nguyenvana@gmail.com</div>
+                                  </div>
+                            </div>
+                        </label>
+                        <div class="list-item__left">
+                        <label class="radio-button">
+                            <input type="radio" id="check1-2" class="radio-button__input" name="check1">
+                            <div class="radio-button__checkmark"></div>
+                        </label>
+                        </div>
+                    </li>
+                    <li class="list-item list-item--tappable">
+                        <label for="check1-3" class="list-item__center">
+                            <div class="row row-20 align-center">
+                                <div class="col list-mb-4">
+                                  <div class="row row-8 align-items-center">
+                                    <div class="col-auto"><div class="font-weight-700 font-size-14 color-main">CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM</div></div>
+                                  </div>                                
+                                  <div class="font-weight-400 font-size-13 color-main">Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội</div>
+                                  <div class="font-weight-400 font-size-13 color-main">Nguyenvana@gmail.com</div>
+                                  </div>
+                            </div>
+                        </label>
+                        <div class="list-item__left">
+                        <label class="radio-button">
+                            <input type="radio" id="check1-3" class="radio-button__input" name="check1">
+                            <div class="radio-button__checkmark"></div>
+                        </label>
+                        </div>
+                    </li>
+                    </ul>
+                
+                
+    
+              </div>
+          </div>  
+        </div>  
+    </ons-action-sheet>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+      <!-- rolldate -->
+  <script src="js/vendors/rolldate/rolldate.bundles.js"></script>
+  <script src="js/vendors/rolldate/rolldate.init.js"></script>
+  <!-- rolldate -->
+    <script src="js/custom.js"></script>
+    <script>
+        function showsheet_contract() {
+          var sheet = document.querySelector(".showsheet_contract");
+          sheet.show();
+        }
+        function hidesheet() {
+          var sheet = document.querySelector(".showsheet_contract");
+          sheet.hide();
+        }
+        function showsheet_contract2() {
+          var sheet2 = document.querySelector(".showsheet_contract2");
+          sheet2.show();
+        }
+        function hidesheet2() {
+          var sheet2 = document.querySelector(".showsheet_contract2");
+          sheet2.hide();
+        }
+      </script>
+      <script>
+        $(document).ready(function () {
+    //input clear
+    const buttontax = document.getElementById("button-tax");
+    
+    $(".input-has-clear").on("paste keyup change", function () {
+      var inputClear = $(this)
+        .closest(".input-inner-wrap")
+        .find(".input-ic-clear");
+      if ($(this).val()) {
+        buttontax.removeAttribute("disabled");
+      } else {
+        buttontax.setAttribute("disabled", "");
+      }
+    });
+    //end input clear  
+//button-tax click
+const buttonsubmit = document.getElementById("button-submit");
+    $('body').on('click', '#button-tax', function(e) {
+      $('.box-show').removeClass('hiddren');
+      buttonsubmit.removeAttribute("disabled");
+    });
+    //button-tax click end
+    
+  });
+      </script>
+  </body>
+</html>

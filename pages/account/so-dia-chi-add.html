@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>    
+    <div class="page page-account">
+        <div class="toolbar align-center flex">
+            <div class="toolbar__left">
+              <a href="pages/account/so-dia-chi.html" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+              </a>
+            </div>
+            <div class="toolbar__center align-center">
+                <div class="font-size-14 font-weight-700">Thêm mới thông tin nhận hàng</div>
+            </div>
+            <div class="toolbar__right">
+                <button class="button button--quiet">
+                    &nbsp;
+                </button>
+            </div>
+          </div>
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="box box-form pt12">
+            <div class="main">
+                <div class="form">
+                <div class="row list-mb-8">
+                    <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Họ tên người nhận</span></div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="input-group-wrap input-default input-size-md">
+                                <label class="input-inner-wrap">
+                                <input type="text" class="input input-label-change input-has-clear" placeholder="Họ tên người nhận" />
+                                <div class="input-extend input-extend-right">
+                                    <div class="input-box input-ic-clear"></div>
+                                </div>
+                                <div class="input-frame"></div>
+                                </label>
+                            </div>
+                            <div class="errorBlock"></div>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="row list-mb-8">
+                        <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600">Số điện thoại</span></div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="input-group-wrap input-default input-size-md">
+                                    <label class="input-inner-wrap">
+                                    <input disabled type="text" class="input input-label-change input-has-clear" placeholder="Số điện thoại" value="" />
+                                    <div class="input-extend input-extend-right">
+                                        <div class="input-box input-ic-clear"></div>
+                                    </div>
+                                    <div class="input-frame"></div>
+                                    </label>
+                                </div>
+                                <div class="errorBlock"></div>
+                                </div>
+                        </div>
+                        </div>
+                        <div class="row list-mb-8">
+                            <div class="col-12"><span class="font-size-14 font-weight-600 color-main">Email</span></div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="input-group-wrap input-default input-size-md">
+                                        <label class="input-inner-wrap">
+                                        <input type="text" class="input input-label-change input-has-clear" placeholder="Nhập email" />
+                                        <div class="input-extend input-extend-right">
+                                            <div class="input-box input-ic-clear"></div>
+                                        </div>
+                                        <div class="input-frame"></div>
+                                        </label>
+                                    </div>
+                                    <div class="errorBlock"></div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="row list-mb-8">
+                                <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Tỉnh/ Thành phố</span></div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="input-group-wrap input-default input-size-md" >
+                                            <label class="input-inner-wrap" onclick="showsheet()">
+                                            <input readonly type="text" class="input input-label-change input-has-clear" placeholder="Tỉnh/ Thành phố" />
+                                            <div class="input-extend input-extend-right">
+                                                <div class="input-box input-ic-clear"></div>
+                                            </div>
+                                            <div class="input-frame"></div>
+                                            </label>
+                                            <div class="input-ic">
+                                              <i class="icon icon_20 icon_arrow_drop color-disabled"></i>
+                                            </div>
+                                        </div>
+                                        <div class="errorBlock"></div>
+                                        </div>
+                                </div>
+                                </div>
+                                <div class="row list-mb-8">
+                                    <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Quận/ Huyện</span></div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="input-group-wrap input-default input-size-md" >
+                                                <label class="input-inner-wrap">
+                                                <input disabled type="text" class="input input-label-change input-has-clear" placeholder="Quận/ Huyện" />
+                                                <div class="input-extend input-extend-right">
+                                                    <div class="input-box input-ic-clear"></div>
+                                                </div>
+                                                <div class="input-frame"></div>
+                                                </label>
+                                                <div class="input-ic">
+                                                  <i class="icon icon_20 icon_arrow_drop color-disabled"></i>
+                                              </div>
+                                            </div>
+                                            <div class="errorBlock"></div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    <div class="row list-mb-8">
+                                        <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Phường/ Xã</span></div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <div class="input-group-wrap input-default input-size-md" >
+                                                    <label class="input-inner-wrap">
+                                                    <input disabled type="text" class="input input-label-change input-has-clear" placeholder="Phường/ Xã" />
+                                                    <div class="input-extend input-extend-right">
+                                                        <div class="input-box input-ic-clear"></div>
+                                                    </div>
+                                                    <div class="input-frame"></div>
+                                                    </label>
+                                                    <div class="input-ic">
+                                                      <i class="icon icon_20 icon_arrow_drop color-disabled"></i>
+                                                  </div>
+                                                </div>
+                                                <div class="errorBlock"></div>
+                                                </div>
+                                        </div>
+                                        </div>
+                                        <div class="row list-mb-8 mb24">
+                                            <div class="col-12"><span class="color-red">*</span> <span class="font-size-14 font-weight-600 color-main">Địa chỉ cụ thể</span></div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <div class="input-group-wrap input-default input-size-md">
+                                                        <label class="input-inner-wrap">
+                                                        <input type="text" class="input input-label-change input-has-clear" placeholder="Địa chỉ cụ thể" />
+                                                        <div class="input-extend input-extend-right">
+                                                            <div class="input-box input-ic-clear"></div>
+                                                        </div>
+                                                        <div class="input-frame"></div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="errorBlock"></div>
+                                                    </div>
+                                            </div>
+                                            </div>
+                                            <div class="row align-center">
+                                                <div class="col">
+                                                    <span class="font-size-14 font-weight-600 color-main">Đặt làm địa chỉ mặc định</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <label class="switch">
+                                                        <input type="checkbox" class="switch__input">
+                                                        <div class="switch__toggle">
+                                                          <div class="switch__handle"></div>
+                                                        </div>
+                                                      </label>
+                                                </div>
+                                            </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        
+      </div>
+      <div class="tabbar tabbar-auto border-top">
+        <div class="button-form">
+          <div class="button-form-cont">
+            <div class="row">
+              <div class="col-12">
+                <a disabled href="javascript:;" class="button width-100 button-md">
+                    Lưu
+                </a>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ons-action-sheet someAttribute="true" anotherAttribute>
+        <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet()">
+        </div>
+        <div class="action-sheet action-sheet-top action-sheet--material">   
+            <div class="sheet-title action-sheet-title action-sheet-title--material" onclick="hidesheet()">
+                <div class="main">
+                    <div class="row row-8 align-center height-sheet-title">
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close">&nbsp;</a>
+                        </div>
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700 text-center">Khu vực nhận hàng</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close font-size-14 font-weight-700 color-primary">Đóng</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            <div class="sheet-title-sub">
+                <div class="main">
+                    <div class="tab mb12">
+                        <div class="row row-0">
+                            <div class="col">
+                                <button class="tablinks tablinks1 font-size-13 font-weight-700 active" onclick="openCity(event, 'tab1')">Tỉnh/ Thành</button> 
+                            </div>
+                            <div class="col">
+                                <button class="tablinks tablinks2 font-size-13 font-weight-700" onclick="openCity(event, 'tab2')">Quận/ Huyện</button>  
+                            </div>
+                            <div class="col">
+                                <button class="tablinks tablinks3 font-size-13 font-weight-700" onclick="openCity(event, 'tab3')">Phường/ Xã</button> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="form-search">
+                        <div
+                          class="input-group-wrap input-default input-group-vertical input-size-default"
+                        >
+                          <label class="input-inner-wrap">
+                            <input
+                              type=""
+                              class="input search-input input-label-change input-has-clear"
+                              placeholder="Tìm kiếm"
+                              required
+                              autocorrect="off"
+                            />
+                            <div class="input-extend input-extend-right">
+                              <div class="input-box input-ic-clear"></div>
+                            </div>
+                            <div class="input-frame"></div>
+                          </label>
+                        </div>
+                        <div class="errorBlock"></div>
+                      </div>
+                </div>
+                
+            </div>
+
+          <div class="sheet-cont">
+            <div class="box-tab">
+                <div class="main">                      
+                    <div id="tab1" class="tabcontent" style="display: block;">
+                        <ul class="list list-bor-bottom">
+                            <li class="list-item list-item--tappable">
+                              <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                    <input id="radio1" type="radio" class="radio-button__input radio-button--material__input" name="r1" checked="checked">
+                                    <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                  </label>
+                              </div>
+                              <label for="radio1" class="list-item__center font-weight-600 font-size-14">
+                                An Giang
+                              </label>
+                            </li>
+                            <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio2" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio2" class="list-item__center font-weight-600 font-size-14">
+                                    Bà Rịa - Vũng Tàu
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio3" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio3" class="list-item__center font-weight-600 font-size-14">
+                                    Bắc Kạn
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio4" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio4" class="list-item__center font-weight-600 font-size-14">
+                                    Bắc Giang
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio5" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio5" class="list-item__center font-weight-600 font-size-14">
+                                    Bạc Liêu
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio6" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio6" class="list-item__center font-weight-600 font-size-14">
+                                    Bắc Ninh
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio7" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio7" class="list-item__center font-weight-600 font-size-14">
+                                    Bến Tre
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio8" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio8" class="list-item__center font-weight-600 font-size-14">
+                                    Bình Định
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio9" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio9" class="list-item__center font-weight-600 font-size-14">
+                                    Bình Dương
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                <label class="radio-button radio-button--material" onclick="openCity(event, 'tab2')">
+                                      <input  id="radio10" type="radio" class="radio-button__input radio-button--material__input" name="r1">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="radio10" class="list-item__center font-weight-600 font-size-14">
+                                    Bình Phước
+                                </label>
+                              </li>
+                              
+                          </ul>
+                      </div>
+                      <div id="tab2" class="tabcontent">
+                        <ul class="list list-bor-bottom">
+                            <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="openCity(event, 'tab3')">
+                                      <input checked id="2radio1" type="radio" class="radio-button__input radio-button--material__input" name="r2">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="2radio1" class="list-item__center font-weight-600 font-size-14">
+                                    Quận Hải Châu
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="openCity(event, 'tab3')">
+                                      <input id="2radio2" type="radio" class="radio-button__input radio-button--material__input" name="r2">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="2radio2" class="list-item__center font-weight-600 font-size-14">
+                                    Quận Thanh Khê
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="openCity(event, 'tab3')">
+                                      <input id="2radio4" type="radio" class="radio-button__input radio-button--material__input" name="r2">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="2radio3" class="list-item__center font-weight-600 font-size-14">
+                                    Quận Sơn Trà
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="openCity(event, 'tab3')">
+                                      <input id="2radio5" type="radio" class="radio-button__input radio-button--material__input" name="r2">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="2radio5" class="list-item__center font-weight-600 font-size-14">
+                                    Quận Ngũ Hành Sơn
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="openCity(event, 'tab3')">
+                                      <input id="2radio6" type="radio" class="radio-button__input radio-button--material__input" name="r2">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="2radio6" class="list-item__center font-weight-600 font-size-14">
+                                    Quận Liên Chiểu
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="openCity(event, 'tab3')">
+                                      <input id="2radio7" type="radio" class="radio-button__input radio-button--material__input" name="r2">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="2radio7" class="list-item__center font-weight-600 font-size-14">
+                                    Quận Hoà Vang
+                                </label>
+                              </li>
+                          </ul>
+                      </div>
+                      <div id="tab3" class="tabcontent">
+                        <ul class="list list-bor-bottom">
+                            <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input checked id="3radio1" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio1" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Bình Hiên
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio2" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio2" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Bình Thuận
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio3" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio3" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Hải Châu I
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio4" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio4" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Hải Châu II
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio5" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio5" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Hoà Cường Bắc
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio6" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio6" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Hoà Cường Nam
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio7" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio7" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Hoà Thuận Đông
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio8" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio8" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Hoà Thuận Tây
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio9" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio9" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Nam Dương
+                                </label>
+                              </li>
+                              <li class="list-item list-item--tappable">
+                                <div class="list-item__right">
+                                  <label class="radio-button radio-button--material" onclick="window.open('pages/account/so-dia-chi-add-value.html', target='_self')">
+                                      <input id="3radio10" type="radio" class="radio-button__input radio-button--material__input" name="r3">
+                                      <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                                    </label>
+                                </div>
+                                <label for="3radio10" class="list-item__center font-weight-600 font-size-14">
+                                    Phường Phước Ninh
+                                </label>
+                              </li>
+
+                          </ul>
+                      </div>
+                      
+                      <script>
+                      function openCity(evt, cityName) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                          tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                          tablinks[i].className = tablinks[i].className.replace(" active", "");
+                        }
+                        document.getElementById(cityName).style.display = "block";
+                        evt.currentTarget.className += " active";
+                      }                     
+
+                      </script>
+                      
+                </div>
+              </div>  
+          </div>  
+        </div>  
+      </ons-action-sheet>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+      <!-- rolldate -->
+  <script src="js/vendors/rolldate/rolldate.bundles.js"></script>
+  <script src="js/vendors/rolldate/rolldate.init.js"></script>
+  <!-- rolldate -->
+    <script src="js/custom.js"></script>
+    <script>
+        function showsheet() {
+          var sheet = document.querySelector("ons-action-sheet");
+          sheet.show();
+        }
+        function hidesheet() {
+          var sheet = document.querySelector("ons-action-sheet");
+          sheet.hide();
+        }
+      </script>
+      <script>
+        document.addEventListener('prechange', function(event) {
+  document.querySelector('ons-toolbar .center')
+    .innerHTML = event.tabItem.getAttribute('label');
+});
+      </script>
+<script>
+    $(document).ready(function () {
+        // js
+      $('.radio-button__input').change(function() {
+      if (this.name == 'r1') {
+      $(".tablinks1").removeClass("active");
+      $(".tablinks2").addClass("active");
+      $(".tablinks3").removeClass("active");
+      }
+      else if (this.name == 'r2') {
+      $(".tablinks1").removeClass("active");
+      $(".tablinks2").removeClass("active");
+      $(".tablinks3").addClass("active");
+      }
+      });
+});
+// js end
+      </script>
+  </body>
+</html>

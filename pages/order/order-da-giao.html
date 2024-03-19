@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>
+    <div class="page page-order-detail">
+        <div class="toolbar toolbar-no-bor align-center flex">
+            <div class="toolbar__left">
+              <a href="pages/order/" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+              </a>
+            </div>
+            <div class="toolbar__center align-center">
+                <div class="font-size-14 font-weight-700">Chi tiết đơn hàng</div>
+            </div>
+            <div class="toolbar__right">
+                <button class="button button--quiet">
+                    &nbsp;
+                </button>
+            </div>
+          </div>
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="order-status order-status-02">
+            <div class="order-status-cont">
+                <div class="font-size-18 font-weight-800">Đã giao</div>
+                <div class="font-size-12 font-weight-400">Đơn hàng đã được giao<br>
+                    thành công, mong sớm gặp lại bạn</div>
+            </div>            
+        </div>
+        <div class="list-box-bor">
+        <div class="box confirm-item">
+            <div class="main">
+                <div class="list-mb-16">
+                    <div class="list-mb-4">
+                        <div class="row row-8 align-items-center">
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700">Đơn hàng: 0123456789 </div>                                
+                            </div>
+                            <div class="col-auto">
+                                <button class="button button-16 button--quiet pr0">
+                                    <i class="icon icon_16 icon_copy text-secondary"></i>
+                                  </button> 
+                            </div>
+                        </div>
+                    
+                    <div class="font-size-12 font-weight-400 text-secondary">
+                        Ngày đặt hàng: 10:30, Thứ 6 17/11/2023
+                    </div>
+                    </div>
+                    <div class="list-mb-4">
+                        <div class="font-size-14 font-weight-700">
+                            Nguyễn Văn A <span class="line-doc"></span> 0123456789
+                        </div>
+                        <div class="font-size-12 font-weight-400 text-secondary">
+                            Tòa nhà TĐL, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội
+                        </div>
+                        </div>
+
+                </div>               
+                
+            </div>
+        </div>      
+        <div class="box confirm-item">
+            <div class="main">
+            <div class="list-mb-16">
+                <div class="row row-8 align-center">
+                    <div class="col-auto">
+                        <div class="box-20">
+                        <i class="icon icon_20 icon_ship color-secondary"></i>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="font-weight-700 font-size-13 color-secondary text-upper">Phương thức thanh toán</span>
+                    </div>
+                    </div>
+                    <div class="box-list-bor">
+                        <div class="row row-8 align-center">
+                            <div class="col-auto">
+                            <div class="box-32">
+                                <img class="border-radius-4" src="general/icon/pay_vivnpay.svg">
+                            </div>
+                            </div>
+                            <div class="col">
+                            <div class="font-size-12 font-weight-700">
+                                Thanh toán trực tiếp <br>qua ứng dụng VNPAY
+                            </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700 color-primary">
+                                    300.000đ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>                    
+               
+                
+            </div>
+        </div>
+        <div class="box confirm-item">
+            <div class="main">
+                <div class="box-list-bor">
+                    <div class="item-bor">
+                        <a href="pages/product/phuong-thuc-giao-hang.html" class="font-size-14 font-weight-700 arrow-right-24">
+                            <div class="row row-8 align-center mb16">
+                                <div class="col-auto">
+                                    <div class="box-20">
+                                    <i class="icon icon_20 icon_ship color-secondary"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <span class="font-weight-700 font-size-13 color-secondary text-upper">Phương thức giao hàng</span>
+                                </div>
+                                <div class="col-auto pr0">
+                                    <div class="box-20">
+                                        <i class="icon icon_20 icon_arrow_right color-secondary"></i>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row row-8 mb4">
+                                    <div class="col">
+                                        <div class="font-size-14 font-weight-700 color-primary">
+                                            Giao hàng tiêu chuẩn
+                                        </div>
+                                        </div>
+                                    <div class="col-auto">
+                                        <div class="font-size-14 font-weight-700 color-primary">
+                                            20.000đ
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="row row-8">
+                                        <div class="col">
+                                            <div class="font-size-12 font-weight-400 color-secondary">
+                                                Dự kiến nhận hàng vào 12 Th10 - 15 Th10
+                                            </div>
+                                            </div>
+                                        <div class="col-auto">
+                                            <div class="font-size-12 font-weight-400 color-secondary price-sub-text">
+                                                40.000đ
+                                            </div>
+                                        </div>
+                                        </div>
+                            </a>   
+                    </div>
+                    
+
+                </div>                   
+                
+            </div>
+        </div>
+        <div class="box confirm-item">
+            <div class="main">
+                <div class="list-mb-16">
+                    <div class="list-mb-4">
+                        <div class="row row-8 align-items-center">
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700">Đơn hàng: 0123456789-01 </div>                                
+                            </div>
+                            <div class="col-auto">
+                                <button class="button button-16 button--quiet pr0">
+                                    <i class="icon icon_16 icon_copy text-secondary"></i>
+                                  </button> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-link">
+                        <a href="pages/order/order-theo-doi-da-giao.html" class="link-bg-gray">
+                            <div class="row row-8">
+                                <div class="col-auto">
+                                    <i class="icon icon_16 icon_wait color-main"></i>
+                                </div>
+                                <div class="col">
+                                    <div class="list-mb-4">
+                                        <div class="font-size-12 font-weight-700">
+                                            Đã giao <span class="line-small"></span> <span class="font-weight-400 text-secondary">12:00, 20/11/2023</span> 
+                                        </div>
+                                        <div class="font-size-12 font-weight-400 text-secondary">
+                                            Kiện hàng của bạn đã được giao
+                                        </div>
+                                        </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="icon icon_16 icon_arrow_right color-secondary"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box box-company">
+                        <div class="title">
+                        <div class="main">
+                            <div class="row row-8 align-center">
+                                <div class="col-auto">
+                                    <div class="box-24">
+                                    <img width="24" height="24" class="border-2" src="demo/icon_vnshop.png">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <span class="font-weight-700 font-size-14 color-main">Công ty cổ phẩn VNIS</span>
+                                    <span class="font-size-14 middle"><i class="icon icon_16 icon_tick color-primary"></i></span>
+                                </div>
+                                </div>
+                        </div>
+                        </div>
+                        <div class="main list-mb-24">
+                            <div class="row row-12">
+                                <div class="col-auto">
+                                    <div class="box-77">
+                                    <img src="demo/product_124.png">
+                                    </div>
+                    
+                                </div>
+                                <div class="col list-mb-8 overflow-hidden">
+                                    <div class="title-normal font-size-13 font-weight-700">
+                                        Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                                    </div>
+                                    <div class="type">
+                                        <span class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám L</span>
+                                    </div>
+                                    <div class="row row-8">
+                                        <div class="col">
+                                            <div class="price-main mb4">
+                                                <div class="font-size-14 font-weight-700">2.000.000 đ</div>
+                                                </div>
+                                            <div class="price-sub font-size-12">
+                                                <span class="price-sub-text">4.000.000 đ</span>
+                                                <span class="price-sub-number">-11%</span>
+                                                </div>                                
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="font-size-12 font-weight-400">x1</div> 
+                                        </div>
+                                    </div>                      
+                                </div>                            
+                    
+                                </div>
+                                <div class="row row-12">
+                                    <div class="col-auto">
+                                        <div class="box-77">
+                                        <img src="demo/product_124.png">
+                                        </div>
+                        
+                                    </div>
+                                    <div class="col list-mb-8 overflow-hidden">
+                                        <div class="title-normal font-size-13 font-weight-700">
+                                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                                        </div>
+                                        <div class="type">
+                                            <span class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám L</span>
+                                        </div>
+                                        <div class="row row-8">
+                                            <div class="col">
+                                                <div class="price-main mb4">
+                                                    <div class="font-size-14 font-weight-700">2.000.000 đ</div>
+                                                    </div>
+                                                <div class="price-sub font-size-12">
+                                                    <span class="price-sub-text">4.000.000 đ</span>
+                                                    <span class="price-sub-number">-11%</span>
+                                                    </div>                                
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="font-size-12 font-weight-400">x1</div> 
+                                            </div>
+                                        </div>                      
+                                    </div>                            
+                        
+                                    </div>
+                                <div class="row row-12">
+                                    <div class="col-auto">
+                                        <div class="box-77">
+                                        <img src="demo/product_124.png">
+                                        </div>
+                        
+                                    </div>
+                                    <div class="col list-mb-8 overflow-hidden">
+                                        <div class="title-normal font-size-13 font-weight-700">
+                                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được- Combo 40/56/76 cây
+                                        </div>
+                                        <div class="type">
+                                            <span class="font-size-12 font-weight-600 text-secondary">Phân loại: Màu xám L</span>
+                                        </div>
+                                        <div class="row row-8">
+                                            <div class="col">
+                                                <div class="price-main mb4">
+                                                    <div class="font-size-14 font-weight-700">2.000.000 đ</div>
+                                                    </div>
+                                                <div class="price-sub font-size-12">
+                                                    <span class="price-sub-text">4.000.000 đ</span>
+                                                    <span class="price-sub-number">-11%</span>
+                                                    </div>                                
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="font-size-12 font-weight-400">x1</div> 
+                                            </div>
+                                        </div>                      
+                                    </div>                            
+                        
+                                    </div>
+                        </div>
+                    </div>
+                </div>               
+                
+            </div>
+        </div>
+        
+        <div class="box box-form">
+            <div class="main">
+                <div class="form">
+                    <div class="row row-12">
+                        <div class="col-8 form-left">Tổng tạm tính</div>
+                        <div class="col-4 form-right text-right"><span class="color-main font-size-14 font-weight-700">600.000đ</span></div>
+                        </div>
+                        <div class="row row-12">
+                        <div class="col-8 form-left">Phí vận chuyển</div>
+                        <div class="col-4 form-right text-right"><span class="color-main font-size-14 font-weight-700">40.000đ</span></div>
+                        </div>
+                        <div class="row row-12">
+                        <div class="col-8 form-left">Giảm giá phí vận chuyển</div>
+                        <div class="col-4 form-right text-right"><span class="color-error font-size-14 font-weight-700">-20.000đ</span></div>
+                        </div>
+                        <div class="row row-12">
+                        <div class="col-8 form-left">Tổng cộng mã giảm giá <a  onclick="sheet_price_detail()" href="javascript:;" class="color-link font-weight-600 font-size-13">(Chi tiết)</a></div>
+                        <div class="col-4 form-right text-right"><span class="color-error font-size-14 font-weight-700">-100.000đ</span></div>
+                        </div>
+                        <div class="row row-12 row-total">
+                        <div class="col-8 form-left"><span class="font-size-14 font-weight-600 color-main">Tổng thanh toán</span></div>
+                        <div class="col-4 form-right text-right">
+                            <div class="color-primary font-size-16 font-weight-800 mb4">400.000đ</div>
+                            <div class="color-secondary font-size-12">(Đã bao gồm VAT)</div>
+                        </div>
+                        </div>
+                    </div>
+                
+            </div>
+            </div>
+
+            <div class="box box-default">
+                <div class="title mb0">
+                  <div class="main">
+                    <a href="pages/account/danh-ba-xuat-hoa-don-add.html" class="list-mb-16">
+                        <div class="row row-8 align-center">
+                            <div class="col">
+                                <span class="font-weight-700 font-size-14 color-main">Xuất hoá đơn GTGT</span>
+                            </div>
+                            <div class="col-auto pr0">
+                                <div class="box-20">
+                                    <i class="icon icon_20 icon_arrow_right color-secondary"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box-gray pd16">
+                                <div class="row row-0">
+                                    <div class="col list-mb-4">
+                                        <div class="font-size-13 font-weight-700">
+                                            MST: 0123456789
+                                        </div>
+                                        <div class="font-size-13 font-weight-700">
+                                            CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM
+                                        </div>
+                                        <div class="font-size-13 font-weight-400 text-secondary">
+                                            Tầng 8, 22 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Hà Nội, Việt Nam
+                                        </div>
+                                        <div class="font-size-13 font-weight-400 text-secondary">
+                                            Nguyenvana@gmail.com
+                                        </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        
+                      </a>
+                  </div>
+                </div>
+                </div>
+            
+        </div>
+      </div>
+      <div class="tabbar tabbar-auto">
+        <div class="button-form">
+          <div class="button-form-cont">
+            <a href="pages/product/confirm.html" class="button width-100 button-md">
+                Mua lại
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <ons-action-sheet class="sheet_price_detail" someAttribute="true" anotherAttribute>
+        <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet_price_detail()">
+        </div>
+        <div class="action-sheet action-sheet-bottom action-sheet--material">   
+            <div class="sheet-title action-sheet-title action-sheet-title--material" onclick="hidesheet_price_detail()">
+                <div class="main">
+                    <div class="row row-8 align-center height-sheet-title">
+                        <div class="col-auto">
+                            <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700 text-center">Mã giảm giá áp dụng</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>   
+          <div class="sheet-cont">
+            <div class="main">
+                <div class="list-mb-24">
+                    <div class="list-mb-16">
+                        <div class="font-size-14 font-weight-700">Khuyến mại vận chuyển</div>
+                        <div class="row row-8">
+                            <div class="col">
+                                <div class="promotion-item">
+                                    <div class="chip chip-sm chip-primary-light">
+                                        <div class="chip-media">
+                                          <i class="icon_16 icon icon_ticket color-primary"></i>
+                                        </div>
+                                        <div class="chip-label text-upper font-size-12">VNSHOP9</div>
+                                      </div>
+                                </div>                             
+                            </div>
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700 color-price">-20.000đ</div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-mb-16">
+                        <div class="font-size-14 font-weight-700">Khuyến mại đơn hàng</div>
+                        <div class="row row-8">
+                            <div class="col">
+                                <div class="promotion-item">
+                                    <div class="chip chip-sm chip-primary-light">
+                                        <div class="chip-media">
+                                          <i class="icon_16 icon icon_ticket color-primary"></i>
+                                        </div>
+                                        <div class="chip-label text-upper font-size-12">VNSHOP9</div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700 color-price">-20.000đ</div> 
+                            </div>
+                        </div>
+                        <div class="row row-8">
+                            <div class="col">
+                                <div class="promotion-item">
+                                    <div class="chip chip-sm chip-primary-light">
+                                        <div class="chip-media">
+                                          <i class="icon_16 icon icon_ticket color-primary"></i>
+                                        </div>
+                                        <div class="chip-label text-upper font-size-12">YEUVNSHOP</div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700 color-price">-65.000đ</div> 
+                            </div>
+                        </div>
+                        <div class="row row-8">
+                            <div class="col">
+                                <div class="promotion-item">
+                                    <div class="chip chip-sm chip-primary-light">
+                                        <div class="chip-media">
+                                          <i class="icon_16 icon icon_ticket color-primary"></i>
+                                        </div>
+                                        <div class="chip-label text-upper font-size-12">pmh100</div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="font-size-14 font-weight-700 color-price">-100.000đ</div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+          </div>  
+        </div>  
+    </ons-action-sheet>     
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+    <script src="js/custom.js"></script>
+    <!--myToast-->
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $("#myToast").hide()
+        }, 5000);
+      });
+    </script>
+    <!--myToast end-->
+    <script>
+      function sheet_price_detail() {
+        var sheet = document.querySelector(".sheet_price_detail");
+        sheet.show();
+      }
+      function hidesheet_price_detail() {
+        var sheet = document.querySelector(".sheet_price_detail");
+        sheet.hide();
+      }
+    </script>
+  </body>
+</html>

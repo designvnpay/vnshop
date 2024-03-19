@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>
+    <div class="page page-product-detail">
+      <div class="toolbar toolbar-tran align-center flex">
+        <div class="toolbar__left">
+          <a href="pages/product/product-list.html" class="button button-gray round button-sm button--quiet">
+            <i class="icon icon_16 icon_back color-white"></i>
+          </a>
+        </div>
+        <div class="toolbar__center">
+          <div class="form-group width-100">
+            <div
+              class="input-group-wrap input-default input-size-default input-group-vertical"
+            >
+              <label class="input-inner-wrap">
+                <input
+                  readonly
+                  onclick="showModal_search()"
+                  type=""
+                  class="input search-input input-label-change input-has-clear"
+                  placeholder="Tìm kiếm"
+                  required
+                  autocorrect="off"
+                />
+                <div class="input-extend input-extend-right">
+                  <div class="input-box input-ic-clear"></div>
+                </div>
+                <div class="input-frame"></div>
+              </label>
+            </div>
+            <div class="errorBlock"></div>
+          </div>
+        </div>
+        <div class="toolbar__right">
+          <div class="row row-8">
+            <div class="col">
+              <button class="button button-gray round button-sm button--quiet">
+                <i class="icon icon_16 icon_share color-white"></i>
+              </button>
+            </div>
+            <div class="col">
+              <button id="cart" class="button button-gray round button-sm button--quiet cart" data-totalitems="0">
+                <i class="icon icon_16 icon_cart color-white"></i>
+              </button>
+            </div>
+            <div class="col">
+              <button class="button button-gray round button-sm button--quiet">
+                <i class="icon icon_16 icon_fill color-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="banner-product">
+          <div class="splide carousel-primary">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide" onclick="showModal_Album()">
+                  <img src="demo/product-detail1.png" />
+                  <div class="numbertext">1 / 5</div>
+                </li>
+                <li class="splide__slide" onclick="showModal_Album()">
+                  <img src="demo/product-detail1.png" />
+                  <div class="numbertext">2 / 5</div>
+                </li>
+                <li class="splide__slide" onclick="showModal_Album()">
+                  <img src="demo/product-detail1.png" />
+                  <div class="numbertext">3 / 5</div>
+                </li>
+                <li class="splide__slide" onclick="showModal_Album()">
+                  <img src="demo/product-detail1.png" />
+                  <div class="numbertext">4 / 5</div>
+                </li>
+                <li class="splide__slide" onclick="showModal_Album()">
+                  <img src="demo/product-detail1.png" />
+                  <div class="numbertext">5 / 5</div>
+                </li>
+              </ul>
+            </div>
+          </div>          
+        </div>
+        <div class="product-detail-flashsale">
+            <div class="main">
+                <div class="row row-8 align-center">
+                    <div class="col">
+                        <div class="flash-logo"><i class="title-flash-sales-white"></i></div>
+                    </div>
+                    <div class="col-auto text-right">
+                        <div class="color-white font-size-14 font-weight-700">Sắp hết khuyến mại</div>
+                        <div class="color-white font-size-12">Kết thúc sau <span class="font-weight-700">00:00:00</span></div>
+                    </div>
+    
+                </div>
+            </div>           
+
+        </div>      
+        <div class="product-detail">
+          <div class="list-box-bor">
+            <div class="product-detail-top">
+              <div class="main">
+                <div class="product-stick mb8">
+                  <span class="bg-primary">Freeship</span
+                  ><span class="bg-secondary-light-300">Sale 8.8</span>
+                </div>
+                <div
+                  class="product-detail-title font-size-16 font-weight-700 mb8"
+                >
+                  Bút lông màu Fiber Pen Thiên Long Colokit - Có thể rửa được-
+                  Combo 40/56/76 cây
+                </div>
+                <div class="price-main font-weight-800 mb4">
+                  <div class="font-size-20">2.000.000 đ</div>
+                </div>
+                <div class="price-sub font-size-12 mb8">
+                  <span class="price-sub-text">4.000.000 đ</span>
+                  <span class="price-sub-number">-11%</span>
+                </div>
+                <div class="text-brand font-size-12">
+                  <span class="text-secondary">Thương hiệu</span>
+                  <span class="font-weight-700">ZARA</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="title">
+                <div class="main">
+                  <div class="row row-8 align-center">
+                    <div class="col">
+                      <a
+                        onclick="showsheet()"
+                        href="javascript:;"
+                        class="title-link"
+                      >
+                        <div class="row row-8">
+                          <div class="col">
+                            <span
+                              class="color-main font-size-16 font-weight-700"
+                              >Lựa chọn</span
+                            >
+                          </div>
+                          <div class="col-auto">
+                            <span
+                              class="text-secondary font-size-13 font-weight-600"
+                              >Màu sắc, kích thước</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main">
+                <div class="list-items row row-8">
+                  <div class="item item-list-border col">
+                    <a href="javascript:;" class="border">
+                      <span class="font-size-13 font-weight-600 text-overflow"
+                        >Giày bóng rổ đẹp</span
+                      >
+                    </a>
+                  </div>
+                  <div class="item item-list-border col">
+                    <a href="javascript:;" class="border">
+                      <span class="font-size-13 font-weight-600 text-overflow"
+                        >Giày bóng rổ đẹp</span
+                      >
+                    </a>
+                  </div>
+                  <div class="item item-list-border col">
+                    <a href="javascript:;" class="border">
+                      <span class="font-size-13 font-weight-600 text-overflow"
+                        >Giày bóng rổ đẹp</span
+                      >
+                    </a>
+                  </div>
+                  <div class="item item-list-border col-auto">
+                    <a href="javascript:;" class="border border-disable">
+                      <span class="font-size-13 font-weight-600">+1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box box-gift">
+              <div class="title">
+                <div class="main">
+                  <span class="color-main font-size-16 font-weight-700"
+                    >Khuyến mại đã nhận</span
+                  >
+                </div>
+              </div>
+              <div class="main list-mb-12">
+                <div class="row row-8">
+                  <div class="col-auto">
+                    <i class="icon icon_20 icon_gift color-primary"></i>
+                  </div>
+                  <div class="col font-size-14">
+                    <span class="font-weight-700">Giảm 2.000đ</span> (áp dụng
+                    vào giá sản phẩm)
+                  </div>
+                </div>
+                <div class="row row-8">
+                  <div class="col-auto">
+                    <i class="icon icon_20 icon_gift color-primary"></i>
+                  </div>
+                  <div class="col font-size-14">
+                    <span class="font-weight-700">1 x Nước xả Downy </span> (Quà
+                    tặng)
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box box-choose">
+              <div class="title">
+                <div class="main">
+                  <span class="color-main font-size-16 font-weight-700"
+                    >Chọn 1 trong những khuyến mại sau</span
+                  >
+                </div>
+              </div>
+              <div class="main">
+                <ul class="list">
+                  <li class="list-item list-item--tappable">
+                    <label for="r1" class="list-item__center">
+                      <div class="row row-12 align-center">
+                        <div class="col-auto">
+                          <div class="box-55">
+                            <img
+                              class="border-radius"
+                              src="demo/voucher1.png"
+                            />
+                          </div>
+                        </div>
+                        <div class="col list-mb-4">
+                          <div class="font-size-14 font-weight-700">
+                            Giảm 8.000đ ( Giảm giá sản phẩm)
+                          </div>
+                          <div class="font-size-13 font-weight-400">
+                            Khuyến mại áp dụng khi mua tối thiểu 2 sản phẩm
+                          </div>
+                          <div
+                            class="font-size-12 font-weight-400 color-disabled"
+                          >
+                            HSD: 30/09/2023
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <div class="list-item__right">
+                      <label class="radio-button">
+                        <input
+                          type="radio"
+                          id="r1"
+                          class="radio-button__input"
+                          name="r"
+                          checked="checked"
+                        />
+                        <div class="radio-button__checkmark"></div>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-item list-item--tappable">
+                    <label for="r2" class="list-item__center">
+                      <div class="row row-12 align-center">
+                        <div class="col-auto">
+                          <div class="box-55">
+                            <img
+                              class="border-radius"
+                              src="demo/voucher2.png"
+                            />
+                          </div>
+                        </div>
+                        <div class="col list-mb-4">
+                          <div class="font-size-14 font-weight-700">
+                            Giảm 8.000đ ( Giảm giá sản phẩm)
+                          </div>
+                          <div class="font-size-13 font-weight-400">
+                            Khuyến mại áp dụng khi mua tối thiểu 2 sản phẩm
+                          </div>
+                          <div
+                            class="font-size-12 font-weight-400 color-disabled"
+                          >
+                            HSD: 30/09/2023
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <div class="list-item__right">
+                      <label class="radio-button">
+                        <input
+                          type="radio"
+                          id="r2"
+                          class="radio-button__input"
+                          name="r"
+                        />
+                        <div class="radio-button__checkmark"></div>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="box box-attachment">
+              <div class="title">
+                <div class="main">
+                  <div class="row row-8">
+                    <div class="col">
+                      <span class="color-main font-size-16 font-weight-700"
+                        >Mua kèm nhận ưu đãi</span
+                      >
+                    </div>
+                    <div class="col-auto">
+                      <a href="pages/product/product-combo.html" class="button button--quiet font-weight-600 pr0 font-size-13">Xem thêm</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main list-mb-12">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <a
+                      href="javascript:;"
+                      class="product product-border list-mb-8"
+                    >
+                      <div class="product-img">
+                        <img src="demo/product-small1.jpg" />
+                      </div>
+                      <div class="product-cont">
+                        <div class="price-main font-size-13 font-weight-700">
+                          155.820 đ
+                        </div>
+                        <div class="price-sub font-size-12">
+                          <span class="price-sub-text">229.000đ</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-auto">
+                    <i class="icon icon_16 icon_plus color-main"></i>
+                  </div>
+                  <div class="col">
+                    <a
+                      href="javascript:;"
+                      class="product product-border list-mb-8"
+                    >
+                      <div class="product-img">
+                        <img src="demo/product-small1.jpg" />
+                      </div>
+                      <div class="product-cont">
+                        <div class="price-main font-size-13 font-weight-700">
+                          155.820 đ
+                        </div>
+                        <div class="price-sub font-size-12">
+                          <span class="price-sub-text">229.000đ</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a
+                      href="javascript:;"
+                      class="product product-border list-mb-8"
+                    >
+                      <div class="product-bg">
+                        <i class="icon icon_16 icon_fill_hori color-white"></i>
+                      </div>
+                      <div class="product-img">
+                        <img src="demo/product-small1.jpg" />
+                      </div>
+                      <div class="product-cont">
+                        <div class="price-main font-size-13 font-weight-700">
+                          155.820 đ
+                        </div>
+                        <div class="price-sub font-size-12">
+                          <span class="price-sub-text">229.000đ</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="item-attachment list-mb-8">
+                  <div class="font-size-13">Quà tặng kèm</div>
+                  <div class="row row-8 align-center">
+                    <div class="col">
+                      <div class="row row-8 align-center">
+                        <div class="col-auto">
+                          <div class="box-40">
+                            <img
+                              class="border-radius"
+                              src="demo/voucher3.png"
+                            />
+                          </div>
+                        </div>
+                        <div class="col list-mb-4">
+                          <div
+                            class="list-item__subtitle font-size-12 font-weight-400"
+                          >
+                            Giảm trực tiếp
+                          </div>
+                          <div
+                            class="list-item__title font-size-12 font-weight-700"
+                          >
+                            100.000đ
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="row row-8 align-center">
+                        <div class="col-auto">
+                          <div class="box-40">
+                            <img
+                              class="border-radius"
+                              src="demo/voucher3.png"
+                            />
+                          </div>
+                        </div>
+                        <div class="col list-mb-4">
+                          <div
+                            class="list-item__subtitle font-size-12 font-weight-400"
+                          >
+                            Giảm trực tiếp
+                          </div>
+                          <div
+                            class="list-item__title font-size-12 font-weight-700"
+                          >
+                            100.000đ
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="total">
+                  <div class="row row-8 align-center">
+                    <div class="col list-mb-4">
+                      <div class="font-size-12">Tổng cộng:</div>
+                      <div class="row row-8">
+                        <div class="col-auto">
+                          <span class="price-main font-size-14 font-weight-800">
+                            2.000.000 đ
+                          </span>
+                        </div>
+                        <div class="col">
+                          <span class="price-sub-text font-size-12"
+                            >4.000.000 đ</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <a onclick="showsheet()"
+                        href="javascript:;"
+                        class="button button-sm button--outline font-weight-600 font-size-13"
+                        >Thêm vào giỏ hàng</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box box-promotion">
+              <div class="title">
+                <div class="main">
+                  <div class="row row-8">
+                    <div class="col">
+                      <span class="color-main font-size-16 font-weight-700"
+                        >Khuyến mại liên quan</span
+                      >
+                    </div>
+                    <div class="col-auto">
+                      <a
+                        href="pages/product/promotion.html"
+                        class="button button--quiet font-weight-600 pr0 font-size-13"
+                        >Xem tất cả</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="glider-promotion glider">
+                <div class="glider-slide">
+                  <div class="item-promotion">
+                    <div class="row row-16 align-center">
+                      <div class="col-auto">
+                        <div class="box-72">
+                          <img src="demo/voucher3.png" />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="promotion-ticket">
+                          <div class="row row-0 align-center">
+                            <div class="col">
+                              <div class="chip chip-sm chip-primary-light">
+                                <div class="chip-media">
+                                  <i
+                                    class="icon_16 icon icon_ticket color-primary"
+                                  ></i>
+                                </div>
+                                <div class="chip-label text-upper">VNSHOP9</div>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <button
+                                class="button button-20 button--quiet pr0"
+                              >
+                                <i
+                                  class="icon icon_20 icon_copy color-primary"
+                                ></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row row-8 align-center">
+                          <div class="col">
+                            <div class="font-size-13 mb4">
+                              <span class="font-weight-700">Giảm 9%</span>
+                              <span class="font-weight-400">tối đa</span>
+                              <span class="font-weight-700">99k</span>
+                            </div>
+                            <div class="font-size-12 color-disabled">
+                              HSD: 09/09/2023
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="glider-slide">
+                  <div class="item-promotion">
+                    <div class="row row-16 align-center">
+                      <div class="col-auto">
+                        <div class="box-72">
+                          <img src="demo/voucher4.png" />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="promotion-ticket">
+                          <div class="row row-0 align-center">
+                            <div class="col">
+                              <div class="chip chip-sm chip-primary-light">
+                                <div class="chip-media">
+                                  <i
+                                    class="icon_16 icon icon_ticket color-primary"
+                                  ></i>
+                                </div>
+                                <div class="chip-label text-upper">VNSHOP9</div>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <button
+                                class="button button-20 button--quiet pr0"
+                              >
+                                <i
+                                  class="icon icon_20 icon_copy color-primary"
+                                ></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row row-8 align-center">
+                          <div class="col">
+                            <div class="font-size-13 mb4">
+                              <span class="font-weight-700">Giảm 9%</span>
+                              <span class="font-weight-400">tối đa</span>
+                              <span class="font-weight-700">99k</span>
+                            </div>
+                            <div class="font-size-12 color-disabled">
+                              HSD: 09/09/2023
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="glider-slide">
+                  <div class="item-promotion">
+                    <div class="row row-16 align-center">
+                      <div class="col-auto">
+                        <div class="box-72">
+                          <img src="demo/voucher3.png" />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="promotion-ticket">
+                          <div class="row row-0 align-center">
+                            <div class="col">
+                              <div class="chip chip-sm chip-primary-light">
+                                <div class="chip-media">
+                                  <i
+                                    class="icon_16 icon icon_ticket color-primary"
+                                  ></i>
+                                </div>
+                                <div class="chip-label text-upper">VNSHOP9</div>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <button
+                                class="button button-20 button--quiet pr0"
+                              >
+                                <i
+                                  class="icon icon_20 icon_copy color-primary"
+                                ></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row row-8 align-center">
+                          <div class="col">
+                            <div class="font-size-13 mb4">
+                              <span class="font-weight-700">Giảm 9%</span>
+                              <span class="font-weight-400">tối đa</span>
+                              <span class="font-weight-700">99k</span>
+                            </div>
+                            <div class="font-size-12 color-disabled">
+                              HSD: 09/09/2023
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="glider-slide">
+                  <div class="item-promotion">
+                    <div class="row row-16 align-center">
+                      <div class="col-auto">
+                        <div class="box-72">
+                          <img src="demo/voucher4.png" />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="promotion-ticket">
+                          <div class="row row-0 align-center">
+                            <div class="col">
+                              <div class="chip chip-sm chip-primary-light">
+                                <div class="chip-media">
+                                  <i
+                                    class="icon_16 icon icon_ticket color-primary"
+                                  ></i>
+                                </div>
+                                <div class="chip-label text-upper">VNSHOP9</div>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <button
+                                class="button button-20 button--quiet pr0"
+                              >
+                                <i
+                                  class="icon icon_20 icon_copy color-primary"
+                                ></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row row-8 align-center">
+                          <div class="col">
+                            <div class="font-size-13 mb4">
+                              <span class="font-weight-700">Giảm 9%</span>
+                              <span class="font-weight-400">tối đa</span>
+                              <span class="font-weight-700">99k</span>
+                            </div>
+                            <div class="font-size-12 color-disabled">
+                              HSD: 09/09/2023
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box box-vnshop">
+              <div class="title mb0">
+                <div class="main">
+                  <a
+                    href="javascript:;"
+                    class="font-size-14 font-weight-700 title-link arrow-right-24"
+                  >
+                    <div class="row row-8 align-center">
+                      <div class="col-auto">
+                        <div class="box-36">
+                          <img class="border-2" src="demo/icon_vnshop.png" />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <span class="font-weight-700 font-size-14 color-main"
+                          >Công ty cổ phẩn VNIS</span
+                        >
+                        <span class="font-size-14 middle"
+                          ><i class="icon icon_16 icon_tick color-primary"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="box box-policy">
+              <div class="title">
+                <div class="main">
+                  <span class="color-main font-size-16 font-weight-700"
+                    >Chính sách bán hàng</span
+                  >
+                </div>
+              </div>
+              <div class="main list-mb-12">
+                <ul class="list list--material">
+                  <li class="list-item list-item--material">
+                    <div class="list-item__left list-item--material__left material_icon_20">
+                      <i class="icon icon_20 icon_policy1 color-secondary"></i>
+                    </div>                
+                    <div class="list-item__center list-item--material__center">
+                      <div class="list-item__title list-item--material__title font-size-14 text-secondary"><b class="font-weight-700">Hoàn tiền 150%</b> nếu hàng không chính hãng</div>
+                    </div>
+                  </li>
+                  <li class="list-item list-item--material">
+                    <div class="list-item__left list-item--material__left material_icon_20">
+                      <i class="icon icon_20 icon_policy2 color-secondary"></i>
+                    </div>                
+                    <div class="list-item__center list-item--material__center">
+                      <div class="list-item__title list-item--material__title font-size-14 text-secondary">
+                        Cam kết hàng 
+                        <b class="font-weight-700">chính hãng 100%</b></div>
+                    </div>
+                  </li>
+                  <li class="list-item list-item--material">
+                    <div class="list-item__left list-item--material__left material_icon_20">
+                      <i class="icon icon_20 icon_policy3 color-secondary"></i>
+                    </div>                
+                    <div class="list-item__center list-item--material__center">
+                      <div class="list-item__title list-item--material__title font-size-14 text-secondary">
+                        Đổi trả trong vòng 
+                        <b class="font-weight-700">10 ngày</b></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="box box-product-info">
+              <div class="title">
+                <div class="main">
+                  <span class="color-main font-size-16 font-weight-700"
+                    >Thông tin sản phẩm</span
+                  >
+                </div>
+              </div>
+              <div class="main list-mb-12">
+                <div class="box-list-bor">
+                  <div class="box-more-product">
+                    <div class="read-more-product">
+                      <div class="list-mb-16">
+                        <div class="text-secondary font-weight-700 text-upper">
+                          Chi tiết sản phẩm
+                        </div>
+                        <div class="form">
+                          <div class="row row-12">
+                            <div class="col-5 form-left">Thương hiệu</div>
+                            <div class="col-7 form-right">ZARA</div>
+                          </div>
+                          <div class="row row-12">
+                            <div class="col-5 form-left">Xuất xứ</div>
+                            <div class="col-7 form-right">Việt Nam</div>
+                          </div>
+                          <div class="row row-12">
+                            <div class="col-5 form-left">Hướng dẫn sử dụng</div>
+                            <div class="col-7 form-right">
+                              Không phơi dưới ánh nắng mặt trời, không dùng
+                              thuốc giặt tẩy mạnh
+                            </div>
+                          </div>
+                          <div class="row row-12">
+                            <div class="col-5 form-left">Thương hiệu</div>
+                            <div class="col-7 form-right">ZARA</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="button-more text-center color-primary font-size-13 font-weight-600"
+                    >
+                      <label for="check-more-product">
+                        <input
+                          id="check-more-product"
+                          type="checkbox"
+                          class="check-more"
+                        />
+                        <div class="show">
+                          <span>Xem thêm</span>
+                          <i class="icon_16 icon ic_drop"></i>
+                        </div>
+                        <div class="hiddren">
+                          <span>Thu gọn</span>
+                          <i class="icon_16 icon ic_up"></i>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="box-more-descript">
+                    <div class="read-more-descript">
+                      <div class="list-mb-16">
+                        <div class="text-secondary font-weight-700 text-upper">
+                          Mô tả sản phẩm
+                        </div>
+                        <div class="form">
+                          <p>
+                            Chúng tôi đang triển khai các chương trình giám sát
+                            nhằm đảm bảo sự tuân thủ các tiêu chuẩn của chúng
+                            tôi về xã hội, môi trường, cũng như về độ an toàn và
+                            tính lành mạnh của các sản phẩm. Nhằm đánh giá sự
+                            tuân thủ các tiêu chuẩn này, chúng tôi đã phát triển
+                            một chương trình kiểm toán và các kế hoạch cải thiện
+                            liên tục.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="button-more text-center color-primary font-size-13 font-weight-600"
+                    >
+                      <label for="check-more-descript">
+                        <input
+                          id="check-more-descript"
+                          type="checkbox"
+                          class="check-more"
+                        />
+                        <div class="show">
+                          <span>Xem thêm</span>
+                          <i class="icon_16 icon ic_drop"></i>
+                        </div>
+                        <div class="hiddren">
+                          <span>Thu gọn</span>
+                          <i class="icon_16 icon ic_up"></i>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box box-product-other">
+              <div class="title">
+                <div class="main">
+                  <div class="row row-8">
+                    <div class="col">
+                      <span class="color-main font-size-16 font-weight-700"
+                        >Sản phẩm liên quan</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-product-other glider-contain">
+                <div class="main">
+                  <div class="glider-other glider">
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess2.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess2.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess2.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess2.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess2.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="glider-slide">
+                      <a href="javascript:;" class="product list-mb-8">
+                        <div class="product-img">
+                          <img src="demo/product_suggess2.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span
+                            ><span class="bg-secondary-light-300"
+                              >Sale 8.8</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div
+                            class="product-title-sub font-size-10 text-secondary"
+                          >
+                            Logitech
+                          </div>
+                          <div class="product-title">
+                            Bút lông màu Fiber Pen Thiên Long Colokit - Có thể
+                            rửa được- Combo 40/56/76 cây
+                          </div>
+                          <div class="price-main font-weight-800">
+                            <div class="font-size-16">2.000.000 đ</div>
+                          </div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">4.000.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabbar tabbar-auto">
+        <div class="button-form">
+          <div class="button-form-cont">
+            <div class="row row-12">
+              <div class="col-6">
+                <button onclick="showsheet()" class="button width-100 button-md button--outline">
+                  Thêm vào giỏ hàng
+                </button>
+              </div>
+              <div class="col-6">
+                <a href="pages/product/cart.html" class="button width-100 button-md">
+                  Mua ngay
+                </a>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <ons-toast id="myToast" animation="ascend" class="toast-warning">
+      <div class="row row-8 align-center">
+        <div class="col-auto">
+          <i class="icon icon_24 icon_warning color-error"></i>
+        </div>
+        <div class="col">
+          <span class="color-main font-size-13">Vui lòng chọn <b class="font-weight-700">Màu sắc</b> </span>
+        </div>
+      </div>
+       
+      <button onclick="myToast.hide()"><i class="icon icon_24 icon_x text-secondary"></i></button>
+    </ons-toast> 
+    <ons-action-sheet someAttribute="true" anotherAttribute>
+      <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet()"></div>
+      <div class="action-sheet action-sheet-cart action-sheet--material">      
+        <div class="sheet-cont">
+          <div class="cart-top">
+            <button onclick="hidesheet()" class="button-close button button--quiet button-24"><i class="icon icon_24 ic_close color-main"></i></button>
+            <div class="main">
+              <div class="cart-top-cont">
+                <div class="row row-12 align-end">
+                  <div class="col-auto">
+                    <div class="box-124" onclick="showModal_Album2()">
+                      <img src="demo/product_124.png">
+                      <button class="button-expand button button-gray-light button-24"><i class="icon icon_16 icon_expand color-main"></i></button>
+                    </div>
+      
+                  </div>
+                  <div class="col">                    
+                    <div class="title-cart-top">
+                      <div class="font-size-12 font-weight-600 color-secondary">Phân loại: Giày chơi bóng rổ Protect 120 cho nam/nữ mới chơi , M, Xanh</div>
+                    </div>
+                    <div class="price-main font-weight-800">
+                      <div class="font-size-16">2.000.000 đ</div>
+                    </div>
+                    <div class="price-sub font-size-12">
+                      <span class="price-sub-text">4.000.000 đ</span>
+                      <span class="price-sub-number">-11%</span>
+                    </div>
+                  </div>
+                  
+      
+                </div>
+              </div>
+              
+
+            </div>
+            
+          </div>
+          <div class="box">
+            <div class="title">
+              <div class="main">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <div class="font-size-14 text-secondary">LOẠI GIÀY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main">
+              <div class="box-radio">
+                <div class="tabbar tabbar-sm tabbar--top">
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio1" checked="checked" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio1" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Giày bóng rổ
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="title">
+              <div class="main">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <div class="font-size-14 text-secondary">KÍCH THƯỚC</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main">
+              <div class="box-radio">
+                <div class="tabbar tabbar-sm tabbar--top">
+                  <label class="tabbar__item mb0">
+                    <input type="radio" name="tabbar-radio2" checked />
+                    <button class="tabbar__button tabbar-button-bor">
+                      S
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item mb0">
+                    <input type="radio" name="tabbar-radio2" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      M
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item mb0">
+                    <input type="radio" name="tabbar-radio2" />
+                    <button class="tabbar__button tabbar-button-bor" disabled>
+                      L
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="title">
+              <div class="main">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <div class="font-size-14 text-secondary">MÀU SẮC</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main">
+              <div class="box-radio">
+                <div class="tabbar tabbar-sm tabbar--top">
+                  <label class="tabbar__item">
+                    <input type="radio" name="tabbar-radio3" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Xanh
+                    </button>
+                  </label>
+      
+                  <label class="tabbar__item">
+                    <input disabled type="radio" name="tabbar-radio3" />
+                    <button class="tabbar__button tabbar-button-bor">
+                      Đỏ
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box box-number">
+            <div class="title mb0">
+              <div class="main">
+                <div class="box-number-cont">
+                  <div class="row row-8 align-center">
+                    <div class="col">
+                      <div class="font-size-14 text-secondary">SỐ LƯỢNG</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="item-number">
+                        <button class="item-number-left button button-xs button--light"><i class="icon icon_16 icon_minus color-main"></i></button>
+                        <button class="item-number-center button button-xs button--light font-size-13 font-weight-600">01</button>
+                        <button class="item-number-right button button-xs button--light"><i class="icon icon_16 icon_plus color-main"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="sheet-footer">
+          <div class="row row-0">
+            <div class="col">
+              <!--<ons-button class="width-100 button-md" onclick="myToast.toggle()">Thêm vào giỏ hàng</ons-button>-->
+              <ons-button onclick="hidesheet()" class="width-100 button-md" id="addtocart">Thêm vào giỏ hàng                 
+            </ons-button>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </ons-action-sheet>
+    <ons-modal class="modal_album modal_album1 modal_full" direction="up">
+      <div class="modal-js">
+          <div class="modal-header">
+              <div class="main">
+                  <div class="row row-8 align-center">
+                    <div class="col-auto">
+                      <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_back color-white"></i></a>
+                  </div>
+                      <div class="col">
+                        &nbsp;                                           
+                      </div>
+                      <div class="col-auto">
+                          &nbsp;
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="modal-body">
+            <div class="banner-product">
+              <div class="splide carousel-album">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>          
+            </div>
+          </div>                
+      </div>          
+      </div>      
+    </ons-modal>
+    <ons-modal class="modal_album modal_album2 modal_full" direction="up">
+      <div class="modal-js">
+          <div class="modal-header">
+              <div class="main">
+                  <div class="row row-8 align-center">
+                    <div class="col-auto">
+                      &nbsp;
+                  </div>
+                      <div class="col">
+                        &nbsp;                                           
+                      </div>
+                      <div class="col-auto">
+                        <a onclick="hideModal2()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-white"></i></a>
+                          
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="modal-body">
+            <div class="banner-product">
+              <div class="splide carousel-album2">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>                    
+                  </ul>
+                </div>
+              </div>          
+            </div>
+          </div>                
+      </div>          
+      </div>      
+    </ons-modal>   
+    <div class="cart-item"><img class="addtocart-img" src="demo/product_124.png"></div>        
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+    <script src="js/custom.js"></script>
+    <!--myToast-->
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $("#myToast").hide()
+        }, 5000);
+      });
+    </script>
+    <!--myToast end-->
+    <script>
+      function showsheet() {
+        var sheet = document.querySelector("ons-action-sheet");
+        sheet.show();
+      }
+      function hidesheet() {
+        var sheet = document.querySelector("ons-action-sheet");
+        sheet.hide();
+      }
+    </script>
+    <script>
+      new Glider(document.querySelector(".glider-promotion"), {
+        slidesToShow: 1.4,
+        slidesToScroll: 1,
+        draggable: true,
+      });
+    </script>
+    <!--carousel-->
+    <script>
+      //carousel-primary
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".carousel-primary", {
+    perPage: 1,
+    gap: "0px",
+    loop: false,
+    //padding: '50px',
+    pagination: true,
+    arrows: false,
+  }).mount();
+});
+//carousel-primary end
+
+//carousel-carousel-album1
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".carousel-album", {
+    perPage: 1,
+    gap: "0px",
+    loop: false,
+    //padding: '50px',
+    pagination: true,
+    arrows: false,
+  }).mount();
+});
+//carousel-carousel-album1 end
+
+//carousel-carousel-album1
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".carousel-album2", {
+    perPage: 1,
+    gap: "0px",
+    loop: false,
+    //padding: '50px',
+    pagination: false,
+    arrows: false,
+  }).mount();
+});
+//carousel-carousel-album1 end
+    </script>
+    <!--carousel end-->
+    <script>
+      $(document).ready(function () {
+          //Glider
+new Glider(document.querySelector(".glider-other"), {
+  slidesToShow: 2.09,
+  slidesToScroll: 1,
+  draggable: true,
+});
+
+
+//Glider end
+      });
+  </script>
+  <script>
+    $(document).ready(function(){
+  $('#addtocart').on('click',function(){    
+    var button = $(this);
+    var cart = $('#cart');
+    var cartTotal = cart.attr('data-totalitems');
+    var newCartTotal = parseInt(cartTotal) + 1;
+    
+    $("body").addClass("sendtocart");
+    setTimeout(function(){
+      $("body").removeClass("sendtocart");
+      cart.addClass('shake').attr('data-totalitems', newCartTotal);
+      setTimeout(function(){
+        cart.removeClass('shake');
+      },500)
+    },1000)
+  })
+})
+  </script>
+  <script>
+    function showModal_Album() {
+      var modal = document.querySelector('.modal_album1');
+modal.show();
+}
+function hideModal() {
+      var modal = document.querySelector(".modal_album1");
+      modal.hide();
+    }
+
+    function showModal_Album2() {
+      var modal2 = document.querySelector('.modal_album2');
+modal2.show();
+}
+function hideModal2() {
+      var modal2 = document.querySelector(".modal_album2");
+      modal2.hide();
+    }
+
+    
+  </script>
+  </body>
+</html>
