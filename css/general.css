@@ -2023,7 +2023,7 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; min-height: 164px;
 }
 .product-cont {
   padding: 0 8px 8px;
@@ -4571,8 +4571,20 @@ line-height: 36px;
   .width-96-pc {
     width: 96px;
   }
+  .product-img {
+    min-height: 465px;
+  }
 }
 @media (max-width: 481px) {
+  .product-img {
+    min-height: 188px;
+  }
+  .flash-sales .product-img {
+    min-height: 142px;
+}
+.category-best .product-img {
+  min-height: 146px;
+}
   .min-col-sales {
     max-height: 96px;
     border-radius: 12px;
@@ -4583,6 +4595,9 @@ line-height: 36px;
   }
 }
 @media (max-width: 376px) {
+  .product-img {
+    min-height: 164px;
+  }
   .masonry {
     columns: 130px;
   }
