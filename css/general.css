@@ -3795,6 +3795,8 @@ border-radius: 16px;
 .box-background {padding: 8px; border-radius: var(--border-radius);}
 .border-radius-4 {border-radius: 4px;}
 /*landing page*/
+.page-landingpage .title-head{opacity: 0;}
+.page-landingpage .sticky .title-head{opacity: 1;}
 .counting-item3 .row-4 > * {
   padding-left: 1.5px;
   padding-right: 1.5px;
