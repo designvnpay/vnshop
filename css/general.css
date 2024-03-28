@@ -1512,7 +1512,6 @@ a {
 }
 .glider-style2 {
   padding-top: var(--padding-12);
-  padding-bottom: var(--padding-12);
 }
 .glider .glider-slide:first-child {
   margin-left: var(--padding-default);
