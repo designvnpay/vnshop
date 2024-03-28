@@ -314,6 +314,9 @@
 .price-sub {
   color: var(--text-secondary);
 }
+.price-sub {
+  min-height: 20px;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -415,13 +418,9 @@ input,
   top: 0;
 }
 
-.toolbar-tran {
-  padding-top: 52px;
-  height: var(--toolbar-100);
-}
 .glider-sales-sticky {
   position: sticky;
-  top: var(--toolbar-100);
+  top: var(--toolbar-height);
   z-index: 3;
   padding-top: 16px;padding-bottom: 16px;
   margin-bottom: 0;
@@ -431,7 +430,7 @@ input,
 }
 .glider-style5 {
   position: sticky;
-  top: var(--toolbar-100);
+  top: var(--toolbar-height);
   background-color: var(--color-white); z-index: 1;
 }
 .opacity0 {opacity: 0;}
@@ -530,7 +529,7 @@ body {
 }
 .toolbar-sub-sticky.toolbar {
   position: sticky;
-  top: 0;
+  top: -2px;
   background-color: var(--color-white);
 }
 .toolbar-sub .tabbar--top {
@@ -1690,6 +1689,9 @@ a {
 .glider-slide {
   min-width: auto; 
 }
+.glider-deal1 .glider-slide {
+  min-width: 150px; 
+}
 .glider-order .glider-slide {
   width: auto !important; margin: 0 12px;
 }
@@ -1816,10 +1818,8 @@ a {
 }
 /*slide end*/
 /*masonry*/
-.masonry.list-mb-12 > *:last-child {
-  margin-bottom: 12px;
-}
-.masonry {
+
+/*.masonry {
   display: grid;
   margin-left: -6px;
   margin-right: -6px;
@@ -1830,13 +1830,20 @@ a {
   padding-left: 6px;
   padding-right: 6px;
 }
-/*
+*/
+.masonry.list-mb-12 > *:not(:last-child) {
+  margin-bottom: 0;
+}
 .masonry {
   display: grid;
   grid-gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  grid-auto-rows: 285px;
   grid-auto-flow: dense;
+}
+/*
+.masonry {
+  columns: 160px;
+  gap: 12px;
 }*/
 .banner_vertical {
   border-radius: var(--border-radius); overflow: hidden;display: block;
@@ -1848,13 +1855,10 @@ a {
   display: block;
   background-repeat: no-repeat;
 }
-/*.masonry {
-  columns: 160px;
-  gap: 12px;
-}*/
+
 
 .masonry-list.masonry {
-  columns: auto;
+  grid-template-columns: none;
 }
 
 /*.masonry > div {
@@ -1922,8 +1926,14 @@ a {
 /*product*/
 .price-main {
   font-size: var(--size-14);
-  line-height: 20px; color: var(--color-primary);
+  line-height: 20px;
+  min-height: 20px;max-height: 24px;
+  color: var(--color-primary);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
+
 .product-cont > *:not(:last-child).price-main {
   margin-bottom: 0;
 }
@@ -1969,6 +1979,9 @@ a {
   flex: 0 0 60%;
   max-width: 60%;
   padding: 0;
+}
+.product-list .product-cont>* {
+  margin-right: 10px;
 }
 .product-title {
   font-size: var(--size-13);
@@ -2023,7 +2036,7 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center; min-height: 164px;
+  align-items: center; /*min-height: 164px;*/
 }
 .product-cont {
   padding: 0 8px 8px;
@@ -3795,6 +3808,8 @@ border-radius: 16px;
 .box-background {padding: 8px; border-radius: var(--border-radius);}
 .border-radius-4 {border-radius: 4px;}
 /*landing page*/
+.page-landingpage .box {padding: 16px 0; margin: 0;}
+
 .page-landingpage .title-head{opacity: 0;}
 .page-landingpage .sticky .title-head{opacity: 1;}
 .counting-item3 .row-4 > * {
@@ -3820,7 +3835,6 @@ border-radius: 16px;
   background-color: var(--ldp_box_bg);
 }
 
-.page-landingpage .flash-sales {padding-top: var(--size-12);}
 .page-landingpage .glider-dot {
   background: var(--ldp_disable);
 }
@@ -3958,7 +3972,6 @@ border-radius: 16px;
   transform: scale(1);
   border-radius: 30px;
 }
-.page-landingpage .banner-home {margin-bottom: 16px;}
 .banner-home .splide__pagination {
   bottom: 0;
 }
@@ -4569,17 +4582,25 @@ line-height: 36px;
   left: 4px;
 }
 /*flash sale end*/
+.product-img img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
 @media (min-width: 768px) {
-  .width-96-pc {
-    width: 96px;
-  }
-  .product-img {
-    min-height: 465px;
-  }
+  .width-96-pc {width: 96px;}
+  /*.product-img {min-height: 465px;}
+  .product-img img {max-height: 465px; width: auto;}*/
+}
+@media (max-width: 767px) {
+  /*.product-img {min-height: 325px;}
+  .product-img img {max-height: 325px; width: auto;}*/
 }
 @media (max-width: 481px) {
-  .product-img {
-    min-height: 188px;
+  /*.product-img {
+    min-height: 202px;
+  }*/
+  .glider-deal2 .product-img {
+    min-height: 145px;
   }
   .flash-sales .product-img {
     min-height: 142px;
@@ -4597,9 +4618,9 @@ line-height: 36px;
   }
 }
 @media (max-width: 376px) {
-  .product-img {
+  /*.product-img {
     min-height: 164px;
-  }
+  }*/
   .masonry {
     columns: 130px;
   }
