@@ -1511,7 +1511,10 @@ a {
   text-align: center;
 }
 .glider-style2 {
-  padding-top: var(--padding-12);
+  padding-top: var(--padding-12); padding-bottom: var(--padding-12);
+}
+.page-landingpage .glider-style2 {
+  padding-bottom: 0;
 }
 .glider .glider-slide:first-child {
   margin-left: var(--padding-default);
@@ -4584,6 +4587,10 @@ line-height: 36px;
 .product-img img {
   aspect-ratio: 1 / 1;
   object-fit: contain;
+}
+.box-brand .product-img img {
+  aspect-ratio:initial;
+  object-fit:initial;
 }
 @media (min-width: 768px) {
   .width-96-pc {width: 96px;}
