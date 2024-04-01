@@ -1610,6 +1610,9 @@ a {
   align-items: center; overflow: hidden;
   border-radius: 6px;
 }
+.combo .box-77 {
+  padding: 2px;background-color: var(--bg-surface-main);align-items:start;
+}
 .box-60 {
   width: 60px;
   height: 60px;
