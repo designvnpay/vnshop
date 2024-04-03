@@ -3928,7 +3928,48 @@ border-radius: 16px;
 .tab-style .toolbar-sub .tabbar__button {
   color: var(--ldp_disable); line-height: initial; height: auto; padding-bottom: 4px; padding-top: 4px;
 }
+.tab-style .label-radio > label > :checked ~ .font-weight-600::after {
+  display: none;
+}
+.label-radio > label .tab_text {
+  border-bottom: 2px solid transparent;
+}
+.label-radio .tab_text {
+  color: var(--ldp_disable); padding-bottom: 5px;
+}
+.label-radio > label> :checked ~ .tab_text {
+  border-bottom-color: var(--ldp_color_primary);color: var(--ldp_color_primary);
+}
+#glider-tabs3 .glider-slide {
+  margin: 0;
+}
+#glider-tabs3.glider .glider-slide:first-child {
+  margin-left: var(--padding-default);
+}
+#glider-tabs3.glider .glider-slide:last-child {
+  margin-right: var(--padding-default);
+}
+#glider-tabs3 .label-radio > label .tab_text {
+  padding: 0 5px 5px;
+}
+#glider-tabs3 .label-radio > label> :checked ~ .tab_text {
+  border-bottom-color: transparent;color: var(--color-white); background-color: var(--ldp_color_primary); border-radius: 8px;
+}
 
+.tab-style :checked ~ .font-weight-600 {
+  color: var(--ldp_color_primary);
+}
+
+.tab-style .label-radio > label > .font-weight-600 {
+  height: auto;
+  padding-bottom: 10px;
+}
+.tab-style .glider-slide {
+  align-content:start;
+}
+.tab-style#glider-tabs1 .glider-slide {
+  align-content:center;
+}
 .tab-style :checked + .tabbar--top-border__button, .tab-style :checked + .tabbar--top-border__button {
   border-bottom-color: var(--ldp_color_primary);
   color: var(--ldp_color_primary);
