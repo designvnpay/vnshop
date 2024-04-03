@@ -3916,14 +3916,19 @@ border-radius: 16px;
 .tabbar-bottom-bg .tabbar__button {
   color: var(--color-white);
 }
+.tab-style > * {box-shadow: none;}
 .tab-style .toolbar, .tab-style .tabbar {
   background: transparent;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 0;overflow: initial; height: auto;
+}
+.tab-style .toolbar-sub .tabbar {
+  height: auto; 
 }
 .tab-style .toolbar-sub .tabbar__button {
-  color: var(--ldp_disable);
+  color: var(--ldp_disable); line-height: initial; height: auto; padding-bottom: 4px; padding-top: 4px;
 }
+
 .tab-style :checked + .tabbar--top-border__button, .tab-style :checked + .tabbar--top-border__button {
   border-bottom-color: var(--ldp_color_primary);
   color: var(--ldp_color_primary);
