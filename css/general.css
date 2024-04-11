@@ -3815,6 +3815,84 @@ border-radius: 16px;
 /*toast end*/
 .box-background {padding: 8px; border-radius: var(--border-radius);}
 .border-radius-4 {border-radius: 4px;}
+/*timer*/
+.tick {
+  text-align: center;
+}
+.tick-flip .tick-flip-card {
+  border-radius: 4px;
+}
+.tick>div {font-size: 16px !important;}
+.tick-group>div {
+  max-height: 30px;
+}
+.tick .tick-group:not(:last-child) { margin-right: 20px;}
+.tick-group {position: relative;margin:0 auto;text-align:center;}
+.tick .tick-group:not(:last-child)::before, .tick .tick-group:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  border-radius: 100px;
+  background-color: var(--ldp_color_counting);
+  width: 3px;
+  height: 3px;
+}
+.tick-group::before {
+  top: 23px;
+}
+.tick-group::after {
+  top: 28px;
+}
+.tick-flip-card-shadow, .tick-flip-spacer, .tick-flip-panel-front-shadow {display: none !important;}
+.tick-flip,.tick-text-inline {
+  font-size:16px; font-weight: 700;
+}
+
+.tick-char {
+  width:1.5em;
+}
+
+.tick-text-inline {
+  display:inline-block;text-align:center;min-width:1em;
+}
+
+.tick-text-inline+.tick-text-inline {
+  margin-left:-.325em;
+}
+
+
+.tick-text-inline {
+   color: var(--ldp_color_counting) !important; 
+}
+
+.tick-label {
+   color: var(--ldp_color_counting) !important; 
+   font-size: var(--size-12);
+    line-height: 16px; font-weight: 600;
+}
+
+.tick-flip-panel {
+   color: rgb(255, 255, 255) !important; 
+}
+
+.tick-flip {
+   height: 30px;
+}
+
+.tick-flip-panel-text-wrapper {
+   line-height: 30px !important; 
+}
+
+.tick-flip-panel {
+   background-color: var(--ldp_color_counting) !important; 
+}
+.tick-flip-panel-back:after {
+  background: var(--ldp_background);
+  height: 1px;
+}
+.tick-flip-shadow {box-shadow: initial;}
+
+/*timer*/
 /*landing page*/
 .page-landingpage .box {padding: 16px 0; margin: 0;}
 

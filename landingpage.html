@@ -30,6 +30,7 @@
     <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
     <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
     <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="js/vendors/flip/flip.min.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/icon.css" />
     <link rel="stylesheet" href="css/theme-color.css" />
@@ -419,7 +420,7 @@
             </div>
           </div>
           <div class="box box-counting">
-            <div class="main">
+            <div class="main">              
               <div class="list-counting">
                 <div class="flex banner-counting align-center">
                   <div class="counting-item counting-item1">
@@ -457,42 +458,17 @@
                 </div>
                 <div class="flex banner-counting align-center">
                   <div class="counting-item counting-item2">
-                      <div class="counting-item-content">
-                          <div class="row row-10 row-space">
-                              <div class="col">                                  
-                                  <div class="counting-number mb3">
-                                    <div class="counting-number-cont">
-                                      <div class="font-size-16 font-weight-700">00</div>
-                                    </div>
-                                  </div>
-                                  <div class="font-size-12 font-weight-600">Ngày</div>
-                              </div>
-                              <div class="col-auto">
-                                <div class="line-space"></div>
-                              </div>
-                              <div class="col">
-                                <div class="counting-number mb3">
-                                  <div class="counting-number-cont">
-                                    <div class="font-size-16 font-weight-700">00</div>
-                                  </div>
-                                </div>
-                                <div class="font-size-12 font-weight-600">Giờ</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="line-space"></div>
-                            </div>
-                            <div class="col">
-                              <div class="counting-number mb3">
-                                <div class="counting-number-cont">
-                                  <div class="font-size-16 font-weight-700">00</div>
-                                </div>
-                              </div>
-                              <div class="font-size-12 font-weight-600">Phút</div>
-                          </div>
-
-                          </div>
-
+                    <div class="tick" data-did-init="handleTickInit">
+                      <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">            
+                          <div class="tick-group">            
+                              <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">            
+                                  <span data-view="flip"></span>            
+                              </div>            
+                              <span data-key="label" data-view="text" class="tick-label"></span>            
+                          </div>            
                       </div>
+                  
+                  </div>
                   </div>
                 </div>
                 <div class="flex banner-counting align-center">
@@ -1955,7 +1931,64 @@
     <script src="js/vendors/select2/select2.init.js"></script>
     <!-- select2 -->
     <script src="js/vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/vendors/flip/flip.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      function handleTickInit(tick) {
+    
+          // uncomment to set labels to different language
+    
+          var locale = {
+              YEAR_PLURAL: 'Năm',
+              YEAR_SINGULAR: 'Jaar',
+              MONTH_PLURAL: 'Tháng',
+              MONTH_SINGULAR: 'Maand',
+              WEEK_PLURAL: 'Tuần',
+              WEEK_SINGULAR: 'Week',
+              DAY_PLURAL: 'Ngày',
+              DAY_SINGULAR: 'Dag',
+              HOUR_PLURAL: 'Giờ',
+              HOUR_SINGULAR: 'Giờ',
+              MINUTE_PLURAL: 'Phút',
+              MINUTE_SINGULAR: 'Minuut',
+              SECOND_PLURAL: 'Giây',
+              SECOND_SINGULAR: 'Seconde',
+              MILLISECOND_PLURAL: 'Milliseconden',
+              MILLISECOND_SINGULAR: 'Milliseconde'
+          };
+    
+          for (var key in locale) {
+              if (!locale.hasOwnProperty(key)) { continue; }
+              tick.setConstant(key, locale[key]);
+          }
+    
+    
+          // format of due date is ISO8601
+          // https://en.wikipedia.org/wiki/ISO_8601
+    
+          // '2018-01-31T12:00:00'        to count down to the 31st of January 2018 at 12 o'clock
+          // '2019'                       to count down to 2019
+          // '2018-01-15T10:00:00+01:00'  to count down to the 15th of January 2018 at 10 o'clock in timezone GMT+1
+    
+          // create the countdown counter
+          var counter = Tick.count.down('2024-05-15T12:00:00');
+    
+          counter.onupdate = function(value) {
+            tick.value = value;
+          };
+    
+          counter.onended = function() {
+              // redirect, uncomment the next line
+              // window.location = 'my-location.html'
+    
+              // hide counter, uncomment the next line
+              // tick.root.style.display = 'none';
+    
+              // show message, uncomment the next line
+              // document.querySelector('.tick-onended-message').style.display = '';
+          };
+      }
+    </script>
     <script>
       $(document).ready(function () { 
   $(".page__content").scroll(function () {
@@ -2074,19 +2107,7 @@ $(document).ready(function () {
         modal.hide();
       }
     </script>
-    <script>
-      //carousel-primary
-document.addEventListener("DOMContentLoaded", function () {
-  new Splide(".carousel-primary", {
-    perPage: 1,
-    gap: "0px",
-    loop: false,
-    //padding: '50px',
-    pagination: true,
-    arrows: false,
-  }).mount();
-});
-//carousel-primary end
-    </script>
+
+
   </body>
 </html>
