@@ -1600,6 +1600,16 @@ a {
   overflow: hidden;
   border-radius: 6px;
 }
+.box-47 {
+  width: 47px;
+  height: 47px;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+}
 .box-25 {
   width: 25px;
   height: 25px;
@@ -3019,7 +3029,7 @@ a.close {display: flex;}
 /*select2 end*/
 /*chip*/
 .item-promotion {
-  background-color: var(--color-white);
+  background-color: var(--brand-primary-lightSellect);
   padding: 8px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
