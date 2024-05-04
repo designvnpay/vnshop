@@ -3032,7 +3032,6 @@ a.close {display: flex;}
   background-color: var(--brand-primary-lightSellect);
   padding: 8px;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
 }
 .promotion-ticket {
   border-bottom: 1px dashed var(--border-color);
