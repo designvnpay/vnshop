@@ -1600,6 +1600,16 @@ a {
   overflow: hidden;
   border-radius: 6px;
 }
+.box-25 {
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+}
 .relative {position: relative;}
 .box-77 {
   width: 77px;
