@@ -1941,6 +1941,11 @@ a {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.price-main>* {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
 .product-cont > *:not(:last-child).price-main {
   margin-bottom: 0;
@@ -3490,7 +3495,10 @@ a.close {display: flex;}
 .category-menu .tabbar__icon {
   font-size: 20px;
   height: 20px;
+  background-repeat: no-repeat;
   margin-bottom: 8px;
+  background-size: 20px;
+  background-position: center;
 }
 .category-menu .tabbar__icon + .tabbar__label {
   line-height: 16px;
@@ -4028,7 +4036,7 @@ border-radius: 16px;
   margin-right: var(--padding-default);
 }
 #glider-tabs3 .label-radio > label .tab_text {
-  padding: 0 5px 5px;
+  padding: 0 0 5px;
 }
 #glider-tabs3 .label-radio > label> :checked ~ .tab_text {
   border-bottom-color: transparent;color: var(--color-white); background-color: var(--ldp_color_primary); border-radius: 8px;
