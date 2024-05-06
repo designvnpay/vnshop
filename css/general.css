@@ -211,7 +211,7 @@
   --sheet-footer: 76px;
   --action-sheet-title: 56px;
   --toolbar-100:100px;
-  --toolbar-flashsale:138px;
+  --toolbar-flashsale:70px;
 }
 .text-disabled {color: var(--text-disabled);}
 .color-error {
@@ -4669,7 +4669,7 @@ line-height: 36px;
 
 }
 .toolbar-flashsale {
-  height: var(--toolbar-flashsale); padding-top: 44px;
+  height: var(--toolbar-flashsale);
 
 }
 .product-detail-flashsale {
@@ -4701,7 +4701,7 @@ line-height: 36px;
 }
 .toolbar-flashsale-slide {
   border-radius: 16px 16px 0 0;
-  margin-top: -16px;
+  margin-top: -12px;
 }
 .label-radio-cont {background-color: var(--price-box); position: relative;}
 .label-radio-cont>* {position: relative; z-index: 1;}
