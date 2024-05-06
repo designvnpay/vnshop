@@ -4405,6 +4405,22 @@ line-height: 36px;
   text-align: center;
   border-radius: 8px;
 }
+.cart-white:before {
+  content: attr(data-totalitems);
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  line-height: 16px;
+  padding: 0 5px;
+  height: 16px;
+  min-width: 16px;
+  color: var(--notification-background-color);
+  text-align: center;
+  border-radius: 8px;
+}
 .cart.shake {
   animation: shakeCart 0.4s ease-in-out forwards;
 }
