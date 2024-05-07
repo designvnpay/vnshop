@@ -14,7 +14,7 @@
   --color-disabled: #bdbdbd;
   --font-size: 12px;
   --button-quiet-color: var(--color-primary);
-  --toolbar-height: 48px;
+  --toolbar-height: 52px;
   --toolbar-search: 56px;
   --toolbar-sub-height: 40px;
   --toolbar-sub2: 40px;
@@ -211,7 +211,7 @@
   --sheet-footer: 76px;
   --action-sheet-title: 56px;
   --toolbar-100:100px;
-  --toolbar-flashsale:70px;
+  --toolbar-flashsale:64px;
 }
 .text-disabled {color: var(--text-disabled);}
 .color-error {
@@ -4670,6 +4670,7 @@ line-height: 36px;
 }
 .toolbar-flashsale {
   height: var(--toolbar-flashsale);
+  padding-bottom: 12px;
 
 }
 .product-detail-flashsale {
