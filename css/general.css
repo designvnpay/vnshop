@@ -3329,11 +3329,11 @@ a.close {display: flex;}
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   position: absolute;
-  top: var(--toolbar-height);
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border-radius: 16px;
+  /*top: var(--toolbar-height);*/
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px 16px 0 0;
   overflow-x: visible;
   overflow-y: hidden;
   color: var(--text-color);
@@ -3354,8 +3354,8 @@ a.close {display: flex;}
 .action-sheet-cart .action-sheet-title {display: none;}
 .sheet-cont {
   background-color: #fff;  
-  padding-bottom: var(--padding-default); min-height: 100px;
-  
+  padding-bottom: var(--padding-default);padding-top: var(--padding-default); min-height: 100px;
+  max-height: calc(100vh - 184px);
   box-sizing: border-box;
   overflow: auto;
 }
