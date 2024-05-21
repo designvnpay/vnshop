@@ -3029,7 +3029,7 @@ a.close {display: flex;}
 /*select2 end*/
 /*chip*/
 .item-promotion {
-  background-color: var(--brand-primary-lightSellect);
+  border: 1px solid var(--border-color);
   padding: 8px;
   border-radius: 8px;
 }
@@ -3087,7 +3087,7 @@ a.close {display: flex;}
 .chip-sm,
 .chip-sm .chip-media {
   height: 20px;
-  line-height: 20px; font-size: 10px;
+  line-height: 20px; font-size: 12px;
   margin-top: 0;
 }
 
@@ -3329,7 +3329,7 @@ a.close {display: flex;}
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   position: absolute;
-  /*top: var(--toolbar-height);*/
+  top: var(--toolbar-height);
   left: 0;
   right: 0;
   bottom: 0;
