@@ -3197,7 +3197,7 @@ a.close {display: flex;}
 .button-more {
   padding: 16px 0;
   font-size: 13px;
-  font-weight: 600; color: var(--color-main);
+  font-weight: 600; color: var(--color-primary);
 }
 .read-more {
   max-height: 80px;
@@ -3239,6 +3239,9 @@ a.close {display: flex;}
 .read-more-product {
   max-height: 150px;
   overflow: hidden;
+}
+.box-policy .read-more-product {
+  max-height: 250px;
 }
 .read-more-descript {
   max-height: 156px;

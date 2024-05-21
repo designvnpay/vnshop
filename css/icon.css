@@ -278,6 +278,21 @@
   -o-mask-image: url(../general/icon/icon_policy3.svg);
   -moz-mask-image: url(../general/icon/icon_policy3.svg);
 }
+.icon_policy4 {
+  -webkit-mask-image: url(../general/icon/icon_policy4.svg);
+  -o-mask-image: url(../general/icon/icon_policy4.svg);
+  -moz-mask-image: url(../general/icon/icon_policy4.svg);
+}
+.icon_policy5 {
+  -webkit-mask-image: url(../general/icon/icon_policy5.svg);
+  -o-mask-image: url(../general/icon/icon_policy5.svg);
+  -moz-mask-image: url(../general/icon/icon_policy5.svg);
+}
+.icon_policy6 {
+  -webkit-mask-image: url(../general/icon/icon_policy6.svg);
+  -o-mask-image: url(../general/icon/icon_policy6.svg);
+  -moz-mask-image: url(../general/icon/icon_policy6.svg);
+}
 .icon_warning {
   -webkit-mask-image: url(../general/icon/icon_warning.svg);
   -o-mask-image: url(../general/icon/icon_warning.svg);
