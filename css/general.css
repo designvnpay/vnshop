@@ -3343,6 +3343,15 @@ a.close {display: flex;}
   -ms-overflow-style: none;
   -webkit-font-smoothing: antialiased;
 }
+.action-sheet-cart.action-sheet {
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border-radius: 16px;
+}
+.action-sheet-cart.action-sheet .cart-top {
+  padding-top: 0;
+}
 .action-sheet-cart .sheet-cont {position: absolute;
   left: 0;
   right: 0;
