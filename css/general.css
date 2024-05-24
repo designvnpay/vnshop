@@ -460,6 +460,9 @@ input,
   height: var(--tabbar-sm);
   padding: 0 8px;
 }
+.box-deal .tabbar {
+  border: none;
+}
 :checked + .tabbar-button-bor.tabbar__button {
   border-color: var(--color-primary);
 }
