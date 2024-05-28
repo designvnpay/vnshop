@@ -2000,7 +2000,10 @@ a {
   padding: 6px var(--padding-8);
   align-items: center;
 }
-.product-image-18 { background-image: url(../general/bg/product-image-18.svg); min-height: 165px; min-width: 165px; background-repeat: no-repeat; background-size: contain;}
+.product-image-18 { background-image: url(../general/bg/product-image-18.svg); min-height: 165px; min-width: 165px; background-repeat: no-repeat; background-size: contain;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+}
 .product-list .product-img img {
   margin-right: 8px;
 }
