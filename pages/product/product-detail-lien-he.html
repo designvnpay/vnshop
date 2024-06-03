@@ -95,23 +95,23 @@
           <div class="splide carousel-primary">
             <div class="splide__track">
               <ul class="splide__list">
-                <li class="splide__slide">
+                <li class="splide__slide" onclick="showModal_Album()">
                   <img src="demo/product-detail1.png" />
                   <div class="numbertext">1 / 5</div>
                 </li>
-                <li class="splide__slide">
+                <li class="splide__slide" onclick="showModal_Album()">
                   <img src="demo/product-detail1.png" />
                   <div class="numbertext">2 / 5</div>
                 </li>
-                <li class="splide__slide">
+                <li class="splide__slide" onclick="showModal_Album()">
                   <img src="demo/product-detail1.png" />
                   <div class="numbertext">3 / 5</div>
                 </li>
-                <li class="splide__slide">
+                <li class="splide__slide" onclick="showModal_Album()">
                   <img src="demo/product-detail1.png" />
                   <div class="numbertext">4 / 5</div>
                 </li>
-                <li class="splide__slide">
+                <li class="splide__slide" onclick="showModal_Album()">
                   <img src="demo/product-detail1.png" />
                   <div class="numbertext">5 / 5</div>
                 </li>
@@ -233,6 +233,17 @@
                     tặng)
                   </div>
                 </div>
+                <div class="row row-8">
+                  <div class="col-auto">
+                    <i class="icon icon_20 icon_gift color-primary"></i>
+                  </div>
+                  <div class="col font-size-14">
+                    <span class="font-weight-700">1 x Nước xả Downy </span> (Quà
+                    tặng)<br>
+                    <span class="font-weight-700">2 x Nước xả vải Comfort </span> (Quà
+                    tặng)
+                  </div>
+                </div>
               </div>
             </div>
             <div class="box box-choose">
@@ -257,8 +268,8 @@
                           </div>
                         </div>
                         <div class="col list-mb-4">
-                          <div class="font-size-14 font-weight-700">
-                            Giảm 8.000đ ( Giảm giá sản phẩm)
+                          <div class="font-size-14">
+                           <span class="font-weight-700">Giảm 20%</span> (Giảm giá sản phẩm)
                           </div>
                           <div class="font-size-13 font-weight-400">
                             Khuyến mại áp dụng khi mua tối thiểu 2 sản phẩm
@@ -285,7 +296,7 @@
                     </div>
                   </li>
                   <li class="list-item list-item--tappable">
-                    <label for="r2" class="list-item__center">
+                    <label for="r1" class="list-item__center">
                       <div class="row row-12 align-center">
                         <div class="col-auto">
                           <div class="box-55">
@@ -296,8 +307,8 @@
                           </div>
                         </div>
                         <div class="col list-mb-4">
-                          <div class="font-size-14 font-weight-700">
-                            Giảm 8.000đ ( Giảm giá sản phẩm)
+                          <div class="font-size-14">
+                            <span class="font-weight-700">Giảm 8.000đ</span> (Giảm giá sản phẩm)
                           </div>
                           <div class="font-size-13 font-weight-400">
                             Khuyến mại áp dụng khi mua tối thiểu 2 sản phẩm
@@ -314,9 +325,125 @@
                       <label class="radio-button">
                         <input
                           type="radio"
-                          id="r2"
+                          id="r1"
                           class="radio-button__input"
                           name="r"
+                        />
+                        <div class="radio-button__checkmark"></div>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-item list-item--tappable">
+                    <label for="r1" class="list-item__center">
+                      <div class="row row-12 align-center">
+                        <div class="col-auto">
+                          <div class="box-55">
+                            <img
+                              class="border-radius"
+                              src="demo/voucher3.png"
+                            />
+                          </div>
+                        </div>
+                        <div class="col list-mb-4">
+                          <div class="font-size-14">
+                            <span class="font-weight-700">1 x Nước xả Downy</span> (Quà tặng)<br>
+                            <span class="font-weight-700">và 1 x Nước xả Downy</span> (Quà tặng)
+                          </div>
+                          <div class="font-size-13 font-weight-400">
+                            Khuyến mại áp dụng khi mua tối thiểu 2 sản phẩm
+                          </div>
+                          <div
+                            class="font-size-12 font-weight-400 color-disabled"
+                          >
+                            HSD: 30/09/2023
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <div class="list-item__right">
+                      <label class="radio-button">
+                        <input
+                          type="radio"
+                          id="r1"
+                          class="radio-button__input"
+                          name="r"
+                        />
+                        <div class="radio-button__checkmark"></div>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-item list-item--tappable">
+                    <label for="r1" class="list-item__center">
+                      <div class="row row-12 align-center">
+                        <div class="col-auto">
+                          <div class="box-55">
+                            <img
+                              class="border-radius"
+                              src="demo/voucher4.png"
+                            />
+                          </div>
+                        </div>
+                        <div class="col list-mb-4">
+                          <div class="font-size-14">
+                            <span class="font-weight-700">1 x Nước xả Downy</span> (Quà tặng)
+                          </div>
+                          <div class="font-size-13 font-weight-400">
+                            Khuyến mại áp dụng khi mua tối thiểu 2 sản phẩm
+                          </div>
+                          <div
+                            class="font-size-12 font-weight-400 color-disabled"
+                          >
+                            HSD: 30/09/2023
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <div class="list-item__right">
+                      <label class="radio-button">
+                        <input
+                          type="radio"
+                          id="r1"
+                          class="radio-button__input"
+                          name="r"
+                        />
+                        <div class="radio-button__checkmark"></div>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-item list-item--tappable">
+                    <label for="r1" class="list-item__center">
+                      <div class="row row-12 align-center">
+                        <div class="col-auto">
+                          <div class="box-55">
+                            <img
+                              class="border-radius"
+                              src="demo/voucher5.png"
+                            />
+                          </div>
+                        </div>
+                        <div class="col list-mb-4">
+                          <div class="font-size-14">
+                            <span class="font-weight-700">Giảm 8.000đ</span> (Giảm giá sản phẩm)<br>
+                            <span class="font-weight-700">và 1 x Nước xả Downy</span> (Quà tặng)
+                          </div>
+                          <div class="font-size-13 font-weight-400">
+                            Khuyến mại áp dụng khi mua tối thiểu 2 sản phẩm
+                          </div>
+                          <div
+                            class="font-size-12 font-weight-400 color-disabled"
+                          >
+                            HSD: 30/09/2023
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <div class="list-item__right">
+                      <label class="radio-button">
+                        <input
+                          type="radio"
+                          id="r1"
+                          class="radio-button__input"
+                          name="r"                          
                         />
                         <div class="radio-button__checkmark"></div>
                       </label>
@@ -444,12 +571,7 @@
                           <div
                             class="list-item__subtitle font-size-12 font-weight-400"
                           >
-                            Giảm trực tiếp
-                          </div>
-                          <div
-                            class="list-item__title font-size-12 font-weight-700"
-                          >
-                            100.000đ
+                           Quà tặng
                           </div>
                         </div>
                       </div>
@@ -491,13 +613,6 @@
                     <div class="col">
                       <span class="color-main font-size-16 font-weight-700"
                         >Khuyến mại liên quan</span
-                      >
-                    </div>
-                    <div class="col-auto">
-                      <a
-                        href="pages/product/promotion.html"
-                        class="button button--quiet font-weight-600 pr0 font-size-13"
-                        >Xem tất cả</a
                       >
                     </div>
                   </div>
@@ -729,44 +844,87 @@
               </div>
             </div>
             <div class="box box-policy">
-              <div class="title">
-                <div class="main">
-                  <span class="color-main font-size-16 font-weight-700"
-                    >Chính sách bán hàng</span
-                  >
-                </div>
-              </div>
               <div class="main list-mb-12">
-                <ul class="list list--material">
-                  <li class="list-item list-item--material">
-                    <div class="list-item__left list-item--material__left material_icon_20">
-                      <i class="icon icon_20 icon_policy1 color-secondary"></i>
-                    </div>                
-                    <div class="list-item__center list-item--material__center">
-                      <div class="list-item__title list-item--material__title font-size-14 text-secondary"><b class="font-weight-700">Hoàn tiền 150%</b> nếu hàng không chính hãng</div>
-                    </div>
-                  </li>
-                  <li class="list-item list-item--material">
-                    <div class="list-item__left list-item--material__left material_icon_20">
-                      <i class="icon icon_20 icon_policy2 color-secondary"></i>
-                    </div>                
-                    <div class="list-item__center list-item--material__center">
-                      <div class="list-item__title list-item--material__title font-size-14 text-secondary">
-                        Cam kết hàng 
-                        <b class="font-weight-700">chính hãng 100%</b></div>
-                    </div>
-                  </li>
-                  <li class="list-item list-item--material">
-                    <div class="list-item__left list-item--material__left material_icon_20">
-                      <i class="icon icon_20 icon_policy3 color-secondary"></i>
-                    </div>                
-                    <div class="list-item__center list-item--material__center">
-                      <div class="list-item__title list-item--material__title font-size-14 text-secondary">
-                        Đổi trả trong vòng 
-                        <b class="font-weight-700">10 ngày</b></div>
-                    </div>
-                  </li>
-                </ul>
+                <div class="box-more-product">
+                  <div class="read-more-product">
+                    <ul class="list list--material">
+                      <li class="list-item list-item--material">
+                        <div class="list-item__left list-item--material__left material_icon_20">
+                          <i class="icon icon_20 icon_policy1 color-primary"></i>
+                        </div>                
+                        <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title font-size-14 text-secondary"><b class="font-weight-700">Hoàn tiền 150%</b> nếu hàng không chính hãng</div>
+                        </div>
+                      </li>
+                      <li class="list-item list-item--material">
+                        <div class="list-item__left list-item--material__left material_icon_20">
+                          <i class="icon icon_20 icon_policy2 color-primary"></i>
+                        </div>                
+                        <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title font-size-14 text-secondary">
+                            Cam kết hàng 
+                            <b class="font-weight-700">chính hãng 100%</b></div>
+                        </div>
+                      </li>
+                      <li class="list-item list-item--material">
+                        <div class="list-item__left list-item--material__left material_icon_20">
+                          <i class="icon icon_20 icon_policy3 color-primary"></i>
+                        </div>                
+                        <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title font-size-14 text-secondary">
+                            Đổi trả trong vòng 
+                            <b class="font-weight-700">10 ngày</b></div>
+                        </div>
+                      </li>
+                      <li class="list-item list-item--material">
+                        <div class="list-item__left list-item--material__left material_icon_20">
+                          <i class="icon icon_20 icon_policy4 color-primary"></i>
+                        </div>                
+                        <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title font-size-14 text-secondary">
+                            Miễn phí lắp đặt       
+                        </div>
+                      </li>
+                      <li class="list-item list-item--material">
+                        <div class="list-item__left list-item--material__left material_icon_20">
+                          <i class="icon icon_20 icon_policy5 color-primary"></i>
+                        </div>                
+                        <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title font-size-14 text-secondary">
+                            Miễn phí vận chuyển       
+                        </div>
+                      </li>
+                      <li class="list-item list-item--material">
+                        <div class="list-item__left list-item--material__left material_icon_20">
+                          <i class="icon icon_20 icon_policy6 color-primary"></i>
+                        </div>                
+                        <div class="list-item__center list-item--material__center">
+                          <div class="list-item__title list-item--material__title font-size-14 text-secondary">
+                            Bảo hành chính hãng       
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="button-more text-center color-primary font-size-13 font-weight-600"
+                  >
+                    <label for="check-more-product-2">
+                      <input
+                        id="check-more-product-2"
+                        type="checkbox"
+                        class="check-more"
+                      />
+                      <div class="show">
+                        <span>Xem thêm</span>
+                        <i class="icon_16 icon ic_drop"></i>
+                      </div>
+                      <div class="hiddren">
+                        <span>Thu gọn</span>
+                        <i class="icon_16 icon ic_up"></i>
+                      </div>
+                    </label>
+                  </div>
+                </div>                
               </div>
             </div>
             <div class="box box-product-info">
@@ -1295,18 +1453,18 @@
       <div class="action-sheet action-sheet-cart action-sheet--material">      
         <div class="sheet-cont">
           <div class="cart-top">
-            <button onclick="hidesheet()" class="button-close button button--quiet button-24"><i class="icon icon_24 ic_close color-main"></i></button>
+            <button onclick="hidesheet()" class="button-close button button--quiet button-24"><i class="icon icon_24 icon_x color-main"></i></button>
             <div class="main">
               <div class="cart-top-cont">
                 <div class="row row-12 align-end">
                   <div class="col-auto">
-                    <div class="box-124">
+                    <div class="box-124" onclick="showModal_Album2()">
                       <img src="demo/product_124.png">
                       <button class="button-expand button button-gray-light button-24"><i class="icon icon_16 icon_expand color-main"></i></button>
                     </div>
       
                   </div>
-                  <div class="col">
+                  <div class="col">                    
                     <div class="title-cart-top">
                       <div class="font-size-12 font-weight-600 color-secondary">Phân loại: Giày chơi bóng rổ Protect 120 cho nam/nữ mới chơi , M, Xanh</div>
                     </div>
@@ -1477,7 +1635,88 @@
           </div>
         </div>
       </div>  
-    </ons-action-sheet>   
+    </ons-action-sheet>
+    <ons-modal class="modal_album modal_album1 modal_full" direction="up">
+      <div class="modal-js">
+          <div class="modal-header">
+              <div class="main">
+                  <div class="row row-8 align-center">
+                    <div class="col-auto">
+                      <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_back color-white"></i></a>
+                  </div>
+                      <div class="col">
+                        &nbsp;                                           
+                      </div>
+                      <div class="col-auto">
+                          &nbsp;
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="modal-body">
+            <div class="banner-product">
+              <div class="splide carousel-album">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>          
+            </div>
+          </div>                
+      </div>          
+      </div>      
+    </ons-modal>
+    <ons-modal class="modal_album modal_album2 modal_full" direction="up">
+      <div class="modal-js">
+          <div class="modal-header">
+              <div class="main">
+                  <div class="row row-8 align-center">
+                    <div class="col-auto">
+                      &nbsp;
+                  </div>
+                      <div class="col">
+                        &nbsp;                                           
+                      </div>
+                      <div class="col-auto">
+                        <a onclick="hideModal2()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-white"></i></a>
+                          
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="modal-body">
+            <div class="banner-product">
+              <div class="splide carousel-album2">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="demo/product-detail1.png" />
+                    </li>                    
+                  </ul>
+                </div>
+              </div>          
+            </div>
+          </div>                
+      </div>          
+      </div>      
+    </ons-modal>   
     <div class="cart-item"><img class="addtocart-img" src="demo/product_124.png"></div>        
     <!-- jquery -->
     <script src="lib/jquery/jquery-1.12.4.min.js"></script>
@@ -1516,6 +1755,7 @@
         draggable: true,
       });
     </script>
+    <!--carousel-->
     <script>
       //carousel-primary
 document.addEventListener("DOMContentLoaded", function () {
@@ -1529,7 +1769,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }).mount();
 });
 //carousel-primary end
+
+//carousel-carousel-album1
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".carousel-album", {
+    perPage: 1,
+    gap: "0px",
+    loop: false,
+    //padding: '50px',
+    pagination: true,
+    arrows: false,
+  }).mount();
+});
+//carousel-carousel-album1 end
+
+//carousel-carousel-album1
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".carousel-album2", {
+    perPage: 1,
+    gap: "0px",
+    loop: false,
+    //padding: '50px',
+    pagination: false,
+    arrows: false,
+  }).mount();
+});
+//carousel-carousel-album1 end
     </script>
+    <!--carousel end-->
     <script>
       $(document).ready(function () {
           //Glider
@@ -1561,6 +1828,27 @@ new Glider(document.querySelector(".glider-other"), {
     },1000)
   })
 })
+  </script>
+  <script>
+    function showModal_Album() {
+      var modal = document.querySelector('.modal_album1');
+modal.show();
+}
+function hideModal() {
+      var modal = document.querySelector(".modal_album1");
+      modal.hide();
+    }
+
+    function showModal_Album2() {
+      var modal2 = document.querySelector('.modal_album2');
+modal2.show();
+}
+function hideModal2() {
+      var modal2 = document.querySelector(".modal_album2");
+      modal2.hide();
+    }
+
+    
   </script>
   </body>
 </html>

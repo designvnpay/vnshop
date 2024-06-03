@@ -49,7 +49,7 @@
             <div class="font-size-14 font-weight-700">Giỏ hàng <span class="number">(65)</span></div>
         </div>
         <div class="toolbar__right">
-            <button class="button button--quiet">
+            <button onclick="showModal_Delete()" class="button button--quiet">
               <span class="color-primary font-weight-600 font-size-13">Xóa</span>                
               </button>
         </div>
@@ -130,7 +130,7 @@
                                   </div>
                                 </div>
                                 <div class="col-auto">
-                                  <button class="button button--quiet pr-r">
+                                  <button class="button button--quiet pr-r" onclick="showModal_Delete()">
                                     <i class="icon icon_24 icon_delete color-disabled"></i>
                                   </button>
                                 </div>
@@ -209,7 +209,7 @@
                                   </div>
                                 </div>
                                 <div class="col-auto">
-                                  <button class="button button--quiet pr-r">
+                                  <button class="button button--quiet pr-r" onclick="showModal_Delete()">
                                     <i class="icon icon_24 icon_delete color-disabled"></i>
                                   </button>
                                 </div>
@@ -276,7 +276,7 @@
                                   </div>
                                 </div>
                                 <div class="col-auto">
-                                  <button class="button button--quiet pr-r">
+                                  <button class="button button--quiet pr-r" onclick="showModal_Delete()">
                                     <i class="icon icon_24 icon_delete color-disabled"></i>
                                   </button>
                                 </div>
@@ -348,7 +348,7 @@
                                 </div>
                               </div>
                               <div class="col-auto">
-                                <button class="button button--quiet pr-r">
+                                <button class="button button--quiet pr-r" onclick="showModal_Delete()">
                                   <i class="icon icon_24 icon_delete color-disabled"></i>
                                 </button>
                               </div>
@@ -410,7 +410,7 @@
                                   </div>
                                 </div>
                                 <div class="col-auto">
-                                  <button class="button button--quiet pr-r">
+                                  <button class="button button--quiet pr-r" onclick="showModal_Delete()">
                                     <i class="icon icon_24 icon_delete color-disabled"></i>
                                   </button>
                                 </div>
@@ -452,7 +452,7 @@
                                   </div>
                                 </div>
                                 <div class="col-auto">
-                                  <button class="button button--quiet pr-r">
+                                  <button class="button button--quiet pr-r" onclick="showModal_Delete()">
                                     <i class="icon icon_24 icon_delete color-disabled"></i>
                                   </button>
                                 </div>
@@ -493,7 +493,7 @@
                                   </div>
                                 </div>
                                 <div class="col-auto">
-                                  <button class="button button--quiet pr-r">
+                                  <button class="button button--quiet pr-r" onclick="showModal_Delete()">
                                     <i class="icon icon_24 icon_delete color-disabled"></i>
                                   </button>
                                 </div>
@@ -618,9 +618,56 @@
             </div> 
         </div>
         
-      </div>
+      </div>      
       <div class="background-overlay show"></div> 
     </div>
+    <ons-modal direction="up">
+        <div class="modal-js">
+            <div class="modal-header">
+                <div class="main">
+                    <div class="row row-8 align-center">
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700">Xoá sản phẩm</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="font-size-13 font-weight-400 text-secondary">Bạn có chắc chắn muốn xoá sản phẩm đang chọn? </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="button-form">
+                    <div class="button-form-cont">
+                      <div class="row row-12">
+                        <div class="col-6">
+                          <button onclick="hideModal()" class="button width-100 button-md button--outline">
+                            Huỷ
+                          </button>
+                        </div>
+                        <div class="col-6">
+                          <button onclick="hideModal()" class="button width-100 button-md">
+                            Xóa
+                            </button>              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>                    
+        </div>
+        
+            
+            
+            
+            
+        </div>
+        
+      </ons-modal>
     <ons-action-sheet class="showsheet_promotion" someAttribute="true" anotherAttribute>
       <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet_promotion()">
       </div>
@@ -977,6 +1024,16 @@
   <script src="js/vendors/jquery-accordion/jquery-accordion.init.js"></script>
   <!-- jqueryAccordion -->
     <script src="js/custom.js"></script>
+    <script>
+        function showModal_Delete() {
+  var modal = document.querySelector('ons-modal');
+  modal.show();
+}
+function hideModal() {
+          var modal = document.querySelector("ons-modal");
+          modal.hide();
+        }
+      </script>
     <script>
       function showsheet_promotion() {
         var showsheet_promotion = document.querySelector(".showsheet_promotion");

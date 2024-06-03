@@ -69,7 +69,7 @@
           </div>
         </div>
         <div class="toolbar__right">
-          <button class="button button--quiet">
+          <button class="button button--quiet" onclick="showsheet_maps()">
             <i class="icon icon_24 icon_maps color-white"></i>
           </button>
         </div>
@@ -203,7 +203,7 @@
                   <a
                     href="javascript:;"
                     class="button button--quiet font-weight-600 pr0 font-size-13"
-                    >Xem thêm</a
+                    >Xem tất cả</a
                   >
                 </div>
               </div>
@@ -452,6 +452,7 @@
                         <div class="price-main font-weight-800">155.820 đ</div>
                         <div class="price-sub font-size-12">
                           <span class="price-sub-text">229.000 đ</span>
+                          <span class="price-sub-number">-11%</span>
                         </div>
                       </div>
                     </a>
@@ -473,6 +474,7 @@
                         <div class="price-main font-weight-800">155.820 đ</div>
                         <div class="price-sub font-size-12">
                           <span class="price-sub-text">229.000 đ</span>
+                          <span class="price-sub-number">-11%</span>
                         </div>
                       </div>
                     </a>
@@ -534,6 +536,7 @@
                         <div class="price-main font-weight-800">155.820 đ</div>
                         <div class="price-sub font-size-12">
                           <span class="price-sub-text">229.000 đ</span>
+                          <span class="price-sub-number">-11%</span>
                         </div>
                       </div>
                     </a>
@@ -555,6 +558,7 @@
                         <div class="price-main font-weight-800">155.820 đ</div>
                         <div class="price-sub font-size-12">
                           <span class="price-sub-text">229.000 đ</span>
+                          <span class="price-sub-number">-11%</span>
                         </div>
                       </div>
                     </a>
@@ -1168,7 +1172,7 @@
                   </a>
                 </div>
                 <div class="masonry-item">
-                  <a href="javascript:;" class="product list-mb-8">
+                  <a href="pages/product/product-detail.html" class="product list-mb-8">
                     <div class="product-img">
                       <img src="demo/product_suggess1.jpg" />
                       <div class="product-stick">
@@ -1291,7 +1295,9 @@
         </div>
       </div>
       <div class="tabbar">
-        <label class="tabbar__item">
+        <label class="tabbar__item"
+        onclick="window.location.href='index.html'"
+        >
           <input type="radio" name="tabbar-a" checked="checked" />
           <button class="tabbar__button">
             <i class="tabbar__icon zmdi zmdi-home"></i>
@@ -1310,7 +1316,7 @@
           </button>
         </label>
 
-        <label class="tabbar__item" onclick="window.location.href='pages/product/cart.html'">
+        <label class="tabbar__item" onclick="window.location.href='pages/product/cart-nav.html'">
           <input type="radio" name="tabbar-a" />
           <button class="tabbar__button">
             <i class="tabbar__icon zmdi zmdi-shopping-cart"></i>
@@ -1954,6 +1960,70 @@
         </div>
       </div>
     </ons-modal>
+    <ons-action-sheet class="showsheet_maps" someAttribute="true" anotherAttribute>
+      <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet_maps()">
+      </div>
+      <div class="action-sheet action-sheet-bottom action-sheet--material">   
+          <div class="sheet-title action-sheet-title action-sheet-title--material">
+              <div class="main">
+                  <div class="row row-8 align-center height-sheet-title">
+                      <div class="col-auto">
+                          <a href="javascript:;" class="close">&nbsp;</a>
+                      </div>
+                      <div class="col">
+                          <div class="color-main font-size-14 font-weight-700 text-center">Lựa chọn khu vực giao hàng</div>                                            
+                      </div>
+                      <div class="col-auto">
+                          <a  onclick="hidesheet_maps()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                      </div>
+                  </div>
+              </div>
+              
+              
+              
+          </div>   
+        <div class="sheet-cont">
+              <div class="main">
+                <div class="block">
+                  <div class="font-size-12 text-secondary">Vui lòng lựa chọn khu vực để chúng tôi sắp xếp giao hàng cho bạn nhanh nhất</div>
+                </div>
+                <div class="box-list-bor">                  
+                  <div class="block">
+                    <ul class="list list-bor-bottom">
+                      <li class="list-item list-item--tappable">
+                        <div class="list-item__right">
+                          <label class="radio-button radio-button--material">
+                              <input id="radio1" type="radio" class="radio-button__input radio-button--material__input" name="r1" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                            </label>
+                        </div>
+                        <label for="radio1" class="list-item__center font-weight-600 font-size-14">
+                          Miền Bắc (Hà Nội - Huế)
+                        </label>
+                      </li>
+                      <li class="list-item list-item--tappable">
+                        <div class="list-item__right">
+                          <label class="radio-button radio-button--material">
+                              <input id="radio2" type="radio" class="radio-button__input radio-button--material__input" name="r1" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+                            </label>
+                        </div>
+                        <label for="radio2" class="list-item__center font-weight-600 font-size-14">
+                          Miền Nam (Đà Nẵng - HCM)
+                        </label>
+                      </li>
+                        
+                    </ul>
+                    </div>                     
+  
+                </div>              
+              </div>
+        </div>  
+        <div class="sheet-footer">
+            <button class="button button-md width-100"  onclick="hidesheet_maps()">Xác nhận</button>
+        </div>
+      </div>  
+  </ons-action-sheet>
     <!-- jquery -->
     <script src="lib/jquery/jquery-1.12.4.min.js"></script>
     <script src="lib/jquery/jquery.init.js"></script>
@@ -2025,7 +2095,7 @@ new Glider(document.querySelector(".glider-style5"), {
   </script>
     <!--popup-->
     <script>
-      $(document).ready(function () {
+      /*$(document).ready(function () {
         var $popuphome = $(".popup-home").addClass("show");
         setTimeout(function () {
           $popuphome.removeClass("show");
@@ -2033,9 +2103,20 @@ new Glider(document.querySelector(".glider-style5"), {
         $("body").on("click", ".button_close", function (e) {
           $(".popup-home").removeClass("show");
         });
-      });
+      });*/
     </script>
     <!--popup end-->
+    <script>
+      function showsheet_maps() {
+        var sheet_maps = document.querySelector(".showsheet_maps");
+        sheet_maps.show();
+      }
+      function hidesheet_maps() {
+        var sheet_maps = document.querySelector(".showsheet_maps");
+        sheet_maps.hide();
+      }
+      
+    </script>
     <script>
       function showModal_search() {
         var modal = document.querySelector("ons-modal");
