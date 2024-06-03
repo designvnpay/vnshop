@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+    <!-- end select2 -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+    <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>VNSHOP</title>
+  </head>
+  <body>
+    <div class="page page-cart">
+
+      <div class="page__background"></div>
+      <div class="page__content">
+        <div class="main">
+            <div class="list-mb-16">
+                <p>&nabla;</p>
+                <div class="box">
+                    <button onclick="showModal_1()" class="button button-md button-primary">
+                        Popup chưa có địa chỉ nhận hàng            
+                        </button>
+                </div>
+                <div class="box">
+                    <button onclick="showModal_2()" class="button button-md button-primary">
+                        Popup số lượng mã SKU vượt quá số lượng tối đa          
+                        </button>
+                </div>
+                <div class="box">
+                    <button onclick="showModal_3()" class="button button-md button-primary">
+                        Popup chưa có địa chỉ nhận hàng           
+                        </button>
+                </div>
+                <div class="box">
+                    <button onclick="showModal_4()" class="button button-md button-primary">
+                        MH5: Popup xác nhận xóa sp         
+                        </button>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+
+      </div>
+    </div>
+    <ons-modal direction="up" class="showModal_1">
+        <div class="modal-js">
+            <div class="modal-header">
+                <div class="main">
+                    <div class="row row-8 align-center">
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700">Thông báo</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="font-size-13 font-weight-400 text-secondary">Quý khách chưa có địa chỉ nhận hàng, vui lòng thêm địa chỉ nhận hàng.</div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="button-form">
+                    <div class="button-form-cont">
+                      <div class="row row-12">
+                        <div class="col-6">
+                          <button onclick="hideModal()" class="button width-100 button-md button--outline">
+                            Thoát
+                          </button>
+                        </div>
+                        <div class="col-6">
+                          <button onclick="hideModal()" class="button width-100 button-md">
+                            Đồng ý
+                            </button>              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>                    
+        </div>
+        
+            
+            
+            
+            
+        </div>
+        
+      </ons-modal>
+      <ons-modal direction="up" class="showModal_2">
+        <div class="modal-js">
+            <div class="modal-header">
+                <div class="main">
+                    <div class="row row-8 align-center">
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700">Thông báo</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="font-size-13 font-weight-400 text-secondary">Vui lòng thanh toán tối đa [x] sản phẩm cho mỗi đơn hàng.</div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="button-form">
+                    <div class="button-form-cont">
+                      <div class="row row-12">
+                        <div class="col-12">
+                          <button onclick="hideModal()" class="button width-100 button-md">
+                            Đóng
+                            </button>              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>                
+        </div>
+        
+            
+            
+            
+            
+        </div>
+        
+      </ons-modal>
+      <ons-modal direction="up" class="showModal_3">
+        <div class="modal-js">
+            <div class="modal-header">
+                <div class="main">
+                    <div class="row row-8 align-center">
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700">Thông báo</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="font-size-13 font-weight-400 text-secondary">Số lượng sản phẩm vượt quá số lượng cho phép. Vui lòng kiểm tra lại. </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="button-form">
+                    <div class="button-form-cont">
+                      <div class="row row-12">
+                        <div class="col-12">
+                          <button onclick="hideModal()" class="button width-100 button-md">
+                            Đóng
+                            </button>              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>                    
+        </div>
+        
+            
+            
+            
+            
+        </div>
+        
+      </ons-modal>
+      <ons-modal direction="up" class="showModal_4">
+        <div class="modal-js">
+            <div class="modal-header">
+                <div class="main">
+                    <div class="row row-8 align-center">
+                        <div class="col">
+                            <div class="color-main font-size-14 font-weight-700">Xoá sản phẩm</div>                                            
+                        </div>
+                        <div class="col-auto">
+                            <a onclick="hideModal()" href="javascript:;" class="close"><i class="icon icon_24 icon_x color-main"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="font-size-13 font-weight-400 text-secondary">Bạn có chắc chắn muốn xoá sản phẩm đang chọn? </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="button-form">
+                    <div class="button-form-cont">
+                      <div class="row row-12">
+                        <div class="col-6">
+                          <button onclick="hideModal()" class="button width-100 button-md button--outline">
+                            Huỷ
+                          </button>
+                        </div>
+                        <div class="col-6">
+                          <button onclick="hideModal()" class="button width-100 button-md">
+                            Xóa
+                            </button>              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>                    
+        </div>
+        
+            
+            
+            
+            
+        </div>
+        
+      </ons-modal>
+
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <!-- jquery -->
+    <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+    <script src="js/vendors/gliderjs/glider.min.js"></script>
+    <!-- select2 -->
+    <script src="js/vendors/select2/select2.js"></script>
+    <script src="js/vendors/select2/select2.init.js"></script>
+    <!-- select2 -->
+    <!-- jqueryAccordion -->
+  <script src="js/vendors/jquery-accordion/jquery-accordion.bundles.js"></script>
+  <script src="js/vendors/jquery-accordion/jquery-accordion.init.js"></script>
+  <!-- jqueryAccordion -->
+    <script src="js/custom.js"></script>
+    <script>
+        function showModal_1() {
+  var modal1 = document.querySelector('ons-modal.showModal_1');
+  modal1.show();
+}
+function showModal_2() {
+  var modal2 = document.querySelector('ons-modal.showModal_2');
+  modal2.show();
+}
+function showModal_3() {
+  var modal3 = document.querySelector('ons-modal.showModal_3');
+  modal3.show();
+}
+function showModal_4() {
+  var modal4 = document.querySelector('ons-modal.showModal_4');
+  modal4.show();
+}
+function hideModal() {
+    var modal1 = document.querySelector("ons-modal.showModal_1");
+    var modal2 = document.querySelector("ons-modal.showModal_2");
+    var modal3 = document.querySelector("ons-modal.showModal_3");
+    var modal4 = document.querySelector("ons-modal.showModal_4");
+    modal1.hide();
+    modal2.hide();
+    modal3.hide();
+    modal4.hide();
+        }
+      </script>
+    
+  </body>
+</html>

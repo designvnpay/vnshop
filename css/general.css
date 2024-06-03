@@ -341,7 +341,7 @@ input,
 * {
   font-family: var(--font-family);
 }
-.button:active{background-color:transparent;transition:none;opacity:1;}
+.button:active{transition:none;opacity:1;}
 .main {
   padding-left: var(--padding-default);
   padding-right: var(--padding-default);
@@ -471,7 +471,7 @@ input,
   flex-grow: initial;
   -webkit-flex-basis: initial;
   flex-basis: initial;
-  display: inline-block;
+  display: inline-block; max-width: 100%;
 }
 .box-radio .tabbar {
   display: inline-block;
@@ -557,8 +557,12 @@ body {
 .page-account .toolbar + .page__background + .page__content {
   bottom: 77px;
 }
+.page-cart .toolbar + .page__background + .page__content +.tabbar +.tabbar-tran.tabbar {
+  bottom: var(--tabbar-height);
+}
+.page-cart .tabbar-tran.tabbar .box-total {margin-bottom: 0; padding-bottom: 16px;}
 .page-cart .toolbar + .page__background + .page__content {
-  padding-bottom: 200px;
+  padding-bottom: 250px;
 }
 .page-search .toolbar + .page__background + .page__content {
   bottom: 0;
@@ -1240,6 +1244,9 @@ a {
   right: 16px;
   top: 16px;
 }
+.action-sheet-cart .button-close {
+  top: 0;
+}
 .button-24 {
   padding: 4px;
   width: 24px;
@@ -1867,7 +1874,7 @@ a {
 .masonry {
   display: grid;
   grid-gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
   grid-auto-flow: dense;
 }
 /*
@@ -2075,6 +2082,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center; /*min-height: 164px;*/
+}
+.box-deal3 .product-img {
+  min-width: 144px;
 }
 .product-cont {
   padding: 0 8px 8px;
@@ -3334,7 +3344,8 @@ a.close {display: flex;}
   box-shadow: none;
 }
 .action-sheet {
-  -moz-osx-font-smoothing: grayscale;
+  /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
   font-weight: 400;
   position: absolute;  
   left: 0;
@@ -3345,7 +3356,7 @@ a.close {display: flex;}
   overflow-y: hidden;
   color: var(--text-color);
   -ms-overflow-style: none;
-  -webkit-font-smoothing: antialiased;
+  
 }
 .action-sheet-cart.action-sheet {
   top: var(--toolbar-height);
@@ -3375,13 +3386,16 @@ a.close {display: flex;}
 .sheet-cont {
   background-color: #fff;  
   padding-bottom: var(--padding-default);padding-top: var(--padding-default); min-height: 100px;
-  max-height: calc(100vh - 184px);
+  max-height: calc(100vh - var(--toolbar-height)); padding-bottom:  var(--action-sheet-title);
   box-sizing: border-box;
   overflow: auto;
 }
+.showsheet_contract .sheet-cont {
+  padding-top: 0;
+}
 .sheet-footer {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
   font-weight: 400;
   font-weight: var(--font-weight);
   display: -webkit-flex;
@@ -3396,7 +3410,7 @@ a.close {display: flex;}
 }
 .action-sheet-cart .sheet-footer {border-top: none;}
 .action-sheet-title--material::before, .rolldate-container header::before {
-  content: "";
+  /*content: "";
   width: 40px;
   height: 4px;
   border-radius: 2.5px;
@@ -3404,7 +3418,7 @@ a.close {display: flex;}
   position: absolute;
   left: 50%;
   margin-left: -16px;
-  top: 4px;
+  top: 4px;*/
 }
 .action-sheet-title--material:first-child {
   font-size: 16px;
