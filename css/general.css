@@ -3413,6 +3413,8 @@ a.close {display: flex;}
   padding: var(--padding-default) var(--padding-default) 32px var(--padding-default);
   width: 100%; border-top: 1px solid var(--border-color);
 }
+.label-text {color: var(--text-disabled);}
+:checked~.label-text {color: var(--color-main);}
 #rolldate-month {
   max-width: 78px;
 }
