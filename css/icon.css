@@ -471,6 +471,7 @@
   -webkit-mask-image: url(../general/icon/icon_aleft.svg);
   -o-mask-image: url(../general/icon/icon_aleft.svg);
   -moz-mask-image: url(../general/icon/icon_aleft.svg);
+  color: #CC6F00;margin-top: 2px;
 }
 .icon_search {
   -webkit-mask-image: url(../general/icon/icon_search.svg);
@@ -509,7 +510,7 @@
 .icon_arrow_primary{
   -webkit-mask-image: url(../general/icon/icon_arrow_primary.svg);
   -o-mask-image: url(../general/icon/icon_arrow_primary.svg);
-  -moz-mask-image: url(../general/icon/icon_arrow_primary.svg);
+  -moz-mask-image: url(../general/icon/icon_arrow_primary.svg);transform: rotate(180deg);
 }
 .icon_aleft_danger{
   -webkit-mask-image: url(../general/icon/icon_aleft_danger.svg);

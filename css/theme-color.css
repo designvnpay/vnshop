@@ -54,12 +54,11 @@
   --color-blue: #1890ff;
   --color-info: #0084FF;
   --color-success: rgba(50, 154, 78, 1);
-  --color-warning: #fa541c;
   --color-info: #0084FF;
   --color-danger: #E11E1E;
   --color-processing: #40a9ff;
   --border-color-success: #3EC161;
-  --border-color-warning: #fa541c;
+  --border-color-warning: rgba(255, 139, 0, 1);
   --border-color-info: #0084FF;
   --border-color-danger: #E11E1E;
   --border-color-processing: #91d5ff;
