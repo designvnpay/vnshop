@@ -10,7 +10,7 @@ var rd = [];
     beginYear: today.getFullYear() - 100,
     endYear: today.getFullYear(),
     minStep: 1,
-    lang: { title: el.getAttribute('header-text'), year: '', month: '', day: '', cancel: '', confirm: 'Xác nhận' },
+    lang: { title: el.getAttribute('header-text'), year: '',  month: '<span>Tháng</span>', day: '', cancel: '', confirm: 'Xác nhận' },
     trigger: 'tap',
     init: function () {
       console.log(this)

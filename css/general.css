@@ -3413,7 +3413,12 @@ a.close {display: flex;}
   padding: var(--padding-default) var(--padding-default) 32px var(--padding-default);
   width: 100%; border-top: 1px solid var(--border-color);
 }
-
+#rolldate-month {
+  max-width: 78px;
+}
+#rolldate-month li span {
+  float: left;
+}
 .action-sheet-title--material::before, .rolldate-container header::before {
   /*content: "";
   width: 40px;
