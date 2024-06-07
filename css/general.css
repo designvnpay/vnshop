@@ -3414,6 +3414,8 @@ a.close {display: flex;}
   width: 100%; border-top: 1px solid var(--border-color);
 }
 .label-text {color: var(--text-disabled);}
+body .rolldate-container .mask-top {border-bottom-color: var(--border-color);}
+body .rolldate-container .mask-bottom {border-top-color: var(--border-color);}
 :checked~.label-text {color: var(--color-main);}
 #rolldate-month {
   max-width: 78px;
