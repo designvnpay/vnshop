@@ -176,6 +176,8 @@
   --material-popover-background-color: #fafafa;
   --material-popover-text-color: var(--material-text-color);
   --material-action-sheet-text-color: #686868;
+  --material-radio-button-size:16px;
+  --checkbox-size:16px;
 
   /* others */
   --tap-highlight-color: transparent;
@@ -1434,9 +1436,10 @@ a {
   border-width: 1.6px; top: 6px;
 
 }
+.radio-button--material__checkmark:after {width: 10px; height: 10px;}
 .radio-button__checkmark:after {
   border-width: 1.5px;
-  left: 5px;
+  left: 3px;top: 3px;
 }
 .radio-button__checkmark:after {
   border-color: #fff;
