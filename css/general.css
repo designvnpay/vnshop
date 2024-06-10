@@ -1432,15 +1432,28 @@ a {
 }
 
 .checkbox__checkmark:after {
-  width: 10px;
-  border-width: 1.6px; top: 6px;
+  left: 2px;
+  width: 12px;
+  top: 3px;
+  border: none;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M10.6654 1.5L4.2487 7.91667L1.33203 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  height: 9px;
+  background-size: contain;
+  transform: none;
 
 }
 .radio-button--material__checkmark:after {width: 10px; height: 10px;}
 .radio-button__checkmark:after {
-  border-width: 1.5px;
-  left: 3px;top: 3px;
+  left: 2px;
+  width: 12px;
+  top: 3px;
+  border: none;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M10.6654 1.5L4.2487 7.91667L1.33203 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  height: 9px;
+  background-size: contain;
+  transform: none;
 }
+
 .radio-button__checkmark:after {
   border-color: #fff;
 }
@@ -1851,7 +1864,7 @@ a {
   grid-gap: 12px;
 }
 .masonry-item .product,
-.product-border, .glider-border .product {
+.product-border, .glider-border .product, .glider-other .product {
   border: 1px solid var(--border-color);
 }
 .list-product {
@@ -1953,12 +1966,25 @@ a {
 }
 .timer_text {
   border-radius: 4px;
-  border: 1px solid #e51212;
+  position: relative;
   background: linear-gradient(180deg, #f55, #de0000);
   color: var(--color-white);
   padding: 2px;
   font-size: 10px;
   font-weight: 600;
+}
+.timer_text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px; 
+  padding: 1px; 
+  background:linear-gradient(180deg,rgba(229, 18, 18, 1),rgba(252, 75, 75, 1)); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
 }
 .secondary-light-200 {
   background: var(--color-secondary-light-200);
@@ -3654,9 +3680,14 @@ body .rolldate-container .mask-bottom {border-top-color: var(--border-color);}
   border-radius: 4px;
 }
 :checked + .checkbox--material__checkmark:after {
-  border-width: 1.8px;
-  top: 5px;
-  left: 4px;
+  left: 3px;
+  width: 12px;
+  top: 4px;
+  border: none;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none"><path d="M10.6654 1.5L4.2487 7.91667L1.33203 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  height: 9px;
+  background-size: contain;
+  transform: none;
 }
 .button-form {
   width: 100%;
