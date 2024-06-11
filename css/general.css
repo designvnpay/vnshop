@@ -317,7 +317,7 @@
   color: var(--text-secondary);
 }
 .price-sub {
-  min-height: 20px;
+  min-height: 20px; display: flex; align-items: center;
 }
 img {
   max-width: 100%;
