@@ -2204,7 +2204,7 @@ a {
   margin-bottom: 4px;
 }
 .price-sub-number {
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #e11e1e;
   color: var(--color-white);
   padding: 0 4px;
