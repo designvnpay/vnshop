@@ -2207,7 +2207,7 @@ a {
   border-radius: 3px;
   background-color: #e11e1e;
   color: var(--color-white);
-  padding: 2px 4px;
+  padding: 0 4px;
   font-size: 10px;
   line-height: 14px;
   margin-left: 8px;
