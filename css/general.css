@@ -57,7 +57,7 @@
   --progress-circle-primary-color: var(--highlight-color);
   --progress-circle-secondary-color: #65adff;
   --progress-circle-background-color: transparent;
-  --tabbar-sm: 28px;
+  --tabbar-sm: 34px;
   --tabbar-md: 40px;
   --tabbar-background-color: #fafafa;
   --tabbar-text-color: var(--text-secondary);
@@ -458,7 +458,7 @@ input,
   border-radius: 8px;
   font-size: 13px;
   font-weight: 600;
-  min-width: 32px;
+  min-width: 40px;
   line-height: 16px;
   height: var(--tabbar-sm);
   padding: 0 8px;
@@ -1458,7 +1458,15 @@ a {
   background-size: contain;
   transform: none;
 }
-
+.radio-button--material .radio-button__checkmark:after{
+  left: 4px;
+  top: 4px;
+  height: 12px;
+}
+.radio-button--material .radio-button__checkmark:before, .radio-button--material .radio-button--material__checkmark {
+  width: 20px;
+  height: 20px;
+}
 .radio-button__checkmark:after {
   border-color: #fff;
 }
@@ -1530,7 +1538,7 @@ a {
 /*Head end*/
 /*slide*/
 .glider-slide {
-  margin: 0 6px;
+  margin: 0 6px;align-content: start;
 }
 .glider-style1 a {
   display: block;
