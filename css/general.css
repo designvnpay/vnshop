@@ -2170,7 +2170,7 @@ a {
   padding: 0 var(--padding-default) var(--padding-default);
 }
 .title-radius {
-  border-radius: 10px 0 20px 0;
+  border-radius: 10px 0 0 0;
   display: inline-block;
   color: var(--color-white);
   font-size: 12px;
@@ -2179,25 +2179,27 @@ a {
   padding: var(--padding-8) var(--padding-24) var(--padding-8)
     var(--padding-default);
   position: relative;
-  left: -16px;
+  left: -16px; background-size: cover; background-position: right 0;
 }
+
 .title-bg1 {
-  background-color: #f1b60e;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="158" height="33" viewBox="0 0 158 33" fill="none"><path d="M0 8.5C0 4.08172 3.58172 0.5 8 0.5H158L150.539 19.7334C147.553 27.429 140.147 32.5 131.893 32.5H0V8.5Z" fill="rgba(241, 182, 14, 1)"/></svg>');
+  
 }
 .title-bg2 {
-  background-color: #93c14f;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="158" height="33" viewBox="0 0 158 33" fill="none"><path d="M0 8.5C0 4.08172 3.58172 0.5 8 0.5H158L150.539 19.7334C147.553 27.429 140.147 32.5 131.893 32.5H0V8.5Z" fill="rgba(147, 193, 79, 1)"/></svg>');
 }
 .title-bg3 {
-  background-color: #327bc3;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="158" height="33" viewBox="0 0 158 33" fill="none"><path d="M0 8.5C0 4.08172 3.58172 0.5 8 0.5H158L150.539 19.7334C147.553 27.429 140.147 32.5 131.893 32.5H0V8.5Z" fill="rgba(50, 123, 195, 1)"/></svg>');
 }
 .title-bg4 {
-  background-color: #f181a2;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="158" height="33" viewBox="0 0 158 33" fill="none"><path d="M0 8.5C0 4.08172 3.58172 0.5 8 0.5H158L150.539 19.7334C147.553 27.429 140.147 32.5 131.893 32.5H0V8.5Z" fill="rgba(241, 129, 162, 1)"/></svg>');
 }
 .title-bg5 {
-  background-color: #1d5089;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="158" height="33" viewBox="0 0 158 33" fill="none"><path d="M0 8.5C0 4.08172 3.58172 0.5 8 0.5H158L150.539 19.7334C147.553 27.429 140.147 32.5 131.893 32.5H0V8.5Z" fill="rgba(29, 80, 137, 1)"/></svg>');
 }
 .title-bg6 {
-  background-color: #fe8212;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="158" height="33" viewBox="0 0 158 33" fill="none"><path d="M0 8.5C0 4.08172 3.58172 0.5 8 0.5H158L150.539 19.7334C147.553 27.429 140.147 32.5 131.893 32.5H0V8.5Z" fill="rgba(254, 130, 18, 1)"/></svg>');
 }
 .product-stick-top {
   position: absolute;
@@ -4508,12 +4510,16 @@ line-height: 36px;
   right: -5px;
   background: var(--notification-background-color);
   line-height: 16px;
-  padding: 0 5px;
+  padding: 0 4px;
   height: 16px;
   min-width: 16px;
   color: white;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 8px; z-index: 1;
+}
+.sticky .cart:before {
+  top: 0;
+  right: 0;
 }
 .cart-white:before {
   content: attr(data-totalitems);
