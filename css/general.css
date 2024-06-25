@@ -3269,7 +3269,7 @@ a.close {display: flex;}
   font-weight: 600; 
 }
 .read-more {
-  max-height: 70px;
+  max-height: 76px;
   overflow: hidden;
   position: relative;
 }
