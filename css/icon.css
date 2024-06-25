@@ -252,6 +252,7 @@
   -webkit-mask-image: url(../general/icon/icon_expand.svg);
   -o-mask-image: url(../general/icon/icon_expand.svg);
   -moz-mask-image: url(../general/icon/icon_expand.svg);
+  background-color: white;
 }
 .icon_minus {
   -webkit-mask-image: url(../general/icon/icon_minus.svg);
