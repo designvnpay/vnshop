@@ -1338,7 +1338,11 @@ a {
   padding: 3px;
 }
 .toolbar .button.button-sm {
-  padding: 6px;
+  padding: 4px;
+}
+.page>.toolbar .icon_16 {
+  width: 24px;
+  height: 24px;
 }
 .button--light {
   background-color: transparent;
@@ -1535,6 +1539,7 @@ a {
   padding-left: 16px;
   padding-right: 16px;
 }
+
 /*Head end*/
 /*slide*/
 .glider-slide {
