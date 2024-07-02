@@ -1526,7 +1526,10 @@ a {
   background: transparent;
   position: fixed;
 }
-.page-home .toolbar, .page-product-detail .toolbar, .page-promotion-detail .toolbar, .page-order-detail .toolbar-tran {
+.page-home .toolbar {
+  background: linear-gradient(180deg, rgba(2, 130, 168, 0.60) 0%, rgba(136, 210, 240, 0.00) 100%);
+}
+.page-product-detail .toolbar, .page-promotion-detail .toolbar, .page-order-detail .toolbar-tran {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%);
 }
 .toolbar-no-bor.toolbar::after, .toolbar-sub.toolbar::after {
