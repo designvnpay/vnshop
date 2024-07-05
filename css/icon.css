@@ -244,9 +244,9 @@
   -moz-mask-image: url(../general/icon/icon_tick.svg);
 }
 .ic_close {
-  -webkit-mask-image: url(../general/icon/button_close.svg);
-  -o-mask-image: url(../general/icon/button_close.svg);
-  -moz-mask-image: url(../general/icon/button_close.svg);
+  -webkit-mask-image: url(../general/icon/icon_x.svg);
+  -o-mask-image: url(../general/icon/icon_x.svg);
+  -moz-mask-image: url(../general/icon/icon_x.svg);
 }
 .icon_expand {
   -webkit-mask-image: url(../general/icon/icon_expand.svg);
