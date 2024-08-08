@@ -3779,7 +3779,10 @@ body .rolldate-container .mask-bottom {border-top-color: var(--border-color);}
 }
 .splide__pagination__page.is-active {
   opacity: 1;
-  background-color: var(--color-white);
+    width: 16px;
+    height: 4px;
+    border-radius: 10px;
+    transform: scale(1);
 }
 .list-item__left {
   padding: 0 12px 0 0;min-height: auto;
