@@ -2482,6 +2482,7 @@ select:invalid {
 .input-size-lg-label::after {
   max-height: 60px;
 }
+.input-default .is-invalid ~ .input-frame {border-color: var(--color-error);}
 .input-group {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;

@@ -558,8 +558,8 @@
             </div>
           </div>
           <div class="main">
-            <div class="form">
-              <div class="row row-12 list-mb-12">
+            <div class="form list-mb-4">
+              <div class="row row-12">
                 <div class="col">
                   <div class="form-group">
                     <div
@@ -567,9 +567,9 @@
                     >
                       <label class="input-inner-wrap">
                         <input
-                          
+                          value="100,000"
                           type="text"
-                          class="input form-control input-has-clear"
+                          class="input form-control input-has-clear is-invalid"
                           placeholder="Tối thiểu"
                           required
                           autocorrect="off"
@@ -579,8 +579,7 @@
                         </div>
                         <div class="input-frame"></div>
                       </label>
-                    </div>
-                    <div class="errorBlock"></div>
+                    </div>                    
                   </div>
 
                 </div>
@@ -591,9 +590,9 @@
                     >
                       <label class="input-inner-wrap">
                         <input
-                          
+                          value="1,000"
                           type="text"
-                          class="input form-control input-has-clear"
+                          class="input form-control input-has-clear is-invalid"
                           placeholder="Tối đa"
                           required
                           autocorrect="off"
@@ -604,11 +603,11 @@
                         <div class="input-frame"></div>
                       </label>
                     </div>
-                    <div class="errorBlock"></div>
                   </div>
 
                 </div>
-              </div>              
+              </div>     
+              <div class="errorBlock">Giá tối thiểu phải nhỏ hơn giá tối đa</div>         
             </div>
           </div>
         </div>

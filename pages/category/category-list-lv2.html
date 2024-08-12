@@ -558,7 +558,7 @@
     <div class="action-sheet-mask action-sheet-mask--material" onclick="hidesheet()"></div>
     <div class="action-sheet action-sheet-top action-sheet--material">      
       <div onclick="hidesheet()" class="sheet-title action-sheet-title action-sheet-title--material">Bộ lọc tìm kiếm
-        <button class="button-close button button--quiet button-24"><i class="icon icon_24 icon_x color-main"></i></button>
+        <button class="button-close button button--quiet button-24"><i class="icon icon_24 ic_close color-main"></i></button>
       </div>
       <div class="sheet-cont">
         <div class="box">
@@ -638,8 +638,8 @@
             </div>
           </div>
           <div class="main">
-            <div class="form">
-              <div class="row row-12 list-mb-12">
+            <div class="form list-mb-4">
+              <div class="row row-12">
                 <div class="col">
                   <div class="form-group">
                     <div
@@ -647,9 +647,9 @@
                     >
                       <label class="input-inner-wrap">
                         <input
-                          
+                          value="100,000"
                           type="text"
-                          class="input form-control input-has-clear"
+                          class="input form-control input-has-clear is-invalid"
                           placeholder="Tối thiểu"
                           required
                           autocorrect="off"
@@ -659,8 +659,7 @@
                         </div>
                         <div class="input-frame"></div>
                       </label>
-                    </div>
-                    <div class="errorBlock"></div>
+                    </div>                    
                   </div>
 
                 </div>
@@ -671,9 +670,9 @@
                     >
                       <label class="input-inner-wrap">
                         <input
-                          
+                          value="1,000"
                           type="text"
-                          class="input form-control input-has-clear"
+                          class="input form-control input-has-clear is-invalid"
                           placeholder="Tối đa"
                           required
                           autocorrect="off"
@@ -684,11 +683,11 @@
                         <div class="input-frame"></div>
                       </label>
                     </div>
-                    <div class="errorBlock"></div>
                   </div>
 
                 </div>
-              </div>              
+              </div>     
+              <div class="errorBlock">Giá tối thiểu phải nhỏ hơn giá tối đa</div>         
             </div>
           </div>
         </div>
