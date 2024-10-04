@@ -209,9 +209,9 @@
   -moz-mask-image: url(../general/icon/icon_gift.svg);
 }
 .icon_share {
-  -webkit-mask-image: url(../general/icon/icon_share.svg);
-  -o-mask-image: url(../general/icon/icon_share.svg);
-  -moz-mask-image: url(../general/icon/icon_share.svg);
+  -webkit-mask-image: url(../general/icon/icon_share2.svg);
+  -o-mask-image: url(../general/icon/icon_share2.svg);
+  -moz-mask-image: url(../general/icon/icon_share2.svg);
 }
 .icon_fill {
   -webkit-mask-image: url(../general/icon/icon_fill.svg);
@@ -556,4 +556,9 @@
   -webkit-mask-image: url(../general/icon/icon_more.svg);
   -o-mask-image: url(../general/icon/icon_more.svg);
   -moz-mask-image: url(../general/icon/icon_more.svg);
+}
+.icon_check_double {
+  -webkit-mask-image: url(../general/icon/icon_check_double.svg);
+  -o-mask-image: url(../general/icon/icon_check_double.svg);
+  -moz-mask-image: url(../general/icon/icon_check_double.svg);
 }

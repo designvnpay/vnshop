@@ -3970,7 +3970,7 @@ border-radius: 16px;
 }
 .bg-success-light {background-color: var(--success-light);}
 .color-success {color: var(--color-success);}
-.toast-bottom .toast {bottom: 30px;align-items: center;}
+.toast-bottom .toast {bottom: 50px;align-items: center;}
 .toast__button {
   padding-right: 0;
   align-items: center;
