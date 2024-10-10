@@ -4718,6 +4718,7 @@ line-height: 36px;
   display: flex;
 }
 .box-order {color: var(--text-secondary)}
+.title-order{color: var(--color-main);}
 .box-order-icon {
   width: 60px;
   display: flex;
