@@ -4717,6 +4717,7 @@ line-height: 36px;
 .link-bg-gray>.row>.col-auto {
   display: flex;
 }
+.box-order {color: var(--text-secondary)}
 .box-order-icon {
   width: 60px;
   display: flex;
