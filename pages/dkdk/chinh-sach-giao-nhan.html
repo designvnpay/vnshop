@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <base href="../../." />
   <meta charset="utf-8" />
   <meta
           name="viewport"
@@ -10,177 +11,48 @@
           http-equiv="Content-Security-Policy"
           content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
   />
-  <!--<script src="components/loader.js"></script>
-<link rel="stylesheet" href="components/loader.css">-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
   />
-
-  <title>Chính sách giao nhận</title>
-  <style type="text/css">
-    :root {
-      --primary: #004a9c;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-size: 14px;
-      line-height: 24px;
-      color: #333;
-      font-family: "Manrope", sans-serif;
-      padding: 5px;
-      text-align: justify;
-    }
-ol{
-    padding-left: 17px;
-}
-li {margin-bottom: 5px;}
-    .title {
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 26px;
-      text-align: center;
-      margin: 0 0 20px;
-      text-transform: uppercase;
-    }
-    .text-center {text-align: center;}
-h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
-    .sub-title,
-    b {
-      font-weight: 700;
-    }
-
-    a {
-      color: rgb(46 116 181);
-    }
-
-    .wrapper {
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 2rem 1rem 1rem;
-      background: #fff;
-    }
-    table {
-      border-top: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      width: 100%;
-      margin-bottom: 16px;
-    }
-    table td {
-      border-bottom: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-      padding: 5px;
-    }
-
-    .main .article:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-
-    /* css ul */
-
-    p,
-    ul {
-      margin-bottom: 5px;
-    }
-
-    ul {
-      padding-left: 32px;
-    }
-
-    ul>li {
-      position: relative;
-    }
-
-    .number {
-      position: absolute;
-      display: inline-block;
-      left: 0;
-      top: 0;
-      width: 1.75rem;
-    }
-
-    ul>li>ul>li {
-      padding-left: 0;
-    }
-
-    ul>li>ul>li .number {
-      left: -1.5rem;
-      width: 1.5rem;
-    }
-
-    ul>li>ul>li>ul>li {
-      padding-left: 10px;
-    }
-
-    ul>li>ul>li>ul>li .number {
-      left: -1.45rem;
-      width: 1.45rem;
-    }
-
-    /* end:css ul */
-
-
-    /* end:css header  */
-    /* css scroll to top */
-    .scroll-top {
-      width: 36px;
-      height: 36px;
-      position: fixed;
-      bottom: -20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 100;
-      background-color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      opacity: 0;
-      box-shadow: 0 0.5rem 1.5rem 0.5rem rgb(0 0 0 / 8%);
-      transition: all .2s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .scroll-top.show {
-      opacity: 0.3;
-      bottom: 40px;
-    }
-
-    .scroll-top .ic-arrow {
-      transform: rotate(-90deg);
-    }
-
-    @media (hover) {
-      .scroll-top.show:hover {
-        opacity: 1;
-      }
-    }
-
-    .scroll-top.show:focus,
-    .scroll-top.show:visited,
-    .scroll-top.show:active {
-      opacity: 1;
-    }
-
-    /* end: css scroll to top */
-  </style>
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+  />
+  <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="pages/dkdk/css/style.css" />
+  <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <title>VNSHOP</title>
 </head>
-
 <body>
-  <div class="wrapper">
-    <section class="main">
-      <h1 class="title">Chính sách giao nhận</h1>
-      <div class="content">
-        <div class="article">
+<div class="page page-notify">
+  <div class="toolbar align-center flex">
+    <div class="toolbar__left">
+      <a href="pages/dkdk/index.html" class="button button--quiet">
+        <i class="icon icon_24 icon_back color-main"></i>
+      </a>
+    </div>
+    <div class="toolbar__center align-center">
+      <div class="font-size-14 font-weight-700">Chính sách và điều khoản</div>
+    </div>
+    <div class="toolbar__right">
+      <a href="javascript:;" class="button button--quiet">
+        &nbsp;
+      </a>
+    </div>
+  </div>
+  <div class="page__background"></div>
+  <div class="page__content">
+    <div class="box">
+      <div class="main">
+        <p class="font-weight-700">Chính sách giao nhận</p>
+        <div class="editor">
           <p><span>Sau khi đặt h&agrave;ng th&agrave;nh c&ocirc;ng, Ứng dụng VnShop sẽ chuẩn bị h&agrave;ng, đ&oacute;ng g&oacute;i v&agrave; b&agrave;n giao cho c&aacute;c đơn vị vận chuyển để giao h&agrave;ng cho Kh&aacute;ch h&agrave;ng. Trường hợp Kh&aacute;ch h&agrave;ng đ&atilde; mua h&agrave;ng một v&agrave;i lần với Ứng dụng VnShop, Ứng dụng VnShop sẽ kh&ocirc;ng gọi điện thoại x&aacute;c nhận để tr&aacute;nh l&agrave;m phiền, trừ c&aacute;c trường hợp đặc biệt cần x&aacute;c nhận lại, như: kh&ocirc;ng c&oacute; h&agrave;ng hoặc h&agrave;ng về chậm dẫn đến thời gian giao h&agrave;ng kh&ocirc;ng đ&uacute;ng như dự kiến. Đơn h&agrave;ng của Kh&aacute;ch h&agrave;ng sẽ được c&aacute;c đối t&aacute;c vận chuyển giao trong khoảng thời gian từ 8h30 - 18h30, từ thứ Hai đến thứ Bảy (trừ ng&agrave;y lễ, Tết) v&agrave; theo thời gian dự kiến cho từng khu vực như sau:</span></p>
-          <table cellpadding="0" cellspacing="0">
+          <table>
             <tbody>
             <tr>
               <td>
@@ -232,7 +104,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
           <p><span>Sản phẩm được đ&oacute;ng g&oacute;i theo ti&ecirc;u chuẩn đ&oacute;ng g&oacute;i của Ứng dụng VnShop, nếu Kh&aacute;ch h&agrave;ng c&oacute; nhu cầu đ&oacute;ng g&oacute;i đặc biệt kh&aacute;c, vui l&ograve;ng b&aacute;o trước cho Ứng dụng VnShop khi đặt h&agrave;ng v&agrave; cho ph&eacute;p Ứng dụng VnShop được t&iacute;nh th&ecirc;m phụ ph&iacute; cho nhu cầu đặc biệt n&agrave;y.</span></p>
           <p><span>Ứng dụng VnShop sẽ b&aacute;o ngay đến Kh&aacute;ch h&agrave;ng nếu c&oacute; sự chậm trễ khi giao h&agrave;ng so với thời gian cam kết. Tuy nhi&ecirc;n, trong phạm vi ph&aacute;p luật cho ph&eacute;p, Ứng dụng VnShop sẽ kh&ocirc;ng chịu tr&aacute;ch nhiệm cho bất cứ tổn thất n&agrave;o, c&aacute;c khoản nợ, thiệt hại hoặc chi ph&iacute; ph&aacute;t sinh từ việc giao h&agrave;ng trễ.</span></p>
           <p><span>Trường hợp muốn thay đổi địa chỉ nhận h&agrave;ng, Kh&aacute;ch h&agrave;ng cần li&ecirc;n hệ ngay với Ứng dụng VnShop để kịp thời thay đổi lộ tr&igrave;nh cho đối t&aacute;c vận chuyển.</span></p>
-          <p><span>Mọi th&ocirc;ng tin về việc thay đổi sản phẩm hay huỷ bỏ đơn h&agrave;ng, đề nghị Kh&aacute;ch h&agrave;ng th&ocirc;ng b&aacute;o sớm để Ứng dụng VnShop c&oacute; thể điều chỉnh lại đơn h&agrave;ng cho bạn. Kh&aacute;ch h&agrave;ng c&oacute; thể li&ecirc;n hệ với ch&uacute;ng t&ocirc;i qua số hotline:1800.5888.59 hoặc qua địa chỉ email:</span> <span>cskh@VnShop.vn</span></p>
+          <p><span>Mọi th&ocirc;ng tin về việc thay đổi sản phẩm hay huỷ bỏ đơn h&agrave;ng, đề nghị Kh&aacute;ch h&agrave;ng th&ocirc;ng b&aacute;o sớm để Ứng dụng VnShop c&oacute; thể điều chỉnh lại đơn h&agrave;ng cho bạn. Kh&aacute;ch h&agrave;ng c&oacute; thể li&ecirc;n hệ với ch&uacute;ng t&ocirc;i qua số hotline:1800.5888.59 hoặc qua địa chỉ email: </span><span>cskh@VnShop.vn</span></p>
           <p><span>Quy định về kiểm tra h&agrave;ng h&oacute;a:</span></p>
           <p><span>Kh&aacute;ch h&agrave;ng vui l&ograve;ng trực tiếp kiểm tra h&agrave;ng h&oacute;a để đảm bảo t&iacute;nh ch&iacute;nh x&aacute;c về chủng loại, số lượng cũng như c&aacute;c yếu tố ngoại quan kh&aacute;c của h&agrave;ng h&oacute;a như bao b&igrave;, m&agrave;u sắc, v.v.. Nếu kh&aacute;ch h&agrave;ng kh&ocirc;ng thực hiện đồng kiểm, VnShop sẽ được miễn tr&aacute;ch nhiệm về t&iacute;nh ch&iacute;nh x&aacute;c của số lượng, chủng loại, ngoại quan h&agrave;ng h&oacute;a, mặc định Kh&aacute;ch h&agrave;ng đ&atilde; đồng &yacute; nhận h&agrave;ng đủ v&agrave; đ&uacute;ng theo y&ecirc;u cầu.</span></p>
           <p><span>Những điểm quan trọng khi nhận h&agrave;ng</span></p>
@@ -241,10 +113,10 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
           <p><span>Kh&aacute;ch h&agrave;ng lưu &yacute; quay lại video về qu&aacute; tr&igrave;nh khui h&agrave;ng v&agrave; chụp ảnh lại lu&ocirc;n c&aacute;c bằng chứng về việc h&agrave;ng h&oacute;a bị hư hỏng khi nhận h&agrave;ng v&agrave; li&ecirc;n hệ ngay với Bộ phận chăm s&oacute;c kh&aacute;ch h&agrave;ng qua số hotline, đồng thời gửi h&igrave;nh ảnh k&egrave;m video qu&aacute; tr&igrave;nh khui h&agrave;ng qua địa chỉ email: </span><span>cskh@VnShop.vn </span><span>để được hướng dẫn xử l&yacute; khiếu nại.</span></p>
           <p><span>Biểu ph&iacute; giao h&agrave;ng:</span></p>
           <p><span>VnShop &aacute;p dụng t&iacute;nh cước ph&iacute; giao h&agrave;ng theo khối lượng như sau:</span></p>
-          <table cellpadding="0" cellspacing="0">
+          <table>
             <tbody>
             <tr>
-              <td width="25%">
+              <td style="text-align: center;">
                 <p><span>Số lượng c&acirc;n (kg)</span></p>
               </td>
               <td>
@@ -258,7 +130,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>1</span></p>
               </td>
               <td>
@@ -272,7 +144,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>2</span></p>
               </td>
               <td>
@@ -286,7 +158,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>3</span></p>
               </td>
               <td>
@@ -300,7 +172,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>4</span></p>
               </td>
               <td>
@@ -314,7 +186,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>5</span></p>
               </td>
               <td>
@@ -328,7 +200,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>6</span></p>
               </td>
               <td>
@@ -342,7 +214,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>7</span></p>
               </td>
               <td>
@@ -356,7 +228,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>8</span></p>
               </td>
               <td>
@@ -370,7 +242,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>9</span></p>
               </td>
               <td>
@@ -384,7 +256,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>10</span></p>
               </td>
               <td>
@@ -398,7 +270,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>11</span></p>
               </td>
               <td>
@@ -412,7 +284,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>12</span></p>
               </td>
               <td>
@@ -426,7 +298,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>13</span></p>
               </td>
               <td>
@@ -440,7 +312,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>14</span></p>
               </td>
               <td>
@@ -454,7 +326,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>15</span></p>
               </td>
               <td>
@@ -468,7 +340,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>16</span></p>
               </td>
               <td>
@@ -482,7 +354,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>17</span></p>
               </td>
               <td>
@@ -496,7 +368,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>18</span></p>
               </td>
               <td>
@@ -510,7 +382,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>19</span></p>
               </td>
               <td>
@@ -524,7 +396,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>20</span></p>
               </td>
               <td>
@@ -538,7 +410,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>21</span></p>
               </td>
               <td>
@@ -552,7 +424,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>22</span></p>
               </td>
               <td>
@@ -566,7 +438,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>23</span></p>
               </td>
               <td>
@@ -580,7 +452,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>24</span></p>
               </td>
               <td>
@@ -594,7 +466,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>25</span></p>
               </td>
               <td>
@@ -608,7 +480,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>26</span></p>
               </td>
               <td>
@@ -622,7 +494,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>27</span></p>
               </td>
               <td>
@@ -636,7 +508,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>28</span></p>
               </td>
               <td>
@@ -650,7 +522,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>29</span></p>
               </td>
               <td>
@@ -664,7 +536,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>30</span></p>
               </td>
               <td>
@@ -678,7 +550,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
               </td>
             </tr>
             <tr>
-              <td>
+              <td style="text-align: center;">
                 <p><span>&gt;30</span></p>
               </td>
               <td>
@@ -694,7 +566,7 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
             </tbody>
           </table>
           <p><span>Bảng ph&acirc;n v&ugrave;ng địa l&yacute;:</span></p>
-          <table cellpadding="0" cellspacing="0">
+          <table>
             <tbody>
             <tr>
               <td>
@@ -1031,48 +903,19 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
             </tr>
             </tbody>
           </table>
-          <p>&nbsp;</p>
           <p><span>*Ch&iacute;nh s&aacute;ch Giao Nhận đối với mặt h&agrave;ng điện tử:</span></p>
           <p><span>Đối với c&aacute;c mặt h&agrave;ng điện tử VnShop hỗ trợ ch&iacute;nh s&aacute;ch &ldquo;miễn ph&iacute; giao h&agrave;ng v&agrave; lắp đặt cơ bản" đối với khu vực H&agrave; Nội, TP Hồ Ch&iacute; Minh.</span></p>
           <p><span>Một số khu vực VnShop hỗ trợ cung cấp dịch vụ giao h&agrave;ng v&agrave; lắp đặt :&nbsp;</span></p>
           <p><span>B&igrave;nh Dương, Đồng Nai, Vũng T&agrave;u, T&acirc;y Ninh, Long An, Tiền Giang, B&igrave;nh Phước, Th&aacute;i Nguy&ecirc;n, Ph&uacute; Thọ, Vĩnh Ph&uacute;c, Bắc Giang, Bắc Ninh, Hải Dương, H&ograve;a B&igrave;nh, Hưng Y&ecirc;n, Hải Ph&ograve;ng, H&agrave; Nam, Th&aacute;i B&igrave;nh, Ninh B&igrave;nh, Nam Định.</span></p>
           <p><span>Ri&ecirc;ng c&aacute;c khu vực c&ograve;n lại, VnShop sẽ tư vấn chi tiết theo từng trường hợp cụ thể.&nbsp;</span></p>
           <p><span>Lưu &yacute;: Đối với 1 số khu vực kh&ocirc;ng thể xử l&yacute; giao h&agrave;ng VnShop xin ph&eacute;p hủy đơn v&agrave; kh&ocirc;ng chịu tr&aacute;ch nhiệm về bất kỳ tổn thất n&agrave;o li&ecirc;n quan đến kh&aacute;ch h&agrave;ng.</span></p>
-          
         </div>
+
+
       </div>
-    </section>
-  </div>
-  <div class="scroll-top">
-    <svg xmlns="http://www.w3.org/2000/svg" class="ic-arrow" width="24" height="24" viewBox="0 0 24 24">
-      <g id="ic_next" transform="translate(-336 -78)">
-        <path id="Path_739" data-name="Path 739" d="M352,101.3l7-6.9-7-7.1" transform="translate(-7.5 -3.8)" fill="none"
-          stroke="#fff" stroke-miterlimit="10" stroke-width="1.5" />
-        <rect id="Rectangle_132" data-name="Rectangle 132" width="24" height="24" transform="translate(336 78)"
-          fill="none" />
-      </g>
-    </svg>
-  </div>
-  <script>
-    const btnScroll = document.querySelector(".scroll-top");
-    let toTop,
-      windowHeight = window.innerHeight;
+    </div>
 
-    window.addEventListener("scroll", function (event) {
-      toTop = this.scrollY;
-      toTop >= windowHeight ? btnScroll.classList.add("show") : btnScroll.classList.remove("show")
-    });
-
-    function scrollToTop() {
-      if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
-        window.scrollBy(0, -windowHeight / 3);
-        requestAnimationFrame(scrollToTop);
-      }
-    }
-    btnScroll.addEventListener("click", function () {
-      scrollToTop();
-    })
-  </script>
+  </div>
+</div>
 </body>
-
 </html>
