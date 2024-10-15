@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="pages/dkdk/css/style.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <title>VNSHOP</title>
+</head>
+<body>
+<div class="page page-notify">
+    <div class="toolbar align-center flex">
+        <div class="toolbar__left">
+            <a href="pages/dkdk/index.html" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+            </a>
+        </div>
+        <div class="toolbar__center align-center">
+            <div class="font-size-14 font-weight-700">Chính sách và điều khoản</div>
+        </div>
+        <div class="toolbar__right">
+            <a href="javascript:;" class="button button--quiet">
+                &nbsp;
+            </a>
+        </div>
+    </div>
+    <div class="page__background"></div>
+    <div class="page__content">
+        <div class="box">
+            <div class="main">
+                <p class="font-weight-700">Bảng phí lắp đặt hàng điện tử</p>
+                <div class="editor">
+                    <p><span>Khu vực &aacute;p dụng: To&agrave;n Quốc</span></p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td colspan="5">
+                                <p><span>Bảng Gi&aacute; Dịch Vụ Lắp Đặt</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Chủng Loại</span></p>
+                            </td>
+                            <td>
+                                <p><span>Đơn Gi&aacute; (Đồng)</span></p>
+                            </td>
+                            <td>
+                                <p><span>Đơn Vị T&iacute;nh</span></p>
+                            </td>
+                            <td>
+                                <p><span>Ghi Ch&uacute;</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp M&aacute;y lạnh (1.0 HP - 1.5 HP)</span></p>
+                            </td>
+                            <td>
+                                <p><span>300.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp M&aacute;y lạnh (2.0 HP - 2.5 HP)</span></p>
+                            </td>
+                            <td>
+                                <p><span>350.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng th&aacute;o M&aacute;y lạnh (1.5 HP -2.5HP)</span></p>
+                            </td>
+                            <td>
+                                <p><span>150.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng th&aacute;o d&agrave;n n&oacute;ng cũ, lắp qua vị tr&iacute; mới (M&aacute;y lạnh)</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>
+                                <p><span>&Aacute;p dụng cho m&aacute;y từ 1HP - 2.5 HP</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng th&aacute;o d&agrave;n lạnh cũ, lắp qua vị tr&iacute; mới (M&aacute;y lạnh)</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng th&aacute;o lắp di dời ML 1.0 HP - 1.5 HP (c&ugrave;ng địa chỉ)</span></p>
+                            </td>
+                            <td>
+                                <p><span>600.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>
+                                <p><span>&Aacute;p dụng khi sản phẩm c&ugrave;ng địa chỉ</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng th&aacute;o lắp di dời ML 2.0 HP - 2.5 HP (c&ugrave;ng địa chỉ)</span></p>
+                            </td>
+                            <td>
+                                <p><span>700.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng vệ sinh l&agrave;m sạch đường ống đồng (+ NI TƠ) (CHƯA LẮP ĐẶT)</span></p>
+                            </td>
+                            <td>
+                                <p><span>500.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>
+                                <p><span>&Aacute;p dụng khi đ&atilde; c&oacute; sẵn đường ống chờ</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng vệ sinh m&aacute;y lạnh treo tường 1.0 HP - 1.5 HP</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng vệ sinh m&aacute;y lạnh treo tường 2.0 HP - 2.5 HP</span></p>
+                            </td>
+                            <td>
+                                <p><span>250.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng &acirc;m ống đồng trong tưởng/tr&ecirc;n La ph&ocirc;ng cố định</span></p>
+                            </td>
+                            <td>
+                                <p><span>40.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>
+                                <p><span>Kh&ocirc;ng bao gồm: tr&aacute;m tr&eacute;t, sơn tường...</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng đi ống đồng nổi/ tr&ecirc;n La ph&ocirc;ng sống/trong Trunking</span></p>
+                            </td>
+                            <td>
+                                <p><span>20.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng &acirc;m ống nước/ c&ocirc;ng &acirc;m d&acirc;y điện nguồn/ c&ocirc;ng lắp đặt ống nước PVC</span></p>
+                            </td>
+                            <td>
+                                <p><span>15.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng th&aacute;o LCD</span></p>
+                            </td>
+                            <td>
+                                <p><span>100.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp LCD &lt;40"</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp LCD 40 - 49"</span></p>
+                            </td>
+                            <td>
+                                <p><span>300.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp LCD 50 &ndash; 55"</span></p>
+                            </td>
+                            <td>
+                                <p><span>350.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp LCD &gt;55"</span></p>
+                            </td>
+                            <td>
+                                <p><span>500.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp m&aacute;y h&uacute;t kh&oacute;i</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp bếp &acirc;m c&aacute;c loại (kh&ocirc;ng cắt đ&aacute;)</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp m&aacute;y lọc nước.</span></p>
+                            </td>
+                            <td>
+                                <p><span>140.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng bảo tr&igrave;/thay bộ lọc nước</span></p>
+                            </td>
+                            <td>
+                                <p><span>150.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp quạt trần c&aacute;c loại trần b&ecirc; t&ocirc;ng (C&oacute; m&oacute;c chờ + điện nguồn chờ)</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>C&ocirc;ng lắp quạt trần c&aacute;c loại trần b&ecirc; t&ocirc;ng (Chưa c&oacute; m&oacute;c chở + chưa c&oacute; điện nguồn)</span></p>
+                            </td>
+                            <td>
+                                <p><span>400.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&aacute;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Khảo s&aacute;t lắp đặt (Tất cả sản phẩm)</span></p>
+                            </td>
+                            <td>
+                                <p><span>120.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Lần</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><span>Ghi ch&uacute;:</span></p>
+                    <p><span>C&aacute;c sản phẩm b&aacute;n ra thực hiện lắp đặt miễn ph&iacute; trong v&ograve;ng 15 ng&agrave;y kể từ ng&agrave;y mua h&agrave;ng ngoại trừ m&aacute;y lạnh.</span></p>
+                    <p><span>Đơn gi&aacute; tr&ecirc;n đ&atilde; bao gồm VAT, kh&ocirc;ng bao gồm ph&iacute; thu&ecirc; gi&agrave;n gi&aacute;o, cẩu h&agrave;ng.</span></p>
+                    <p><span>Nếu nh&acirc;n vi&ecirc;n lắp đặt c&oacute; y&ecirc;u cầu th&ecirc;m bất kỳ chi ph&iacute; n&agrave;o ngo&agrave;i danh s&aacute;ch n&agrave;y hoặc y&ecirc;u cầu gi&aacute; cao hơn, kh&aacute;ch h&agrave;ng c&oacute; thể từ chối v&agrave; gọi ngay đến Hotline 1800.58.88.59</span></p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td colspan="5">
+                                <p><span>Bảng Gi&aacute; Vật Tư Ch&iacute;nh</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Vật Tư Ch&iacute;nh</span></p>
+                            </td>
+                            <td>
+                                <p><span>Đơn Gi&aacute; (Đồng)</span></p>
+                            </td>
+                            <td>
+                                <p><span>Đơn Vị T&iacute;nh</span></p>
+                            </td>
+                            <td>
+                                <p><span>Ghi Ch&uacute;</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống đồng 10/6</span></p>
+                            </td>
+                            <td>
+                                <p><span>170.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bao gồm: d&acirc;y điện (&oslash; 2mm) theo ống đồng v&agrave; vật tư phụ.</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống đồng 12/6</span></p>
+                            </td>
+                            <td>
+                                <p><span>190.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống đồng 16/6</span></p>
+                            </td>
+                            <td>
+                                <p><span>220.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống đồng 16/10</span></p>
+                            </td>
+                            <td>
+                                <p><span>250.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống đồng 19/10</span></p>
+                            </td>
+                            <td>
+                                <p><span>300.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống đồng 19/12</span></p>
+                            </td>
+                            <td>
+                                <p><span>350.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Gi&aacute; treo m&aacute;y lạnh (2.7; v4; 062019; 500x500) + ốc v&iacute;t + tắc k&ecirc;</span></p>
+                            </td>
+                            <td>
+                                <p><span>120.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Cặp</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Gi&aacute; treo m&aacute;y lạnh (2.0; v4; 062019; 330x400) + ốc v&iacute;t + tắc k&ecirc;</span></p>
+                            </td>
+                            <td>
+                                <p><span>100.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Cặp</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Gi&aacute; treo m&aacute;y lạnh (2.4; v4; 062019; 400x450) + ốc v&iacute;t + tắc k&ecirc;</span></p>
+                            </td>
+                            <td>
+                                <p><span>110.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Cặp</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Gi&aacute; đỡ m&aacute;y nước n&oacute;ng (25-30cm)</span></p>
+                            </td>
+                            <td>
+                                <p><span>60.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Cặp</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>D&acirc;y điện nguồn &oslash; 2mm</span></p>
+                            </td>
+                            <td>
+                                <p><span>10.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Cầu Dao Tự Động 20A</span></p>
+                            </td>
+                            <td>
+                                <p><span>80.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống nước PVC 21</span></p>
+                            </td>
+                            <td>
+                                <p><span>20.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bao gồm: keo, m&oacute;c</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ch&acirc;n đế cao su</span></p>
+                            </td>
+                            <td>
+                                <p><span>30.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Bộ</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>D&acirc;y cấp nước inox 40 cm</span></p>
+                            </td>
+                            <td>
+                                <p><span>60.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>D&acirc;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Nối hai đầu răng ngo&agrave;i &oslash; 21 inox</span></p>
+                            </td>
+                            <td>
+                                <p><span>15.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p><span>Ống tho&aacute;t nước mềm (d&agrave;nh cho m&aacute;y lạnh)</span></p>
+                            </td>
+                            <td>
+                                <p><span>6.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td colspan="5">
+                                <p><span>Bảng Gi&aacute; Vật Tư Ph&aacute;t Sinh</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                            <td>
+                                <p><span>Đơn Gi&aacute; (Đồng)</span></p>
+                            </td>
+                            <td>
+                                <p><span>Đơn Vị T&iacute;nh</span></p>
+                            </td>
+                            <td>
+                                <p><span>Ghi Ch&uacute;</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Vật Tư M&aacute;y Lạnh</span></p>
+                            </td>
+                            <td>
+                                <p><span>Ống tho&aacute;t nước mềm (d&agrave;nh cho m&aacute;y lạnh)</span></p>
+                            </td>
+                            <td>
+                                <p><span>6.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="9">
+                                <p><span>Vật Tư M&aacute;y Giặt</span></p>
+                            </td>
+                            <td>
+                                <p><span>Nối Trơn nhựa PVC &Oslash; 21, &Oslash; 27</span></p>
+                            </td>
+                            <td>
+                                <p><span>7.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>T giảm, T ren trong, T ren ngo&agrave;i &oslash;21( bằng nhựa)</span></p>
+                            </td>
+                            <td>
+                                <p><span>9.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Co răng trong, Co răng ngo&agrave;i &oslash; 21 ( bằng nhựa)</span></p>
+                            </td>
+                            <td>
+                                <p><span>9.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Van Kh&oacute;a Nước &Oslash; 21, &Oslash; 27 (bằng nhựa)</span></p>
+                            </td>
+                            <td>
+                                <p><span>35.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Van Kh&oacute;a Nước &Oslash; 21, &Oslash; 27 (bằng đồng)</span></p>
+                            </td>
+                            <td>
+                                <p><span>60.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Nối răng ngo&agrave;i &Oslash; 21, &Oslash;27 (bằng thau)</span></p>
+                            </td>
+                            <td>
+                                <p><span>25.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Nối 2 đầu răng ngo&agrave;i &Oslash; 27 (bằng thau)</span></p>
+                            </td>
+                            <td>
+                                <p><span>25.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Ống xả nước m&aacute;y giặt &Oslash; 34(Ống nhựa mềm)</span></p>
+                            </td>
+                            <td>
+                                <p><span>20.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Ch&acirc;n M&aacute;y Giặt, Tủ Lạnh</span></p>
+                            </td>
+                            <td>
+                                <p><span>300.000đ - 550.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="9">
+                                <p><span>Vật Tư M&aacute;y Nước N&oacute;ng</span></p>
+                            </td>
+                            <td>
+                                <p><span>D&acirc;y cấp nước inox 1m2</span></p>
+                            </td>
+                            <td>
+                                <p><span>120.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>D&acirc;y</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Ống nước h&agrave;n nhiệt &Oslash; 20-25</span></p>
+                            </td>
+                            <td>
+                                <p><span>45.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Ống nước h&agrave;n nhiệt &Oslash; 32-40</span></p>
+                            </td>
+                            <td>
+                                <p><span>70.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>M&eacute;t</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>D&acirc;y cấp nước inox 50 cm</span></p>
+                            </td>
+                            <td>
+                                <p><span>55.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>D&acirc;y cấp nước inox 60cm</span></p>
+                            </td>
+                            <td>
+                                <p><span>60.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>D&acirc;y cấp nước inox 80cm</span></p>
+                            </td>
+                            <td>
+                                <p><span>80.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Nối răng ngo&agrave;i &Oslash; 21, &Oslash;27(bằng thau)</span></p>
+                            </td>
+                            <td>
+                                <p><span>25.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Nối 2 đầu răng ngo&agrave;i &Oslash; 27 (bằng thau)</span></p>
+                            </td>
+                            <td>
+                                <p><span>25.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>C&aacute;i</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Băng tan (keo lụa)</span></p>
+                            </td>
+                            <td>
+                                <p><span>5.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Cuộn</span></p>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                <p><span>Vật Tư Tivi</span></p>
+                            </td>
+                            <td>
+                                <p><span>Đầu jack đấu nối t&iacute;n hiệu c&aacute;p</span></p>
+                            </td>
+                            <td>
+                                <p><span>20.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>15.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Đầu</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>Box chuyển t&iacute;n hiệu &acirc;m thanh</span></p>
+                            </td>
+                            <td>
+                                <p><span>300.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>200.000đ</span></p>
+                            </td>
+                            <td>
+                                <p><span>Hộp</span></p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><span>Ghi ch&uacute;: Đơn gi&aacute; tham khảo theo thị trường c&oacute; thể thay đổi. Kh&aacute;ch h&agrave;ng c&oacute; thể tự mua hoặc Nh&acirc;n vi&ecirc;n hỗ trợ mua ngo&agrave;i cho c&aacute;c vật tư đối t&aacute;c VnShop chưa kinh doanh.</span></p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

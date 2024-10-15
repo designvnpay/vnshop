@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="pages/dkdk/css/style.css" />
+    <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <title>VNSHOP</title>
+</head>
+<body>
+<div class="page page-notify">
+    <div class="toolbar align-center flex">
+        <div class="toolbar__left">
+            <a href="pages/dkdk/index.html" class="button button--quiet">
+                <i class="icon icon_24 icon_back color-main"></i>
+            </a>
+        </div>
+        <div class="toolbar__center align-center">
+            <div class="font-size-14 font-weight-700">Chính sách và điều khoản</div>
+        </div>
+        <div class="toolbar__right">
+            <a href="javascript:;" class="button button--quiet">
+                &nbsp;
+            </a>
+        </div>
+    </div>
+    <div class="page__background"></div>
+    <div class="page__content">
+        <div class="box">
+            <div class="main">
+                <p class="font-weight-700">Đổi/Trả/Hoàn tiền</p>
+                <div class="editor">
+                    <p><span>Thời gian &aacute;p dụng đổi trả:</span></p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <p><span>Kể từ khi Ứng dụng VNSHOP giao h&agrave;ng th&agrave;nh c&ocirc;ng</span></p>
+                            </td>
+                            <td>
+                                <p><span>Sản phẩm lỗi / hư hỏng (Do Người b&aacute;n hoặc do vận chuyển)</span></p>
+                            </td>
+                            <td>
+                                <p><span>Sản phẩm kh&ocirc;ng lỗi</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>C&aacute;c sản phẩm kh&ocirc;ng phải l&agrave; sản phẩm kh&ocirc;ng được đổi / trả</span></p>
+                            </td>
+                            <td>
+                                <p><span>7 ng&agrave;y đầu ti&ecirc;n</span></p>
+                            </td>
+                            <td>
+                                <p><span>- Đổi mới</span><span><br /></span><span>- Trả kh&ocirc;ng thu ph&iacute;</span></p>
+                            </td>
+                            <td>
+                                <p><span>Kh&ocirc;ng hỗ trợ đổi / trả</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <p><span>Ng&agrave;y thứ 8 trở đi</span></p>
+                            </td>
+                            <td colspan="2">
+                                <p><span>- Kh&ocirc;ng hỗ trợ đổi / trả</span><span><br /></span><span>- Bảo h&agrave;nh theo quy định của H&atilde;ng / Nh&agrave; sản xuất</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><span>C&aacute;c sản phẩm thuộc mặt h&agrave;ng C&ocirc;ng Nghệ thuộc nh&agrave; b&aacute;n VNIS*</span></p>
+                            </td>
+                            <td>
+                                <p><span>Trong v&ograve;ng 24h kể từ thời điểm nhận h&agrave;ng th&agrave;nh c&ocirc;ng, kh&aacute;ch h&agrave;ng mở bưu phẩm vui l&ograve;ng quay lại video trong qu&aacute; tr&igrave;nh mở hộp sản phẩm</span></p>
+                            </td>
+                            <td>
+                                <p><span>VnShop sẽ l&agrave;m việc trực tiếp với kh&aacute;ch h&agrave;ng để đổi trả v&agrave; ho&agrave;n tiền</span></p>
+                            </td>
+                            <td>
+                                <p><span>Kh&ocirc;ng hỗ trợ đổi / trả</span></p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><span>* Một số lưu &yacute; khi kh&aacute;ch h&agrave;ng mua c&aacute;c sản phẩm thuộc mặt h&agrave;ng C&ocirc;ng Nghệ thuộc nh&agrave; b&aacute;n VNIS:&nbsp;</span></p>
+                    <ul>
+                        <li aria-level="1"><span>VnShop &aacute;p dụng ch&iacute;nh s&aacute;ch "Hỗ trợ đồng kiểm khi nhận h&agrave;ng". Người mua chỉ c&oacute; quyền mở kiện h&agrave;ng sau khi đ&atilde; cung cấp đầy đủ giấy tờ x&aacute;c minh c&aacute; nh&acirc;n cho nh&acirc;n vi&ecirc;n giao vận x&aacute;c nhận khớp với th&ocirc;ng tin tr&ecirc;n đơn h&agrave;ng.</span></li>
+                        <li aria-level="1"><span>Trong v&ograve;ng 24h kể từ thời điểm nhận h&agrave;ng th&agrave;nh c&ocirc;ng, kh&aacute;ch h&agrave;ng mở bưu phẩm vui l&ograve;ng quay lại video trong qu&aacute; tr&igrave;nh mở hộp sản phẩm . Nếu c&oacute; ph&aacute;t sinh lỗi, kh&ocirc;ng đ&uacute;ng quy c&aacute;ch sản phẩm, VnShop sẽ l&agrave;m việc trực tiếp với kh&aacute;ch h&agrave;ng để đổi trả v&agrave; ho&agrave;n tiền.</span></li>
+                        <li aria-level="1"><span>Sản phẩm của kh&aacute;ch h&agrave;ng sẽ được đ&oacute;ng g&oacute;i ni&ecirc;m phong theo ti&ecirc;u chuẩn của b&ecirc;n chuyển ph&aacute;t nhanh (quấn bọt kh&iacute; trước khi bỏ v&agrave;o hộp carton hoặc t&uacute;i g&oacute;i h&agrave;ng, được ghi h&igrave;nh trong qu&aacute; tr&igrave;nh đ&oacute;ng g&oacute;i)</span></li>
+                        <li aria-level="1"><span>Trường hợp khi giao đến hộp h&agrave;ng kh&ocirc;ng c&ograve;n nguy&ecirc;n vẹn, ẩm ướt, m&oacute;p, m&eacute;o hoặc mất tem băng keo, kh&aacute;ch h&agrave;ng vui l&ograve;ng từ chối nhận v&agrave; li&ecirc;n hệ tổng đ&agrave;i của VnShop để được hỗ trợ</span></li>
+                        <li aria-level="1"><span>VnShop cam kết tất cả h&agrave;ng h&oacute;a gửi đến qu&yacute; kh&aacute;ch đều l&agrave; đ&uacute;ng như th&ocirc;ng tin đăng tải tr&ecirc;n website (c&oacute; đầy đủ h&oacute;a đơn, được bảo h&agrave;nh ch&iacute;nh h&atilde;ng).&nbsp;</span></li>
+                        <li aria-level="1"><span>Những rủi ro ph&aacute;t sinh trong qu&aacute; tr&igrave;nh vận chuyển (va đập, ẩm ướt, tai nạn..) c&oacute; thể ảnh hưởng đến h&agrave;ng h&oacute;a, v&igrave; thế xin kh&aacute;ch h&agrave;ng vui l&ograve;ng kiểm tra h&agrave;ng h&oacute;a thật kỹ trước khi k&yacute; nhận v&agrave; quay lại video trong qu&aacute; tr&igrave;nh mở hộp sản phẩm.&nbsp;</span></li>
+                        <li aria-level="1"><span>VnShop sẽ kh&ocirc;ng chịu tr&aacute;ch nhiệm với những sai lệch h&igrave;nh thức của h&agrave;ng ho&aacute; sau khi kh&aacute;ch h&agrave;ng đ&atilde; k&yacute; nhận h&agrave;ng v&agrave; kh&ocirc;ng c&oacute; video mở hộp l&agrave;m bằng chứng sau 24h kể từ thời điểm nhận h&agrave;ng.</span></li>
+                    </ul>
+                    <p><span>C&aacute;c sản phẩm kh&ocirc;ng được đổi / trả:</span></p>
+                    <ul>
+                        <li aria-level="1"><span>C&aacute;c sản phẩm nằm trong danh mục kh&ocirc;ng được đổi trả hoặc c&oacute; ghi l&agrave; sản phẩm kh&ocirc;ng được đổi trả tại m&ocirc; tả chi tiết về sản phẩm tr&ecirc;n Ứng dụng VNSHOP.</span></li>
+                        <li aria-level="1"><span>C&aacute;c sản phẩm trưng b&agrave;y hoặc thuộc chương tr&igrave;nh giải ph&oacute;ng h&agrave;ng tồn kho, bỏ mẫu.</span></li>
+                        <li aria-level="1"><span>C&aacute;c sản phẩm l&agrave; vật tư ti&ecirc;u hao hoặc sản phẩm điện tử gửi qua đường Email hoặc SMS.</span></li>
+                        <li aria-level="1"><span>C&aacute;c sản phẩm do C&ocirc;ng ty Apple Inc. sản xuất v&agrave; cung cấp bởi nh&agrave; b&aacute;n Phong Vũ</span></li>
+                        <li aria-level="1"><span>C&aacute;c sản phẩm được đặt h&agrave;ng theo y&ecirc;u cầu.</span></li>
+                    </ul>
+                    <p><span>Trong tất cả c&aacute;c trường hợp y&ecirc;u cầu đổi trả, Kh&aacute;ch h&agrave;ng cần chuẩn bị th&ecirc;m c&aacute;c bằng chứng để đối chiếu/ khiếu nại về sau như:</span></p>
+                    <ul>
+                        <li aria-level="1"><span>Video clip mở kiện h&agrave;ng từ l&uacute;c bắt đầu khui ngoại quan đến kiểm tra sản phẩm b&ecirc;n trong th&ugrave;ng h&agrave;ng/ H&igrave;nh ảnh sản phẩm lỗi.</span></li>
+                        <li aria-level="1"><span>H&igrave;nh chụp tem kiện h&agrave;ng c&oacute; thể hiện m&atilde; đơn h&agrave;ng.</span></li>
+                        <li aria-level="1"><span>T&igrave;nh trạng ngoại quan (băng keo, seal, h&igrave;nh dạng th&ugrave;ng h&agrave;ng) đặc biệt c&aacute;c vị tr&iacute; nghi ngờ c&oacute; t&aacute;c động đến sản phẩm.</span></li>
+                        <li aria-level="1"><span>T&igrave;nh trạng sản phẩm b&ecirc;n trong.</span></li>
+                    </ul>
+                    <p><span>Để đảm bảo quyền lợi kh&aacute;ch h&agrave;ng v&agrave; VNSHOP c&oacute; cơ sở l&agrave;m việc với c&aacute;c bộ phận li&ecirc;n quan, tất cả y&ecirc;u cầu đổi/trả/bảo h&agrave;nh cần c&oacute; h&igrave;nh ảnh/clip sản phẩm lỗi. Qu&aacute; thời gian đổi/ trả sản phẩm nếu chưa nhận được đủ h&igrave;nh ảnh/ clip từ kh&aacute;ch h&agrave;ng, VNSHOP xin ph&eacute;p từ chối hỗ trợ. B&ecirc;n cạnh đ&oacute;, kh&aacute;ch h&agrave;ng cần quay video clip đ&oacute;ng g&oacute;i sản phẩm để l&agrave;m bằng chứng đối chiếu/ khiếu nại li&ecirc;n quan đến đổi trả về sau (nếu cần).</span></p>
+                    <p><span>Trả h&agrave;ng v&agrave; ho&agrave;n tiền:</span></p>
+                    <ul>
+                        <li aria-level="1"><span>Kh&aacute;ch h&agrave;ng cần gửi h&agrave;ng về Ứng dụng VNSHOP theo hướng dẫn về c&aacute;ch thức gửi h&agrave;ng.</span></li>
+                        <li aria-level="1"><span>Xin Kh&aacute;ch h&agrave;ng cần cho VNIS từ 3 - 5 ng&agrave;y l&agrave;m việc để đ&aacute;nh gi&aacute; v&agrave; xử l&yacute; y&ecirc;u cầu đổi / trả h&agrave;ng. Sau khi kết quả đ&aacute;nh gi&aacute; cho thấy sản phẩm của Kh&aacute;ch h&agrave;ng đ&aacute;p ứng c&aacute;c quy định về đổi / trả h&agrave;ng, ch&uacute;ng t&ocirc;i sẽ th&ocirc;ng b&aacute;o kết quả v&agrave; ho&agrave;n tiền lại cho Kh&aacute;ch h&agrave;ng.</span></li>
+                        <li aria-level="1"><span>Phương thức ho&agrave;n tiền:</span><span><br /><br /></span></li>
+                        <ul>
+                            <li aria-level="2"><span>Với c&aacute;c đơn h&agrave;ng đ&atilde; được thanh to&aacute;n Online: Ứng dụng VNSHOP sẽ ho&agrave;n tiền lại v&agrave;o t&agrave;i khoản m&agrave; Kh&aacute;ch h&agrave;ng đ&atilde; sử dụng khi thanh to&aacute;n.</span></li>
+                            <li aria-level="2"><span>Với c&aacute;c đơn h&agrave;ng đ&atilde; được thanh to&aacute;n bằng tiền mặt: Ứng dụng VNSHOP tiến h&agrave;nh ho&agrave;n tiền v&agrave;o t&agrave;i khoản ng&acirc;n h&agrave;ng m&agrave; Kh&aacute;ch h&agrave;ng lựa chọn.</span></li>
+                            <li aria-level="2"><span>Tuỳ thuộc v&agrave;o thời gian xử l&yacute; của từng ng&acirc;n h&agrave;ng, th&ocirc;ng thường c&oacute; thể mất từ 7 &ndash; 10 ng&agrave;y l&agrave;m việc để tiền v&agrave;o t&agrave;i khoản của Kh&aacute;ch h&agrave;ng. Nếu Kh&aacute;ch h&agrave;ng kh&ocirc;ng nhận được tiền v&agrave;o t&agrave;i khoản sau 10 ng&agrave;y l&agrave;m việc, xin vui l&ograve;ng li&ecirc;n hệ lại với ch&uacute;ng t&ocirc;i qua tổng đ&agrave;i CSKH 1800.5888.59. Ch&uacute;ng t&ocirc;i sẽ li&ecirc;n hệ ngay với ng&acirc;n h&agrave;ng để nhờ kiểm tra v&agrave; xử l&yacute; nhanh hơn cho Kh&aacute;ch h&agrave;ng.</span></li>
+                            <li aria-level="2"><span>Lưu &yacute;: Ứng dụng VNSHOP sẽ c&oacute; th&ocirc;ng b&aacute;o khi đ&atilde; nhận được sản phẩm từ Kh&aacute;ch h&agrave;ng gửi về. Xin lưu &yacute;, Ứng dụng VNSHOP sẽ ho&agrave;n lại gi&aacute; trị sản phẩm m&agrave; Kh&aacute;ch h&agrave;ng đ&atilde; thanh to&aacute;n. Ph&iacute; vận chuyển, ph&iacute; lắp đặt, phụ ph&iacute; v&agrave; c&aacute;c khuyến m&atilde;i cộng th&ecirc;m sẽ kh&ocirc;ng được ho&agrave;n lại.</span></li>
+                        </ul>
+                    </ul>
+                    <p><span>C&aacute;ch thức gửi h&agrave;ng về cho Ứng dụng VNSHOP qua bưu điện</span></p>
+                    <ul>
+                        <li aria-level="1"><span>Kiểm tra điều kiện đổi trả h&agrave;ng: Vui l&ograve;ng chắc chắn rằng sản phẩm Kh&aacute;ch h&agrave;ng y&ecirc;u cầu đổi (trả) thỏa m&atilde;n điều kiện đổi trả h&agrave;ng của Ứng dụng VNSHOP tại ch&iacute;nh s&aacute;ch đổi trả h&agrave;ng h&oacute;a.</span></li>
+                        <li aria-level="1"><span>C&aacute;c bước thực hiện đổi &ndash; trả:</span></li>
+                    </ul>
+                    <p><span>Bước 1: Đăng k&yacute; nhu cầu của Kh&aacute;ch h&agrave;ng qua hotline: 1800.5888.59 hoặc email: </span><a href="https://vnshop.vn/p/cskh@vnshop.vn"><span>cskh@vnshop.vn</span></a><span> v&agrave; cung cấp th&ocirc;ng tin chi tiết về sản phẩm lỗi gồm:</span></p>
+                    <ul>
+                        <li aria-level="1"><span>M&atilde; số đơn h&agrave;ng</span></li>
+                        <li aria-level="1"><span>T&ecirc;n sản phẩm</span></li>
+                        <li aria-level="1"><span>Lỗi sản phẩm (m&ocirc; tả chi tiết v&agrave; k&egrave;m ảnh chụp/ clip nếu c&oacute;)</span></li>
+                        <li aria-level="1"><span>Nhu cầu cần hỗ trợ: đổi/trả/bảo h&agrave;nh</span></li>
+                    </ul>
+                    <p><span>Bước 2: Sau khi nhận được y&ecirc;u cầu đổi/trả/bảo h&agrave;nh, Ứng dụng VNSHOP sẽ hướng dẫn Kh&aacute;ch h&agrave;ng c&aacute;ch thức gửi h&agrave;ng về cho ch&uacute;ng t&ocirc;i trong v&ograve;ng 48h l&agrave;m việc.</span></p>
+                    <p><span>Bước 3: Đ&oacute;ng g&oacute;i v&agrave; mang sản phẩm đến bưu điện Kh&aacute;ch h&agrave;ng c&oacute; thể tham khảo mạng lưới bưu điện tr&ecirc;n to&agrave;n quốc tại: </span><a href="http://www.vnpost.vn/POLocation.aspx"><span>http://www.vnpost.vn/POLocation.aspx</span></a><span>&nbsp;</span></p>
+                    <p><span>Bước 4: Gửi sản phẩm về Ứng dụng VNSHOP</span></p>
+                    <p><span>Kh&aacute;ch h&agrave;ng vui l&ograve;ng gửi sản phẩm qua đường bưu điện về Ứng dụng VNSHOP trong v&ograve;ng 3 ng&agrave;y l&agrave;m việc kể từ nhận được hướng dẫn từ Ứng dụng VNSHOP v&agrave; gửi k&egrave;m:</span></p>
+                    <ul>
+                        <li aria-level="1"><span>H&oacute;a đơn b&aacute;n h&agrave;ng hoặc đ&iacute;nh k&egrave;m giấy ghi ch&uacute; c&oacute; m&atilde; đơn h&agrave;ng</span></li>
+                        <li aria-level="1"><span>H&oacute;a đơn gi&aacute; trị gia tăng (nếu c&oacute;)</span></li>
+                        <li aria-level="1"><span>Phụ kiện đi k&egrave;m sản phẩm v&agrave; tặng khuyến m&atilde;i k&egrave;m theo (nếu c&oacute;)</span></li>
+                        <li aria-level="1"><span>Một số lưu &yacute; khi gửi h&agrave;ng đến bưu điện:</span></li>
+                        <li aria-level="1"><span>Đ&oacute;ng g&oacute;i, ch&egrave;n l&oacute;t sản phẩm như ban đầu nhưng kh&ocirc;ng ni&ecirc;m phong bề mặt th&ugrave;ng trước khi ho&agrave;n tất qu&aacute; tr&igrave;nh gửi h&agrave;ng v&igrave; c&oacute; thể bưu điện cần kiểm tra trước khi nhận h&agrave;ng từ Kh&aacute;ch h&agrave;ng.</span></li>
+                        <li aria-level="1"><span>Lưu &yacute; kh&ocirc;ng d&aacute;n băng keo trực tiếp l&ecirc;n hộp sản phẩm v&igrave; y&ecirc;u cầu đổi/trả c&oacute; thể sẽ bị từ chối nếu hộp sản phẩm bị hư hỏng.</span></li>
+                        <li aria-level="1"><span>Li&ecirc;n hệ Hotline: 1800.5888.59 (8h - 18h từ thứ 2 - CN) khi c&oacute; bất cứ kh&oacute; khăn xảy ra trong qu&aacute; tr&igrave;nh l&agrave;m việc với bưu điện.</span></li>
+                    </ul>
+                    <p><span>Lưu &yacute;: Kh&aacute;ch h&agrave;ng vui l&ograve;ng chỉ gửi sản phẩm qua đường bưu điện v&agrave; chịu tr&aacute;ch nhiệm về trạng th&aacute;i nguy&ecirc;n vẹn của sản phẩm khi gửi về Ứng dụng VNSHOP. Sau khi nhận được sản phẩm Kh&aacute;ch h&agrave;ng gởi về, Ứng dụng VNSHOP sẽ phản hồi v&agrave; cập nhật th&ocirc;ng tin tr&ecirc;n từng giai đoạn xử l&yacute; đến Kh&aacute;ch h&agrave;ng qua email.</span></p>
+                    <p><span>Danh mục kh&ocirc;ng được ph&eacute;p đổi trả h&agrave;ng:</span></p>
+                    <p><span>Do quy định từ ph&iacute;a nh&agrave; sản xuất/ nh&agrave; b&aacute;n, c&aacute;c loại sản phẩm trong danh s&aacute;ch dưới đ&acirc;y, Ứng dụng VNSHOP rất tiếc kh&ocirc;ng thể hỗ trợ đổi trả được cho Kh&aacute;ch h&agrave;ng. Rất mong Kh&aacute;ch h&agrave;ng h&agrave;ng th&ocirc;ng cảm.</span></p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>STT</span></p>
+                            </td>
+                            <td>
+                                <p><span>Danh mục ng&agrave;nh h&agrave;ng</span></p>
+                            </td>
+                            <td>
+                                <p><span>Loại sản phẩm</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>1</span></p>
+                            </td>
+                            <td>
+                                <p><span>Ng&agrave;nh h&agrave;ng C&ocirc;ng Nghệ - Điện Tử</span></p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li aria-level="1"><span>Tất cả c&aacute;c sản phẩm sim v&agrave; thẻ c&agrave;o</span></li>
+                                    <li aria-level="1"><span>C&aacute;c sản phẩm thiết bị số, phụ kiện số, thiết bị IT đ&atilde; k&iacute;ch hoạt bảo h&agrave;nh, th&aacute;o seal, qua sử dụng, sao lưu dữ liệu...</span></li>
+                                    <li aria-level="1"><span>C&aacute;c phần mềm m&agrave; c&oacute; bản quyền gửi qua đường điện tử</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>2</span></p>
+                            </td>
+                            <td>
+                                <p><span>Mẹ v&agrave; b&eacute;</span></p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li aria-level="1"><span>Đồ l&oacute;t, Đồ bơi của b&eacute;</span></li>
+                                    <li aria-level="1"><span>Sản phẩm mua tại c&aacute;c sự kiện offline</span></li>
+                                    <li aria-level="1"><span>Sản phẩm kh&ocirc;ng đổi trả ghi chi tiết tr&ecirc;n từng Người b&aacute;n</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>3</span></p>
+                            </td>
+                            <td>
+                                <p><span>L&agrave;m đẹp - Sức khỏe</span></p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li aria-level="1"><span>Mỹ phẩm, nước hoa</span></li>
+                                    <li aria-level="1"><span>Thực phẩm bổ sung (Thực phẩm l&agrave;m đẹp, chăm s&oacute;c sức khỏe, kiểm so&aacute;t c&acirc;n nặng, dinh dưỡng thể thao)</span></li>
+                                    <li aria-level="1"><span>Nh&oacute;m thực phẩm chức năng, sản phẩm dinh dưỡng của nh&acirc;n s&acirc;m, linh chi, hồng s&acirc;m</span></li>
+                                    <li aria-level="1"><span>Dụng cụ hỗ trợ t&igrave;nh dục</span></li>
+                                    <li aria-level="1"><span>Sản phẩm mua tại c&aacute;c sự kiện offline</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>4</span></p>
+                            </td>
+                            <td>
+                                <p><span>Nh&agrave; cửa đời sống</span></p>
+                            </td>
+                            <td>
+                                <p><span>Sản phẩm kh&ocirc;ng đổi trả ghi chi tiết tr&ecirc;n từng Người b&aacute;n</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>5</span></p>
+                            </td>
+                            <td>
+                                <p><span>H&agrave;ng ti&ecirc;u d&ugrave;ng - thực phẩm</span></p>
+                            </td>
+                            <td>
+                                <p><span>Tất cả c&aacute;c h&agrave;ng h&oacute;a thực phẩm tươi sống v&agrave; thực phẩm kh&ocirc;</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>6</span></p>
+                            </td>
+                            <td>
+                                <p><span>Thể thao</span></p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li aria-level="1"><span>Đồ Golf</span></li>
+                                    <li aria-level="1"><span>Đồ bơi, đồ thể h&igrave;nh, đồ thể dục thẩm mỹ v&agrave; yoga</span></li>
+                                    <li aria-level="1"><span>Sản phẩm cồng kềnh</span></li>
+                                    <li aria-level="1"><span>Sản phẩm mua tại c&aacute;c sự kiện offline</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>7</span></p>
+                            </td>
+                            <td>
+                                <p><span>Thời trang</span></p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li aria-level="1"><span>Đồ l&oacute;t, đồ bơi, đồ ngủ, đồ bộ, quần legging v&agrave; vớ</span></li>
+                                    <li aria-level="1"><span>Sản phẩm mua tại c&aacute;c sự kiện offline</span></li>
+                                    <li aria-level="1"><span>Một số thương hiệu kh&ocirc;ng &aacute;p dụng đổi trả theo quy định của Người b&aacute;n. (Sản phẩm kh&ocirc;ng đổi trả ghi chi tiết tr&ecirc;n từng Người b&aacute;n)</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <p><span>8</span></p>
+                            </td>
+                            <td>
+                                <p><span>Sản phẩm kh&aacute;c</span></p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li aria-level="1"><span>Sản phẩm khuyến mại, tặng k&egrave;m</span></li>
+                                    <li aria-level="1"><span>H&agrave;ng mua tại c&aacute;c sự kiện Offline</span></li>
+                                    <li aria-level="1"><span>Sản phẩm thanh l&yacute;</span></li>
+                                    <li aria-level="1"><span>Sản phẩm mua với h&igrave;nh thức thanh to&aacute;n trả g&oacute;p</span></li>
+                                    <li aria-level="1"><span>Sản phẩm nằm trong danh mục kh&ocirc;ng được đổi trả hoặc c&oacute; ghi l&agrave; sản phẩm kh&ocirc;ng được đổi trả tại m&ocirc; tả chi tiết về sản phẩm tr&ecirc;n Ứng dụng VNSHOP.</span></li>
+                                    <li aria-level="1"><span>Sản phẩm trưng b&agrave;y hoặc thuộc chương tr&igrave;nh giải ph&oacute;ng h&agrave;ng tồn kho, bỏ mẫu.</span></li>
+                                    <li aria-level="1"><span>Sản phẩm l&agrave; vật tư ti&ecirc;u hao hoặc sản phẩm điện tử gửi qua đường Email hoặc SMS.</span></li>
+                                    <li aria-level="1"><span>C&aacute;c sản phẩm do C&ocirc;ng ty Apple Inc. sản xuất v&agrave; cung cấp.</span></li>
+                                    <li aria-level="1"><span>C&aacute;c sản phẩm được đặt h&agrave;ng theo y&ecirc;u cầu.9</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><span>VNIS y&ecirc;u cầu Người b&aacute;n phải ni&ecirc;m yết r&otilde; th&ocirc;ng tin, h&igrave;nh ảnh của Sản phẩm được ch&agrave;o b&aacute;n tr&ecirc;n giao diện gian h&agrave;ng (nếu c&oacute;). Trường hợp Người b&aacute;n kh&ocirc;ng c&oacute; ch&iacute;nh s&aacute;ch trả h&agrave;ng v&agrave; ho&agrave;n tiền ri&ecirc;ng, c&aacute;c ch&iacute;nh s&aacute;ch trả h&agrave;ng, ho&agrave;n tiền sẽ tu&acirc;n thủ quy chế n&ecirc;u tại c&aacute;c điểm a, b, c, d, e của khoản n&agrave;y. Trường hợp Người b&aacute;n c&oacute; ch&iacute;nh s&aacute;ch trả h&agrave;ng, ho&agrave;n tiền được ni&ecirc;m yết ri&ecirc;ng, trong trường hợp n&agrave;y, ch&iacute;nh s&aacute;ch trả h&agrave;ng v&agrave; ho&agrave;n tiền phải c&oacute; quy định tối thiểu để Kh&aacute;ch h&agrave;ng sau khi nhận Sản phẩm, h&agrave;ng h&oacute;a được giao c&oacute; thể trả h&agrave;ng nếu :</span></p>
+                    <ul>
+                        <li aria-level="1"><span>Sản phẩm kh&aacute;ch nhận được bị vỡ, nứt, gẫy, m&eacute;o, hỏng, kh&ocirc;ng giống th&ocirc;ng tin đăng b&aacute;n tr&ecirc;n Ứng dụng VNSHOP.</span></li>
+                        <li aria-level="1"><span>Sản phẩm nhận được kh&ocirc;ng đ&uacute;ng sản phẩm đ&atilde; đặt mua.</span></li>
+                        <li aria-level="1"><span>Giao thiếu h&agrave;ng.</span></li>
+                        <li aria-level="1"><span>Sản phẩm hoặc linh kiện kh&ocirc;ng ch&iacute;nh h&atilde;ng</span></li>
+                        <li aria-level="1"><span>H&agrave;ng đ&atilde; qua sử dụng/H&agrave;ng dựng/H&agrave;ng t&acirc;n trang</span></li>
+                    </ul>
+                    <p><span>VNIS c&oacute; quyền ho&atilde;n lại qu&aacute; tr&igrave;nh của bất kỳ giao dịch n&agrave;o m&agrave; VNIS tin tưởng một c&aacute;ch hợp l&yacute; rằng giao dịch l&agrave; lừa đảo, tr&aacute;i ph&aacute;p luật hoặc d&iacute;nh l&iacute;u tới bất kỳ hoạt động tội phạm n&agrave;o hoặc khi VNIS c&oacute; cơ sở để tin rằng th&agrave;nh vi&ecirc;n vi phạm đi&ecirc;̀u khoản v&agrave; điều kiện sử dụng Ứng dụng VNSHOP.</span></p>
+                    <p><span>Đối với trường hợp đơn h&agrave;ng đ&atilde; x&aacute;c nhận nhưng chưa được giao v&agrave; Kh&aacute;ch h&agrave;ng đ&atilde; hủy trong thời hạn của n&ecirc;u tại Khoản 4.b Chương II Quy chế n&agrave;y, việc ho&agrave;n tiền sẽ được thực hiện sau thời điểm hệ thống gửi x&aacute;c nhận hủy đơn h&agrave;ng v&agrave;o email, số điện thoại của Kh&aacute;ch h&agrave;ng. Đối với trường hợp đơn h&agrave;ng đ&atilde; x&aacute;c nhận, đ&atilde; giao nhưng thuộc trường hợp trả h&agrave;ng, ngay sau khi h&agrave;ng h&oacute;a được trả lại Người b&aacute;n, VNIS sẽ y&ecirc;u cầu Người b&aacute;n ho&agrave;n trả tiền cho Kh&aacute;ch h&agrave;ng trực tiếp hoặc th&ocirc;ng qua VNIS, t&ugrave;y lựa chọn của Kh&aacute;ch h&agrave;ng.</span></p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
