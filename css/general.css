@@ -567,7 +567,7 @@ body {
 }
 .page-cart .tabbar-tran.tabbar .box-total {margin-bottom: 0; padding-bottom: 16px;}
 .page-cart .toolbar + .page__background + .page__content {
-  padding-bottom: 250px;
+  padding-bottom: 150px;
 }
 .page-search .toolbar + .page__background + .page__content {
   bottom: 0;
