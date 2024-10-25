@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <base href="../../." />
   <meta charset="utf-8" />
   <meta
           name="viewport"
@@ -10,175 +11,46 @@
           http-equiv="Content-Security-Policy"
           content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
   />
-  <!--<script src="components/loader.js"></script>
-<link rel="stylesheet" href="components/loader.css">-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
   />
-
-  <title>Chính sách đổi/trả và hoàn tiền</title>
-  <style type="text/css">
-    :root {
-      --primary: #004a9c;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-size: 14px;
-      line-height: 24px;
-      color: #333;
-      font-family: "Manrope", sans-serif;
-      padding: 5px;
-      text-align: justify;
-    }
-ol{
-    padding-left: 17px;
-}
-li {margin-bottom: 5px;}
-    .title {
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 26px;
-      text-align: center;
-      margin: 0 0 20px;
-      text-transform: uppercase;
-    }
-    .text-center {text-align: center;}
-h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
-    .sub-title,
-    b {
-      font-weight: 700;
-    }
-
-    a {
-      color: rgb(46 116 181);
-    }
-
-    .wrapper {
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 2rem 1rem 1rem;
-      background: #fff;
-    }
-    table {
-      border-top: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      width: 100%;
-      margin-bottom: 16px;
-    }
-    table td {
-      border-bottom: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-      padding: 5px;
-    }
-
-    .main .article:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-
-    /* css ul */
-
-    p,
-    ul {
-      margin-bottom: 5px;
-    }
-
-    ul {
-      padding-left: 32px;
-    }
-
-    ul>li {
-      position: relative;
-    }
-
-    .number {
-      position: absolute;
-      display: inline-block;
-      left: 0;
-      top: 0;
-      width: 1.75rem;
-    }
-
-    ul>li>ul>li {
-      padding-left: 0;
-    }
-
-    ul>li>ul>li .number {
-      left: -1.5rem;
-      width: 1.5rem;
-    }
-
-    ul>li>ul>li>ul>li {
-      padding-left: 10px;
-    }
-
-    ul>li>ul>li>ul>li .number {
-      left: -1.45rem;
-      width: 1.45rem;
-    }
-
-    /* end:css ul */
-
-
-    /* end:css header  */
-    /* css scroll to top */
-    .scroll-top {
-      width: 36px;
-      height: 36px;
-      position: fixed;
-      bottom: -20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 100;
-      background-color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      opacity: 0;
-      box-shadow: 0 0.5rem 1.5rem 0.5rem rgb(0 0 0 / 8%);
-      transition: all .2s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .scroll-top.show {
-      opacity: 0.3;
-      bottom: 40px;
-    }
-
-    .scroll-top .ic-arrow {
-      transform: rotate(-90deg);
-    }
-
-    @media (hover) {
-      .scroll-top.show:hover {
-        opacity: 1;
-      }
-    }
-
-    .scroll-top.show:focus,
-    .scroll-top.show:visited,
-    .scroll-top.show:active {
-      opacity: 1;
-    }
-
-    /* end: css scroll to top */
-  </style>
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+  />
+  <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="pages/dkdk/css/style.css" />
+  <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <title>VNSHOP</title>
 </head>
-
 <body>
-  <div class="wrapper">
-    <section class="main">
-      <h1 class="title">Chính sách đổi/trả và hoàn tiền</h1>
-      <div class="content">
-        <div class="article">
+<div class="page page-notify">
+  <div class="toolbar align-center flex">
+    <div class="toolbar__left">
+      <a href="pages/product/product-detail.html" class="button button--quiet">
+        <i class="icon icon_24 icon_back color-main"></i>
+      </a>
+    </div>
+    <div class="toolbar__center align-center">
+      <div class="font-size-14 font-weight-700">Chính sách đổi/trả và hoàn tiền</div>
+    </div>
+    <div class="toolbar__right">
+      <a href="javascript:;" class="button button--quiet">
+        &nbsp;
+      </a>
+    </div>
+  </div>
+  <div class="page__background"></div>
+  <div class="page__content">
+    <div class="box">
+      <div class="main">
+        <p class="font-weight-700">Chính sách đổi/trả và hoàn tiền</p>
+        <div class="editor">
           <p><span>Thời gian &aacute;p dụng đổi trả:</span></p>
           <table cellpadding="0" cellspacing="0">
             <tbody>
@@ -445,39 +317,11 @@ h2 {font-size: 18px;font-weight: 700; padding-top: 5px; padding-bottom: 5px;}
           <p><span>VNIS c&oacute; quyền ho&atilde;n lại qu&aacute; tr&igrave;nh của bất kỳ giao dịch n&agrave;o m&agrave; VNIS tin tưởng một c&aacute;ch hợp l&yacute; rằng giao dịch l&agrave; lừa đảo, tr&aacute;i ph&aacute;p luật hoặc d&iacute;nh l&iacute;u tới bất kỳ hoạt động tội phạm n&agrave;o hoặc khi VNIS c&oacute; cơ sở để tin rằng th&agrave;nh vi&ecirc;n vi phạm đi&ecirc;̀u khoản v&agrave; điều kiện sử dụng Ứng dụng VNSHOP.</span></p>
           <p><span>Đối với trường hợp đơn h&agrave;ng đ&atilde; x&aacute;c nhận nhưng chưa được giao v&agrave; Kh&aacute;ch h&agrave;ng đ&atilde; hủy trong thời hạn của n&ecirc;u tại Khoản 4.b Chương II Quy chế n&agrave;y, việc ho&agrave;n tiền sẽ được thực hiện sau thời điểm hệ thống gửi x&aacute;c nhận hủy đơn h&agrave;ng v&agrave;o email, số điện thoại của Kh&aacute;ch h&agrave;ng. Đối với trường hợp đơn h&agrave;ng đ&atilde; x&aacute;c nhận, đ&atilde; giao nhưng thuộc trường hợp trả h&agrave;ng, ngay sau khi h&agrave;ng h&oacute;a được trả lại Người b&aacute;n, VNIS sẽ y&ecirc;u cầu Người b&aacute;n ho&agrave;n trả tiền cho Kh&aacute;ch h&agrave;ng trực tiếp hoặc th&ocirc;ng qua VNIS, t&ugrave;y lựa chọn của Kh&aacute;ch h&agrave;ng.</span></p>
         </div>
+
       </div>
-    </section>
-  </div>
-  <div class="scroll-top">
-    <svg xmlns="http://www.w3.org/2000/svg" class="ic-arrow" width="24" height="24" viewBox="0 0 24 24">
-      <g id="ic_next" transform="translate(-336 -78)">
-        <path id="Path_739" data-name="Path 739" d="M352,101.3l7-6.9-7-7.1" transform="translate(-7.5 -3.8)" fill="none"
-          stroke="#fff" stroke-miterlimit="10" stroke-width="1.5" />
-        <rect id="Rectangle_132" data-name="Rectangle 132" width="24" height="24" transform="translate(336 78)"
-          fill="none" />
-      </g>
-    </svg>
-  </div>
-  <script>
-    const btnScroll = document.querySelector(".scroll-top");
-    let toTop,
-      windowHeight = window.innerHeight;
+    </div>
 
-    window.addEventListener("scroll", function (event) {
-      toTop = this.scrollY;
-      toTop >= windowHeight ? btnScroll.classList.add("show") : btnScroll.classList.remove("show")
-    });
-
-    function scrollToTop() {
-      if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
-        window.scrollBy(0, -windowHeight / 3);
-        requestAnimationFrame(scrollToTop);
-      }
-    }
-    btnScroll.addEventListener("click", function () {
-      scrollToTop();
-    })
-  </script>
+  </div>
+</div>
 </body>
-
 </html>
