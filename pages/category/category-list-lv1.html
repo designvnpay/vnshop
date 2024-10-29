@@ -75,12 +75,31 @@
       </div>      
       <div class="page__background"></div>
       <div class="page__content">
-        <div class="box banner mb0">
+        <div class="box banner mb0 border-radius">
           <div class="main">
-            <a href="javascript">
-              <img src="demo/banner_goi_y.png" .. />
-            </a>
-          </div>          
+            <div class="splide carousel-primary">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="demo/banner_goi_y.png" .. />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="demo/banner_goi_y.png" .. />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="demo/banner_goi_y.png" .. />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="demo/banner_goi_y.png" .. />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="demo/banner_goi_y.png" .. />
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="list-box-bor">
           <div class="box box-category glider-contain">
@@ -1146,6 +1165,20 @@
     <script src="js/vendors/select2/select2.init.js"></script>
     <!-- select2 -->
     <script src="js/custom.js"></script>
+    <script>
+      //carousel-primary
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide(".carousel-primary", {
+          perPage: 1,
+          gap: "0px",
+          loop: false,
+          //padding: '50px',
+          pagination: true,
+          arrows: false,
+        }).mount();
+      });
+      //carousel-primary end
+    </script>
     <script>
         //Glider
   new Glider(document.querySelector(".glider-category-list"), {

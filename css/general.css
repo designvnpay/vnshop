@@ -4940,6 +4940,7 @@ line-height: 36px;
   aspect-ratio:initial;
   object-fit:initial;
 }
+.banner.border-radius .splide {border-radius: var(--border-radius);overflow: hidden}
 @media (min-width: 768px) {
   .width-96-pc {width: 96px;}
   /*.product-img {min-height: 465px;}

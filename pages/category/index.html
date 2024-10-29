@@ -149,10 +149,29 @@
             </div>
           </div>
           <div class="layout-right">
-            <div class="box banner">
-              <a href="javascript">
-                <img src="demo/banner_goi_y.png" .. />
-              </a>
+            <div class="box banner border-radius">
+              <div class="splide carousel-primary">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="demo/banner_goi_y.png" .. />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/banner_goi_y.png" .. />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/banner_goi_y.png" .. />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/banner_goi_y.png" .. />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="demo/banner_goi_y.png" .. />
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="box box-search-category">
               <div class="title">
@@ -697,6 +716,20 @@
     <script src="js/vendors/select2/select2.init.js"></script>
     <!-- select2 -->
     <script src="js/custom.js"></script>
+    <script>
+      //carousel-primary
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide(".carousel-primary", {
+          perPage: 1,
+          gap: "0px",
+          loop: false,
+          //padding: '50px',
+          pagination: true,
+          arrows: false,
+        }).mount();
+      });
+      //carousel-primary end
+    </script>
     <script>
       function showModal_search() {
         var modal = document.querySelector("ons-modal");
