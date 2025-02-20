@@ -217,6 +217,7 @@
   --action-sheet-title: 48px;
   --toolbar-100:100px;
   --toolbar-flashsale:64px;
+  --tabbar-bottom:65px;
 }
 .text-disabled {color: var(--text-disabled);}
 .color-error {
@@ -557,7 +558,7 @@ body {
   top: calc(var(--tabbar-height) + var(--tabbar-height));
 }
 .toolbar + .page__background + .page__content:has(+ .tabbar) {
-  bottom: var(--tabbar-height); padding-bottom: 30px;
+  bottom: var(--tabbar-height); padding-bottom: calc(var(--tabbar-bottom) + 30px);
 }
 .page-account .toolbar + .page__background + .page__content {
   bottom: 77px;
@@ -3744,6 +3745,9 @@ body .rolldate-container .mask-bottom {border-top-color: var(--border-color);}
 }
 .button-form-cont {
   padding: 16px;
+}
+.page__content ~.tabbar>.button-form>.button-form-cont {
+  padding-bottom: var(--tabbar-bottom);
 }
 .border-2 {
   border-radius: 100px;
