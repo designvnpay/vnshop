@@ -83,10 +83,17 @@
             <i class="icon icon_20 icon_list color-main"></i>
           </button>
         </div>
-        <div class="toolbar__center">
+        <div class="toolbar__center tabbar-scroll">
           <div class="tabbar tabbar-md tabbar--top tabbar--top-border">
             <label class="tabbar__item tabbar--top-border__item">
               <input type="radio" name="tabbar-menu" checked="checked" />
+              <button class="tabbar__button tabbar--top-border__button">
+                Liên quan
+              </button>
+            </label>
+
+            <label class="tabbar__item tabbar--top-border__item">
+              <input type="radio" name="tabbar-menu" />
               <button class="tabbar__button tabbar--top-border__button">
                 KM tốt nhất
               </button>
@@ -352,35 +359,17 @@
                     <label class="tabbar__item">
                       <input type="checkbox" name="tabbar-radio1" checked="checked" />
                       <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
+                        Mỹ phẩm (n)
                       </button>
                     </label>
         
                     <label class="tabbar__item">
                       <input type="checkbox" name="tabbar-radio1" />
                       <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
+                        Dưỡng da (n)
                       </button>
                     </label>
-        
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
+
                   </div>
                 </div>
               </div>
@@ -414,53 +403,25 @@
             <div class="form list-mb-4">
               <div class="row row-12">
                 <div class="col">
-                  <div class="form-group">
-                    <div
-                      class="input-group-wrap input-default input-size-sm input-group-vertical"
-                    >
-                      <label class="input-inner-wrap">
-                        <input
-                          value="100,000"
-                          type="text"
-                          class="input form-control input-has-clear is-invalid"
-                          placeholder="Tối thiểu"
-                          required
-                          autocorrect="off"
-                        />
-                        <div class="input-extend input-extend-right">
-                          <div class="input-box input-ic-clear"></div>
-                        </div>
-                        <div class="input-frame"></div>
-                      </label>
-                    </div>                    
-                  </div>
+                  <div class="price-range">
+                    <!-- Labels hiển thị giá -->
+                    <div class="labels">
+                      <span id="min-price">0đ</span>
+                      <span id="max-price">10.000.000đ</span>
+                    </div>
 
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <div
-                      class="input-group-wrap input-default input-size-sm input-group-vertical"
-                    >
-                      <label class="input-inner-wrap">
-                        <input
-                          value="1,000"
-                          type="text"
-                          class="input form-control input-has-clear is-invalid"
-                          placeholder="Tối đa"
-                          required
-                          autocorrect="off"
-                        />
-                        <div class="input-extend input-extend-right">
-                          <div class="input-box input-ic-clear"></div>
-                        </div>
-                        <div class="input-frame"></div>
-                      </label>
+                    <!-- Slider wrapper -->
+                    <div class="slider">
+                      <div class="track"></div>
+                      <div class="progress"></div>
+                      <input type="range" id="minRange" min="0" max="10000000" step="100000" value="0">
+                      <input type="range" id="maxRange" min="0" max="10000000" step="100000" value="10000000">
                     </div>
                   </div>
 
                 </div>
               </div>     
-              <div class="errorBlock">Giá tối thiểu phải nhỏ hơn giá tối đa</div>         
+
             </div>
           </div>
         </div>
@@ -482,83 +443,21 @@
                     <label class="tabbar__item">
                       <input type="checkbox" name="tabbar-radio1" checked="checked" />
                       <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
+                        Dior
                       </button>
                     </label>
         
                     <label class="tabbar__item">
                       <input type="checkbox" name="tabbar-radio1" />
                       <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
+                        Channel
                       </button>
                     </label>
         
                     <label class="tabbar__item">
                       <input type="checkbox" name="tabbar-radio1" />
                       <button class="tabbar__button tabbar-button-bor">
-                        Bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
-        
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
-        
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
-                      </button>
-                    </label>
-                    <label class="tabbar__item">
-                      <input type="checkbox" name="tabbar-radio1" />
-                      <button class="tabbar__button tabbar-button-bor">
-                        Giày bóng rổ
+                        YSL
                       </button>
                     </label>
                   </div>
@@ -605,6 +504,90 @@
     <script src="js/vendors/select2/select2.init.js"></script>
     <!-- select2 -->
     <script src="js/custom.js"></script>
+    <script>
+      const minRange = document.getElementById('minRange');
+      const maxRange = document.getElementById('maxRange');
+      const minPrice = document.getElementById('min-price');
+      const maxPrice = document.getElementById('max-price');
+      const progress = document.querySelector('.slider .progress');
+      const STEP = parseInt(minRange.step, 10);
+
+      function updateRange() {
+        let minVal = parseInt(minRange.value, 10);
+        let maxVal = parseInt(maxRange.value, 10);
+
+        // đảm bảo min < max
+        if (minVal > maxVal - STEP) {
+          minVal = maxVal - STEP;
+          minRange.value = minVal;
+        }
+        if (maxVal < minVal + STEP) {
+          maxVal = minVal + STEP;
+          maxRange.value = maxVal;
+        }
+
+        const rangeTotal = parseInt(minRange.max, 10) - parseInt(minRange.min, 10);
+        const percentMin = ((minVal - parseInt(minRange.min, 10)) / rangeTotal) * 100;
+        const percentMax = ((maxVal - parseInt(minRange.min, 10)) / rangeTotal) * 100;
+
+        // cập nhật vị trí và độ rộng của bar fill
+        progress.style.left = percentMin + '%';
+        progress.style.width = (percentMax - percentMin) + '%';
+
+        // hiển thị text với dấu phân ngăn
+        minPrice.textContent = minVal.toLocaleString('vi-VN') + 'đ';
+        maxPrice.textContent = maxVal.toLocaleString('vi-VN') + 'đ';
+      }
+
+      // gắn sự kiện
+      minRange.addEventListener('input', updateRange);
+      maxRange.addEventListener('input', updateRange);
+      window.addEventListener('load', updateRange);
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabbar = document.querySelector('.tabbar');
+        const radios = tabbar.querySelectorAll('input[name="tabbar-menu"]');
+
+        function scrollToActive() {
+          const activeRadio = tabbar.querySelector('input[name="tabbar-menu"]:checked');
+          if (!activeRadio) return;
+
+          // lấy label chứa radio
+          const label = activeRadio.closest('.tabbar__item');
+          if (!label) return;
+
+          // thêm class active để CSS đánh dấu (tuỳ chọn)
+          tabbar.querySelectorAll('.tabbar__item').forEach(item => item.classList.remove('active'));
+          label.classList.add('active');
+
+          // cuộn ngang: đặt label vào giữa container
+          label.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',   // center | start | nearest
+            block: 'nearest'
+          });
+        }
+
+        // gọi một lần để scroll tới tab mặc định
+        scrollToActive();
+
+        // lắng nghe thay đổi radio
+        radios.forEach(radio => {
+          radio.addEventListener('change', scrollToActive);
+        });
+
+        // nếu bạn kích hoạt tab bằng click vào button bên trong label
+        tabbar.querySelectorAll('.tabbar__button').forEach(btn => {
+          btn.addEventListener('click', () => {
+            // đợi radio checked được cập nhật rồi mới scroll
+            setTimeout(scrollToActive, 0);
+          });
+        });
+      });
+
+    </script>
     <script>
         //Glider
   new Glider(document.querySelector(".glider-category-list"), {

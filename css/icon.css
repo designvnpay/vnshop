@@ -562,3 +562,9 @@
   -o-mask-image: url(../general/icon/icon_check_double.svg);
   -moz-mask-image: url(../general/icon/icon_check_double.svg);
 }
+.icon_trending{
+  -webkit-mask-image: url(../general/icon/icon_trending.svg);
+  -o-mask-image: url(../general/icon/icon_trending.svg);
+  -moz-mask-image: url(../general/icon/icon_trending.svg);
+  color: var(--color-red-500);
+}
