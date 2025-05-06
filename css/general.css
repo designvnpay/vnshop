@@ -695,7 +695,6 @@ body {
   background-color: rgba(0,0,0,0.2);
   border-radius: 3px;
 }
-
 /* 4. Style tab active (có thể tuỳ chỉnh) */
 .tabbar-scroll .tabbar .tabbar__item.active .tabbar__button {
   color: var(--color-primary);
