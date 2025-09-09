@@ -87,12 +87,16 @@
 .bg-brand-primary-lightSellect {background-color: var(--brand-primary-lightSellect);}
 .logo {
   display: flex;
-  justify-content: center; margin-bottom: 16px;
+  justify-content: center;
+  margin-bottom: 16px;
+  margin-top: -24px;
+  z-index: 1;
+  position: relative;
 }
 .logo-pic {
   background-image: url(../general/logo.png);
-  width: 193px;
-  height: 48px;
+  width: 230px;
+  height: 44px;
   content: "";
   background-size: contain;
   background-position: center center;
