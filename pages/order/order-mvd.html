@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="../../." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'" />
+  <!--<script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="js/vendors/select2/select2.css" />
+  <!-- end select2 -->
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css" />
+  <!--<link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">-->
+  <link rel="stylesheet" href="js/vendors/gliderjs/glider.min.css" />
+  <link rel="stylesheet" href="js/vendors/splide/dist/css/splide.min.css" />
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/icon.css" />
+  <link rel="stylesheet" href="css/theme-color.css" />
+  <!--<script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+  <title>VNSHOP</title>
+</head>
+
+<body>
+
+
+  <!-- Auto Bottom Sheet -->
+  <div class="auto-bottom-sheet">
+    <div class="bottom-sheet-mask" onclick="hideAutoBottomSheet()"></div>
+    <div class="bottom-sheet-content">
+      <div class="bottom-sheet-handle"></div>
+
+      <div class="bottom-sheet-body">
+        <div class="main">
+          <div class="page page-promotion">
+            <div class="bg-white pb16 pt16 pl16 pr16 toolbar">
+              <div class="width-100">
+                <div class="row row-8 align-center">
+                  <div class="col">
+                    <div class="font-size-16 font-weight-700 text-center">Chọn khuyến mại</div>
+                  </div>
+                  <div class="col-auto">
+                    <button onclick="hideAutoBottomSheet()" class="button button--quiet">
+                      <img src="general/icon/close-select.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page__content">      
+              <div class="product-detail pt16">                
+                <div class="pl16 pr16 mt16">
+                  <div class="font-size-12 font-weight-400 text-secondary">Bạn có thể sao chéo và tra cứu vận đơn trên trang chủ của đối tác vận chuyển.</div>
+                  <div class="list-vandon">
+                    <div class="list-vandon-item">
+                      <div class="row row-8 align-items-center justify-content-between">
+                          <div class="col">
+                              <div class="font-size-14 font-weight-700">Vận đơn : AE123456789</div>
+                          </div>
+                          <div class="col-auto">
+                              <button class="button button-16 button--quiet pr0">
+                                  <i class="icon icon_16 icon_copy text-secondary"></i>
+                              </button>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="list-vandon-item">
+                      <div class="row row-8 align-items-center justify-content-between">
+                          <div class="col">
+                              <div class="font-size-14 font-weight-700">Vận đơn : AE123456789</div>
+                          </div>
+                          <div class="col-auto">
+                              <button class="button button-16 button--quiet pr0">
+                                  <i class="icon icon_16 icon_copy text-secondary"></i>
+                              </button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabbar tabbar-auto">
+              <div class="button-form">
+                <div class="button-form-cont">
+                  <div class="row row-12">
+                    <div class="col">
+                      <a href="pages/product/cart.html" class="button width-100 button-md">
+                        Áp dụng
+                      </a>                
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jquery -->
+  <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+  <script src="lib/jquery/jquery.init.js"></script>
+  <!-- jquery -->
+  <script src="js/vendors/splide/dist/js/splide.min.js"></script>
+  <script src="js/vendors/gliderjs/glider.min.js"></script>
+  <!-- select2 -->
+  <script src="js/vendors/select2/select2.js"></script>
+  <script src="js/vendors/select2/select2.init.js"></script>
+  <!-- select2 -->
+  <script src="js/custom.js"></script>
+
+  <style>
+    /* Auto Bottom Sheet Styles */
+    .auto-bottom-sheet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      display: none;
+    }
+
+    .auto-bottom-sheet.show {
+      display: block;
+    }
+
+    .bottom-sheet-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .auto-bottom-sheet.show .bottom-sheet-mask {
+      opacity: 1;
+    }
+
+    .bottom-sheet-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-radius: 16px 16px 0 0;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .auto-bottom-sheet.show .bottom-sheet-content {
+      transform: translateY(0);
+    }
+
+    .bottom-sheet-handle {
+      width: 40px;
+      height: 4px;
+      background: #ddd;
+      border-radius: 2px;
+      margin: 8px auto;
+    }
+
+    .bottom-sheet-header {
+      padding: 16px;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 10;
+    }
+
+    .bottom-sheet-body {
+      padding: 16px;
+      overflow-y: auto;
+    }
+
+    /* Custom Height Options */
+    .bottom-sheet-content {
+      max-height: 95vh;
+      /* Điều chỉnh chiều cao tối đa */
+      min-height: 40vh;
+      /* Điều chỉnh chiều cao tối thiểu */
+    }
+
+    .bottom-sheet-content .page__content {
+      top: 73px; bottom: 80px;
+    }
+
+    .bottom-sheet-content .toolbar {
+      height: auto;
+    }
+
+    .bottom-sheet-content .bottom-sheet-handle {
+      z-index: 3;
+      position: relative;
+    }
+
+    .bottom-sheet-content .button-form-cont {
+      padding-bottom: 16px !important;
+    }
+
+    
+
+    /* Hoặc height cố định */
+    /* .bottom-sheet-content {
+        height: 500px;
+      } */
+
+    /* Responsive height */
+    @media (max-height: 600px) {
+      .bottom-sheet-content {
+        max-height: 90vh;
+      }
+    }
+
+    @media (min-height: 800px) {
+      .bottom-sheet-content {
+        max-height: 85vh;
+      }
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      //input clear
+      const buttonsearch = document.getElementById("button-search");
+      $(".input-has-clear").on("paste keyup change", function () {
+        var inputClear = $(this)
+          .closest(".input-inner-wrap")
+          .find(".input-ic-clear");
+        if ($(this).val()) {
+          buttonsearch.removeAttribute("disabled");
+        } else {
+          buttonsearch.setAttribute("disabled", "");
+        }
+      });
+      //end input clear  
+
+      // Auto show bottom sheet when page loads
+      setTimeout(function () {
+        showAutoBottomSheet();
+      }, 800); // Delay 800ms to ensure page is fully loaded
+    });
+
+    // Auto Bottom Sheet Functions
+    function showAutoBottomSheet() {
+      var bottomSheet = document.querySelector('.auto-bottom-sheet');
+      bottomSheet.classList.add('show');
+    }
+
+    function hideAutoBottomSheet() {
+      var bottomSheet = document.querySelector('.auto-bottom-sheet');
+      bottomSheet.classList.remove('show');
+    }
+
+    // Select Promotion Function
+    function selectPromotion(promoCode) {
+      // Fill the input field with the selected promotion code
+      var inputField = document.querySelector('.input-has-clear');
+      if (inputField) {
+        inputField.value = promoCode;
+        inputField.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+
+      // Hide the bottom sheet
+      hideAutoBottomSheet();
+
+      // Show success message (optional)
+      showPromotionMessage(promoCode);
+    }
+
+    // Show promotion message
+    function showPromotionMessage(promoCode) {
+      // You can customize this message based on the promotion code
+      var messages = {
+        'FREESHIP': 'Đã áp dụng mã miễn phí vận chuyển!',
+        'SALE10': 'Đã áp dụng mã giảm 10%!',
+        'NEWUSER': 'Đã áp dụng ưu đãi người dùng mới!',
+        'VIP': 'Đã áp dụng ưu đãi VIP!'
+      };
+
+      // Simple alert for demo - you can replace with toast notification
+      if (messages[promoCode]) {
+        alert(messages[promoCode]);
+      }
+    }
+  </script>
+</body>
+
+</html>

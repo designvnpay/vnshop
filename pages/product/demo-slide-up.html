@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="../../." />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/theme-color.css" />
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <title>Demo Slide Up - VNSHOP</title>
+  </head>
+  <body>
+    <div class="page page-demo-slide-up">
+      <!-- Toolbar -->
+      <div class="toolbar toolbar-tran align-center flex">
+        <div class="toolbar__left">
+          <button class="button button--quiet" onclick="goBack()">
+            <i class="icon icon_24 icon_back color-white"></i>
+          </button>
+        </div>
+        <div class="toolbar__center">
+          <div class="font-size-16 font-weight-700 color-white">Demo Slide Up</div>
+        </div>
+        <div class="toolbar__right">
+          <button class="button button--quiet" onclick="showSlideUpModal()">
+            <i class="icon icon_24 icon_menu color-white"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="page__background"></div>
+      <div class="page__content">
+        <!-- Main Content -->
+        <div class="box">
+          <div class="main">
+            <div class="list-mb-16">
+              <h2 class="font-size-18 font-weight-700 mb8">Demo Slide Up Content</h2>
+              <p class="font-size-14 text-secondary mb16">
+                Nhấn vào các nút bên dưới để xem hiệu ứng slide up từ dưới lên theo chuẩn Onsen UI
+              </p>
+            </div>
+
+            <!-- Demo Buttons -->
+            <div class="list-mb-16">
+              <button class="button button-md width-100 mb12" onclick="showSlideUpModal()">
+                <i class="icon icon_20 icon_menu mr8"></i>
+                Slide Up Modal
+              </button>
+              
+              <button class="button button-md button--outline width-100 mb12" onclick="showActionSheet()">
+                <i class="icon icon_20 icon_more mr8"></i>
+                Action Sheet
+              </button>
+              
+              <button class="button button-md button--outline width-100 mb12" onclick="showBottomSheet()">
+                <i class="icon icon_20 icon_list mr8"></i>
+                Bottom Sheet
+              </button>
+              
+              <button class="button button-md button--outline width-100 mb12" onclick="showCustomSlideUp()">
+                <i class="icon icon_20 icon_settings mr8"></i>
+                Custom Slide Up
+              </button>
+            </div>
+
+            <!-- Product Demo -->
+            <div class="box">
+              <div class="title">
+                <div class="main">Sản phẩm demo</div>
+              </div>
+              <div class="list-product">
+                <div class="main">
+                  <div class="row row-8 list-mb-12">
+                    <div class="col-6">
+                      <a href="javascript:;" class="product list-mb-8" onclick="showProductDetail()">
+                        <div class="product-img">
+                          <img src="demo/product-demo1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span>
+                            <span class="bg-secondary-light-300">Sale 8.8</span>
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div class="product-title">Nước giặt Dnee em bé</div>
+                          <div class="price-main font-weight-800">155.820 đ</div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">229.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="javascript:;" class="product list-mb-8" onclick="showProductDetail()">
+                        <div class="product-img">
+                          <img src="demo/product-demo1.jpg" />
+                          <div class="product-stick">
+                            <span class="bg-primary">Freeship</span>
+                            <span class="bg-secondary-light-300">Sale 8.8</span>
+                          </div>
+                        </div>
+                        <div class="product-cont">
+                          <div class="product-title">Nước giặt Dnee em bé</div>
+                          <div class="price-main font-weight-800">155.820 đ</div>
+                          <div class="price-sub font-size-12">
+                            <span class="price-sub-text">229.000 đ</span>
+                            <span class="price-sub-number">-11%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Up Modal -->
+    <ons-modal direction="up" class="modal-slide-up">
+      <div class="page page-modal">
+        <div class="toolbar align-center flex">
+          <div class="toolbar__left">
+            <button class="button button--quiet" onclick="hideSlideUpModal()">
+              <i class="icon icon_24 icon_close color-main"></i>
+            </button>
+          </div>
+          <div class="toolbar__center">
+            <div class="font-size-16 font-weight-700">Slide Up Modal</div>
+          </div>
+          <div class="toolbar__right">
+            <button class="button button--quiet" onclick="hideSlideUpModal()">
+              <i class="icon icon_24 icon_check color-primary"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="page__background"></div>
+        <div class="page__content">
+          <div class="box">
+            <div class="main">
+              <div class="list-mb-16">
+                <h3 class="font-size-16 font-weight-700 mb8">Nội dung Modal</h3>
+                <p class="font-size-14 text-secondary mb16">
+                  Đây là nội dung của modal slide up từ dưới lên. Modal này sử dụng direction="up" của Onsen UI.
+                </p>
+              </div>
+
+              <div class="list-mb-16">
+                <div class="form-group">
+                  <label class="form-label">Tên sản phẩm</label>
+                  <input type="text" class="input form-control" placeholder="Nhập tên sản phẩm" />
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Mô tả</label>
+                  <textarea class="input form-control" rows="4" placeholder="Nhập mô tả sản phẩm"></textarea>
+                </div>
+              </div>
+
+              <div class="list-mb-16">
+                <button class="button button-md width-100 mb8" onclick="hideSlideUpModal()">
+                  Lưu thay đổi
+                </button>
+                <button class="button button-md button--outline width-100" onclick="hideSlideUpModal()">
+                  Hủy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ons-modal>
+
+    <!-- Action Sheet -->
+    <ons-action-sheet class="action-sheet-demo">
+      <div class="action-sheet-mask action-sheet-mask--material" onclick="hideActionSheet()"></div>
+      <div class="action-sheet action-sheet-bottom action-sheet--material">
+        <div class="sheet-title action-sheet-title action-sheet-title--material">
+          <div class="main">
+            <div class="row row-8 align-center height-sheet-title">
+              <div class="col">
+                <div class="color-main font-size-14 font-weight-700 text-center">Chọn hành động</div>
+              </div>
+              <div class="col-auto">
+                <button onclick="hideActionSheet()" class="button button--quiet">
+                  <i class="icon icon_24 icon_close color-main"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sheet-cont">
+          <div class="main">
+            <ul class="list list-bor-bottom">
+              <li class="list-item list-item--tappable" onclick="hideActionSheet()">
+                <div class="list-item__left">
+                  <i class="icon icon_24 icon_edit color-primary"></i>
+                </div>
+                <div class="list-item__center">
+                  <div class="list-item__title">Chỉnh sửa sản phẩm</div>
+                </div>
+              </li>
+              <li class="list-item list-item--tappable" onclick="hideActionSheet()">
+                <div class="list-item__left">
+                  <i class="icon icon_24 icon_share color-primary"></i>
+                </div>
+                <div class="list-item__center">
+                  <div class="list-item__title">Chia sẻ sản phẩm</div>
+                </div>
+              </li>
+              <li class="list-item list-item--tappable" onclick="hideActionSheet()">
+                <div class="list-item__left">
+                  <i class="icon icon_24 icon_favorite color-primary"></i>
+                </div>
+                <div class="list-item__center">
+                  <div class="list-item__title">Thêm vào yêu thích</div>
+                </div>
+              </li>
+              <li class="list-item list-item--tappable" onclick="hideActionSheet()">
+                <div class="list-item__left">
+                  <i class="icon icon_24 icon_delete color-error"></i>
+                </div>
+                <div class="list-item__center">
+                  <div class="list-item__title text-error">Xóa sản phẩm</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </ons-action-sheet>
+
+    <!-- Bottom Sheet -->
+    <ons-bottom-sheet class="bottom-sheet-demo">
+      <div class="bottom-sheet-mask" onclick="hideBottomSheet()"></div>
+      <div class="bottom-sheet-content">
+        <div class="bottom-sheet-handle"></div>
+        <div class="bottom-sheet-header">
+          <div class="main">
+            <div class="row row-8 align-center">
+              <div class="col">
+                <div class="font-size-16 font-weight-700">Bottom Sheet</div>
+              </div>
+              <div class="col-auto">
+                <button onclick="hideBottomSheet()" class="button button--quiet">
+                  <i class="icon icon_24 icon_close color-main"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bottom-sheet-body">
+          <div class="main">
+            <div class="list-mb-16">
+              <p class="font-size-14 text-secondary mb16">
+                Đây là bottom sheet với hiệu ứng slide up từ dưới lên.
+              </p>
+            </div>
+
+            <div class="list-mb-16">
+              <div class="row row-8">
+                <div class="col-4">
+                  <button class="button button-sm button--outline width-100">
+                    <i class="icon icon_16 icon_edit"></i>
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button class="button button-sm button--outline width-100">
+                    <i class="icon icon_16 icon_share"></i>
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button class="button button-sm button--outline width-100">
+                    <i class="icon icon_16 icon_favorite"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-mb-16">
+              <button class="button button-md width-100" onclick="hideBottomSheet()">
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ons-bottom-sheet>
+
+    <!-- Custom Slide Up -->
+    <div class="custom-slide-up-overlay" onclick="hideCustomSlideUp()">
+      <div class="custom-slide-up-content">
+        <div class="custom-slide-up-header">
+          <div class="main">
+            <div class="row row-8 align-center">
+              <div class="col">
+                <div class="font-size-16 font-weight-700">Custom Slide Up</div>
+              </div>
+              <div class="col-auto">
+                <button onclick="hideCustomSlideUp()" class="button button--quiet">
+                  <i class="icon icon_24 icon_close color-main"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="custom-slide-up-body">
+          <div class="main">
+            <div class="list-mb-16">
+              <p class="font-size-14 text-secondary mb16">
+                Đây là custom slide up với CSS animation tùy chỉnh.
+              </p>
+            </div>
+
+            <div class="list-mb-16">
+              <div class="form-group">
+                <label class="form-label">Tùy chọn 1</label>
+                <select class="input form-control">
+                  <option>Chọn tùy chọn</option>
+                  <option>Tùy chọn A</option>
+                  <option>Tùy chọn B</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Tùy chọn 2</label>
+                <input type="text" class="input form-control" placeholder="Nhập thông tin" />
+              </div>
+            </div>
+
+            <div class="list-mb-16">
+              <button class="button button-md width-100 mb8" onclick="hideCustomSlideUp()">
+                Xác nhận
+              </button>
+              <button class="button button-md button--outline width-100" onclick="hideCustomSlideUp()">
+                Hủy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="lib/jquery/jquery.init.js"></script>
+    <script src="js/custom.js"></script>
+
+    <style>
+      /* Custom Slide Up Styles */
+      .custom-slide-up-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .custom-slide-up-overlay.show {
+        display: block;
+        opacity: 1;
+      }
+
+      .custom-slide-up-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 16px 16px 0 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+
+      .custom-slide-up-overlay.show .custom-slide-up-content {
+        transform: translateY(0);
+      }
+
+      .custom-slide-up-header {
+        padding: 16px;
+        border-bottom: 1px solid var(--border-color);
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+      }
+
+      .custom-slide-up-body {
+        padding: 16px;
+      }
+
+      /* Bottom Sheet Styles */
+      .bottom-sheet-demo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        display: none;
+      }
+
+      .bottom-sheet-demo.show {
+        display: block;
+      }
+
+      .bottom-sheet-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .bottom-sheet-demo.show .bottom-sheet-mask {
+        opacity: 1;
+      }
+
+      .bottom-sheet-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 16px 16px 0 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+
+      .bottom-sheet-demo.show .bottom-sheet-content {
+        transform: translateY(0);
+      }
+
+      .bottom-sheet-handle {
+        width: 40px;
+        height: 4px;
+        background: #ddd;
+        border-radius: 2px;
+        margin: 8px auto;
+      }
+
+      .bottom-sheet-header {
+        padding: 16px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .bottom-sheet-body {
+        padding: 16px;
+      }
+
+      /* Modal Slide Up Styles */
+      .modal-slide-up {
+        z-index: 1000;
+      }
+
+      .page-modal {
+        background: white;
+        border-radius: 16px 16px 0 0;
+      }
+
+      /* Action Sheet Styles */
+      .action-sheet-demo {
+        z-index: 1000;
+      }
+
+      .height-sheet-title {
+        min-height: 48px;
+      }
+    </style>
+
+    <script>
+      // Go back function
+      function goBack() {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = 'product-list.html';
+        }
+      }
+
+      // Slide Up Modal Functions
+      function showSlideUpModal() {
+        var modal = document.querySelector('.modal-slide-up');
+        modal.show();
+      }
+
+      function hideSlideUpModal() {
+        var modal = document.querySelector('.modal-slide-up');
+        modal.hide();
+      }
+
+      // Action Sheet Functions
+      function showActionSheet() {
+        var actionSheet = document.querySelector('.action-sheet-demo');
+        actionSheet.show();
+      }
+
+      function hideActionSheet() {
+        var actionSheet = document.querySelector('.action-sheet-demo');
+        actionSheet.hide();
+      }
+
+      // Bottom Sheet Functions
+      function showBottomSheet() {
+        var bottomSheet = document.querySelector('.bottom-sheet-demo');
+        bottomSheet.classList.add('show');
+      }
+
+      function hideBottomSheet() {
+        var bottomSheet = document.querySelector('.bottom-sheet-demo');
+        bottomSheet.classList.remove('show');
+      }
+
+      // Custom Slide Up Functions
+      function showCustomSlideUp() {
+        var customSlideUp = document.querySelector('.custom-slide-up-overlay');
+        customSlideUp.classList.add('show');
+      }
+
+      function hideCustomSlideUp() {
+        var customSlideUp = document.querySelector('.custom-slide-up-overlay');
+        customSlideUp.classList.remove('show');
+      }
+
+      // Product Detail Function
+      function showProductDetail() {
+        // Có thể mở modal chi tiết sản phẩm hoặc chuyển trang
+        showSlideUpModal();
+      }
+
+      // Initialize
+      $(document).ready(function() {
+        // Add any initialization code here
+        console.log('Demo Slide Up page loaded');
+        
+        // Auto show bottom sheet when page loads
+        setTimeout(function() {
+          showBottomSheet();
+        }, 500); // Delay 500ms to ensure page is fully loaded
+      });
+    </script>
+  </body>
+</html>
