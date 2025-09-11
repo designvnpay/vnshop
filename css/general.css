@@ -1293,6 +1293,9 @@ a {
 .align-end {
   align-items: end;
 }
+.cart-top-cont .align-end {
+  align-items: center;
+}
 .button-16 {
   height: 16px;
   width: 16px;
@@ -2075,7 +2078,7 @@ a {
 .search-title-img {width: auto; height: 32px;}
 /*product*/
 .price-main {
-  font-size: var(--size-14);
+  font-size: var(--size-16);
   line-height: 20px;
   min-height: 20px;max-height: 24px;
   color: var(--color-primary);
@@ -5290,6 +5293,7 @@ line-height: 36px;
   }
 }
 @media (max-width: 376px) {
+  .price-sub.font-size-12 {font-size: 11px; }
   /*.product-img {
     min-height: 164px;
   }*/
