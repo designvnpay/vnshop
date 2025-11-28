@@ -3886,19 +3886,27 @@ body .rolldate-container .mask-bottom {border-top-color: var(--border-color);}
 .box-product-info {
   padding-bottom: 0;
 }
+.product-detail-top {
+  padding-top: 0;
+}
 .product-detail {
   background-color: var(--color-white);
-  border-radius: 24px 24px 0 0;
   position: relative;
-  top: -24px;
-  padding-top: 4px;
 }
 .product-detail .product-title {
   white-space: initial;
   font-weight: 700;
 }
 .product-detail-top .product-stick {
+  position: relative;
+  left: -16px; top: -22px; margin-bottom: -12px !important;
+}
+.product-detail-flashsale + .product-detail .product-detail-top .product-stick {
   position: inherit;
+  margin-bottom: 0px !important;
+}
+.product-detail-flashsale + .product-detail .product-detail-top {
+  padding-top: 16px;
 }
 .tabbar-nobor {
   border: none !important;
